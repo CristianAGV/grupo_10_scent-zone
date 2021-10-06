@@ -31,6 +31,11 @@ Nuestra página web le brindará al usuario una barra de navegación ordenada se
 
 - Detalle del producto: El usuario tendrá la posibilidad de visualizar el producto que desee consultar con la descripción del mismo, el precio, dejar su calificación, mirar las reseñas y un botón para añadir directamente al carrito.
 
+## Información de los desarrolladores:
+
+- Carlos Grisales:
+Ingeniero mecatrónico apasionado por la programación, la robótica y la inteligencia artificial; me gusta el café, el ajedrez  y resolver retos tecnológicos donde pueda aportar mis conocimientos
+
 ## Sitios web de referencia
 
 - https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio
