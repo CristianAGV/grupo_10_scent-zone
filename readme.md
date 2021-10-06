@@ -34,9 +34,11 @@ Nuestra página web le brindará al usuario una barra de navegación ordenada se
 ## Información de los desarrolladores:
 
 - Carlos Grisales:
-Ingeniero mecatrónico apasionado por la programación, la robótica y la inteligencia artificial; me gusta el café, el ajedrez  y resolver retos tecnológicos donde pueda aportar mis conocimientos
+  Ingeniero mecatrónico apasionado por la programación, la robótica y la inteligencia artificial; me gusta el café, el ajedrez y resolver retos tecnológicos donde pueda aportar mis conocimientos
+
+- Cristian Gutierrez:
+  Desarrollador Fullstack en formación, con gran interés en la tecnologia, naturaleza y el deporte.
 
 ## Sitios web de referencia
 
-- https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio
--https://demo.codezeel.com/opencart/OPC05/OPC050115/index.php?route=product/product&product_id=45
+- https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio -https://demo.codezeel.com/opencart/OPC05/OPC050115/index.php?route=product/product&product_id=45
