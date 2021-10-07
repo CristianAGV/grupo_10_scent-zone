@@ -44,4 +44,7 @@ Estudiante de desarrollo web Fullstack, soy aficionada en la programación, la m
 
 ## Sitios web de referencia
 
-- https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio -https://demo.codezeel.com/opencart/OPC05/OPC050115/index.php?route=product/product&product_id=45
+- https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio 
+- https://demo.codezeel.com/opencart/OPC05/OPC050115/index.php?route=product/product&product_id=45
+- https://co.oriflame.com/ De este sitio se toman como referencia las cartas de producto, las categorias y el detalle de producto.
+- https://www.gucci.com/au/en_au/cart De este sitio se toma como referencia el carrito de compras.
