@@ -38,6 +38,9 @@ Nuestra página web le brindará al usuario una barra de navegación ordenada se
 
 - Cristian Gutierrez:
   Desarrollador Fullstack en formación, con gran interés en la tecnologia, naturaleza y el deporte.
+  
+- Salma Morales:
+Estudiante de desarrollo web Fullstack, soy aficionada en la programación, la música y el arte. Disfruto resolver retos y aprender cosas nuevas.
 
 ## Sitios web de referencia
 
