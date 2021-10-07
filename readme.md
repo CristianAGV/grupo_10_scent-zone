@@ -48,4 +48,5 @@ Estudiante de desarrollo web Fullstack, soy aficionada en la programación, la m
 - https://demo.codezeel.com/opencart/OPC05/OPC050115/index.php?route=product/product&product_id=45
 - https://co.oriflame.com/ De este sitio se toman como referencia las cartas de producto, las categorias y el detalle de producto.
 - https://www.gucci.com/au/en_au/cart De este sitio se toma como referencia el carrito de compras.
+- https://www.bulgari.com/en-int/fragrances/all-fragrances De este sitio se toma como referencia la parte de categorias.
 
