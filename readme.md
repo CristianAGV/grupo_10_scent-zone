@@ -42,6 +42,9 @@ Nuestra página web le brindará al usuario una barra de navegación ordenada se
 - Salma Morales:
 Estudiante de desarrollo web Fullstack, soy aficionada en la programación, la música y el arte. Disfruto resolver retos y aprender cosas nuevas.
 
+- Edward Orozco:
+Profesor, licenciado y magíster en filosofía. Fullstack Web Developer en formación, apasionado por la innovación y por la resolución de problemas de manera ágil y perdurable.
+
 ## Sitios web de referencia
 
 - https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio 
