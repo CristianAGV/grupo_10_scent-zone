@@ -1,0 +1,24 @@
+{
+  "name": "grupo_10_scent-zone",
+  "version": "1.0.0",
+  "description": "- Perfumes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianAGV/grupo_10_scent-zone.git"
+  },
+  "keywords": [],
+  "author": "Carlos Grisales <carlose0320@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CristianAGV/grupo_10_scent-zone/issues"
+  },
+  "homepage": "https://github.com/CristianAGV/grupo_10_scent-zone#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
