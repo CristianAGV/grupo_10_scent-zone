@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mate+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Mate+SC&family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <!-- <p>This is home</p> -->
+     <!-- Header's styles -->
+     <header class="main-header">
+        <div class="main-header__container">
+            <h1 class="main-header__title">SCENTZONE</h1>
+            <div class="main-header__menuIcons">
+                <a href="" class="main-header__btn"><i class="fas fa-home"></i></a>
+                <a href="" class="main-header__btn"><i class="fas fa-shopping-cart"></i></a>
+                <span class="main-header__btn"><i class="fas fa-user"></i></span>                
+            </div>
+            <div class="main-header__search">
+                <span class="icon-search"><i class="fas fa-search"></i></span>
+            </div>        
+        </div>        
+    </header>
+    <!-- NavBar's styles -->
+    <nav class="main-nav">
+        <div class="main-nav__container">
+            <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+            <ul class="main-nav__menu">
+                <li class="menu__item"><a href="" class="menu__link">Amaderado</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Floral</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Cítrico</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Dulce</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Frutal</a></li>            
+            </ul>
+            <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>        
+    </nav>
+    <!-- Slider's styles -->
+    <section class="main-slider">
+        <div class="main-slider__container">
+            <img src="assets/slider1.png" alt="slider image" class="main-slider__image">
+            <div class="main-slider__content">
+                <h2 class="slider__title">Amaderado</h2>
+                <p class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, nisi.</p>
+            </div>
+            <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
+            <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
+        </div>
+    </section>
 </body>
 </html>
