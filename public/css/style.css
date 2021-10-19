@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Frequent Questions */
+.background {
+  background-image: url("/assets/background.svg");
+  background-size: cover;
+}
+.frequentQuestions__container {
+  width: 90%;
+  min-height: 100vh;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frequentQuestions__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.frequentQuestions__wrapper h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.frequentQuestions__wrapper h1::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 5px;
+  background: #50020d;
+  border-radius: 5px;
+}
+
+.frequentQuestions__content {
+  padding: 20px;
+}
+
+.frequentQuestions__content h2 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.frequentQuestions__content p {
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 769px) {
+  .frequentQuestions__container {
+    width: 70%;
+  }
+  .frequentQuestions__wrapper h1 {
+    font-size: 1.8rem;
+  }
+  .frequentQuestions__content h2 {
+    font-size: 1.3rem;
+  }
+
+  .frequentQuestions__content p {
+    font-size: 1rem;
+  }
+}
