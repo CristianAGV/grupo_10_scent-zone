@@ -12,6 +12,7 @@ h1,h2{
     margin: 0;
     padding:0;
 }
+
 /* Header's styles */
 .main-header__container{
     display: flex;
@@ -23,11 +24,10 @@ h1,h2{
 }
 
 .main-header__title{
-    width: 40%;
-    
+    width: 40%;    
     color:#fff;
     font-family: 'Libre Baskerville', serif;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0;
 }
 
@@ -40,6 +40,7 @@ h1,h2{
 .main-header__menuIcons a:nth-child(1){
     display: none;
 }
+
 a.main-header__btn{
     height: 100%;    
 }
@@ -74,6 +75,10 @@ a.main-header__btn{
 
 .main-nav__menu{
     display:none
+}
+
+.main-header__search{
+  display: none;
 }
 
 .icon-menu, .icon-search{
@@ -185,15 +190,29 @@ a.main-header__btn{
     }
 
     .main-header__search{
+      display: block;
         width: 200px;
-        border-radius:20px;
-        background:rgba(0, 0, 0,0.26);
-        
+        /* border-radius:20px;
+        b     */
+        position: relative;        
+    }
+
+    .main-header__search--bar{
+      background-color:#3b010a;
+      height:35px;
+      border-radius:20px;
+      border:none;
+      color: white;
+      font-size: 14px;
     }
 
     .icon-search{
         color:rgba(255, 255, 255, 0.5);
         padding:5px 10px;
+        position: absolute;
+        top:0;
+        left:0;
+        font-size: 20px;       
     }
 
     /* Navbar's styles */
