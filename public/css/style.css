@@ -274,6 +274,111 @@ a.main-header__btn {
 }
 /* End slider's styles */
 
+/*footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+footer{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    position: absolute;
+    font-weight: lighter;
+    background-color: #50020D;
+    width: 100%;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+}
+
+.footer-divs{
+    width: 40%;
+    margin: 8px;
+    margin-left: 11px;
+}
+
+.footer-divs a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-divs a p i{
+   margin: 0px 4px 0px 0px;
+   color: white;
+}
+
+.footer-email-div{
+    width: 40%;
+    margin: 8px;
+}
+
+
+.footer-email-div p{
+    font-size: 8px;
+    color: white;
+}
+
+.footer-email-div #email{
+    max-width: 90%;
+    border: none;
+    background-color: #00000063;
+    margin: 5px 0px;
+    height: 18px;
+
+}
+
+.footer-email-div #enviar{
+    font-size: 10px;
+    background-color: #141417;
+    margin: 5px 0px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 3px 4px;
+    font-size: 9px;
+    color: white;
+
+}
+
+
+.copyright{
+    text-align: center;
+}
+
+@media (min-width: 840px) {
+    footer{
+        font-size: 12px;
+    }
+    .footer-divs{
+        width: 20%;
+        margin: 20px;
+        margin-left: 11px;
+    }
+
+    .footer-divs p{
+        text-decoration: none;
+        margin: 9px;
+    }
+
+    .footer-email-div{
+        width: 20%;
+        margin: 30px;
+        
+    }
+
+    .footer-email-div p{
+        font-size: 10px;
+
+    }
+
+}
+
 @media screen and (min-width: 760px) {
   .product__section--title {
     color: #141417;
