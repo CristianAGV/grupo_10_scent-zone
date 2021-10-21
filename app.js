@@ -7,8 +7,12 @@ const port = process.env.PORT || 3000
 app.use(express.static(path.join(__dirname, './public/')))
 
 /* En este caso aca se serviria el home */
-app.get("/", (req, res) => {
+/*app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/home.html"))
+})*/
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/registro.html"))
 })
 
 
