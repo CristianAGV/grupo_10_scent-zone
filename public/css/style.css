@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+/*history styles*/
+.history-main {
+  width: 90%;
+  margin: auto;
+}
+
+.history-title {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #141417;
+  text-align: center;
+  margin: 18px 0px;
+}
+
+.history-time-title{
+  color: #4c4c50;
+  margin-bottom: 8px;
+
+}
+
+.history-product-container {
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #fcf7f8;
+}
+
+.history-product-card {
+  margin: 10px;
+  width: 43%;
+  border-radius: 8px;
+  background: rgba(80, 2, 13);
+  -webkit-box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+  box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+}
+
+.card-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-description {
+  width: 95%;
+  position: relative;
+  padding: 13px;
+
+}
+
+.card-price,
+.card-name {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.stars {
+  font-size: 0.6rem;
+  color: #f8dc68;
+}
+
+/*end of history styles*/
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+  .stars {
+    font-size: 0.7rem;
+  }
+
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header's styles */
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #50020d;
+  width: 100%;
+  padding: 25px;
+}
+
+.main-header__title {
+  width: 40%;
+  color: #fff;
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.main-header__menuIcons {
+  display: flex;
+  align-items: center;
+}
+
+.main-header__menuIcons a:nth-child(1) {
+  display: none;
+}
+
+a.main-header__btn {
+  height: 100%;
+}
+
+.main-header__btn {
+  display: block;
+  padding: 0 20px;
+  color: #454546;
+  text-decoration: none;
+}
+
+.main-header__btn i {
+  font-size: 1.4em;
+  cursor: pointer;
+  color: #ffff;
+}
+/* End header's styles */
+
+/* Navbar styles */
+.main-nav {
+  background-color: #141417;
+  margin: 0;
+}
+
+.main-nav__container {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.main-nav__menu {
+  display: none;
+}
+
+.main-header__search {
+  display: none;
+}
+
+.icon-menu,
+.icon-search {
+  color: #fff;
+  font-size: 1.6em;
+  display: block;
+  cursor: pointer;
+}
+/* End navbar's styles */
+
+
+
+
+
+
+
+/*footer*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+footer{
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    position: absolute;
+    font-weight: lighter;
+    background-color: #50020D;
+    width: 100%;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    
+}
+
+.footer-divs{
+    width: 40%;
+    margin: 8px;
+    margin-left: 11px;
+}
+
+.footer-divs a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-divs a p i{
+   margin: 0px 4px 0px 0px;
+   color: white;
+}
+
+.footer-email-div{
+    width: 40%;
+    margin: 8px;
+}
+
+
+.footer-email-div p{
+    font-size: 8px;
+    color: white;
+}
+
+.footer-email-div #email{
+    max-width: 90%;
+    border: none;
+    background-color: #00000063;
+    margin: 5px 0px;
+    height: 18px;
+
+}
+
+.footer-email-div #enviar{
+    font-size: 10px;
+    background-color: #141417;
+    margin: 5px 0px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 3px 4px;
+    font-size: 9px;
+    color: white;
+
+}
+
+
+.copyright{
+    text-align: center;
+}
+
+/*End of footer*/
+
+@media (min-width: 840px) {
+    footer{
+        font-size: 12px;
+    }
+    .footer-divs{
+        width: 20%;
+        margin: 20px;
+        margin-left: 11px;
+    }
+
+    .footer-divs p{
+        text-decoration: none;
+        margin: 9px;
+    }
+
+    .footer-email-div{
+        width: 20%;
+        margin: 30px;
+        
+    }
+
+    .footer-email-div p{
+        font-size: 10px;
+
+    }
+
+}
+
+@media screen and (min-width: 760px) {
+
+    /*history styles for desktop*/
+  .history-main {
+    width: 90%;
+    display: block;
+    margin: auto;
+  }
+  
+  .history-title {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #141417;
+    text-align: center;
+    margin: 18px 0px;
+  }
+
+  .history-time{
+    margin: auto;
+    width: 90%;
+  }
+  
+  .history-time-title{
+    color: #4c4c50;
+    margin-bottom: 8px;
+  
+  }
+  
+  .history-product-container {
+    padding: 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    background: #fcf7f8;
+    margin: auto;
+  }
+  
+  .history-product-card {
+    margin: 20px;
+    width: 180px;
+   
+  }
+  
+  .card-img img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .card-description {
+    width: 95%;
+    position: relative;
+    padding: 13px;
+  
+  }
+  
+  .card-price,
+  .card-name {
+    font-size: 0.7rem;
+    color: #fff;
+  }
+  .stars {
+    font-size: 12px;
+  }
+
+  /* end of history styles for desktop*/
+  
+
+  .main-header__container {
+    padding: 30px 40px;
+  }
+
+  .main-header__title {
+    font-size: 48px;
+    width: 50%;
+  }
+
+  .main-header__btn {
+    height: 30px;
+  }
+  .main-header__btn i {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .main-header__menuIcons {
+    width: 30%;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .main-header__menuIcons a:nth-child(1) {
+    display: block;
+  }
+
+  .main-header__search {
+    display: block;
+    width: 200px;
+    /* border-radius:20px;
+        b     */
+    position: relative;
+  }
+
+  .main-header__search--bar {
+    background-color: #3b010a;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 14px;
+  }
+
+  .icon-search {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+  }
+
+  /* Navbar's styles */
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav__container .icon-search {
+    display: none;
+  }
+
+  .main-nav__container {
+    width: 80%;
+  }
+
+  .main-nav__menu {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    list-style: none;
+  }
+
+  .menu__item {
+    text-align: center;
+  }
+
+  .menu__link {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.3em;
+  }
+
+  .main-slider__container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .main-slider__image {
+    display: block;
+    width: 100%;
+  }
+}
+
