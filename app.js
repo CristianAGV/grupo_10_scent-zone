@@ -12,6 +12,8 @@ app.get("/", (req, res) => {
 })
 
 
-
+app.get("/cart", (req, res) => {
+  res.sendFile(path.join(__dirname, './views/cart.html'))
+})
 
 app.listen(port, () => console.log("Servidor corriendo en el puerto", port))
