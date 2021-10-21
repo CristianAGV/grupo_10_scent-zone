@@ -32,6 +32,10 @@ body {
 
 }
 
+.history-time{
+    margin-bottom: 48px;
+}
+
 .history-product-container {
   width: 100%;
   padding: 5%;
