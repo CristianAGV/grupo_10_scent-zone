@@ -1001,6 +1001,13 @@ a.main-header__btn {
 
 /*footer*/
 
+.copyright {
+  text-align: center;
+  color: #fff;
+}
+
+/*end of footer*/
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 * {
   margin: 0px;
@@ -1080,6 +1087,8 @@ footer {
 
   font-size: 20px;
 }
+
+/*footer*/
 .footer-email-div {
   width: 40%;
   margin: 8px;
@@ -1113,6 +1122,8 @@ footer {
   text-align: center;
   color: #fff;
 }
+
+/* end of footer*/
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
