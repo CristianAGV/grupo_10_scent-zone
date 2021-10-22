@@ -24,7 +24,7 @@ app.get("/registro", (req, res) => {
 })
 
 app.get("/historial", (req, res) => {
-  res.sendFile(path.join(__dirname, "./views/historial.html"))
+  res.sendFile(path.join(__dirname, "./views/history.html"))
 })
 
 

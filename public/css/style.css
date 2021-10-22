@@ -356,6 +356,77 @@ a.main-header__btn {
 }
 
 /*footer*/
+/*history styles*/
+.history-main {
+  width: 90%;
+  margin: auto;
+}
+
+.history-title {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #141417;
+  text-align: center;
+  margin: 18px 0px;
+}
+
+.history-time-title{
+  color: #4c4c50;
+  margin-bottom: 8px;
+
+}
+
+.history-time{
+    margin-bottom: 48px;
+}
+
+.history-product-container {
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #fcf7f8;
+}
+
+.history-product-card {
+  margin: 10px;
+  width: 43%;
+  border-radius: 8px;
+  background: rgba(80, 2, 13);
+  -webkit-box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+  box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+}
+
+.card-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-description {
+  width: 95%;
+  position: relative;
+  padding: 13px;
+
+}
+
+.card-price,
+.card-name {
+  font-size: 0.7rem;
+  color: #fff;
+}
+
+.stars {
+  font-size: 0.6rem;
+  color: #f8dc68;
+}
+
+/*end of history styles*/
 /* Categories section */
 .main__categories-container {
   width: 90%;
@@ -1027,6 +1098,7 @@ footer {
   .perfume__img {
     width: 100%;
   }
+  
 }
 
 @media (min-width: 840px) {
@@ -1369,6 +1441,77 @@ footer {
 .reg-labels{
   margin-bottom: 15px;
 }
+
+/*history styles for desktop*/
+.history-main {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.history-title {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #141417;
+  text-align: center;
+  margin: 18px 0px;
+}
+
+.history-time{
+  margin: auto;
+  width: 90%;
+}
+
+.history-time-title{
+  color: #4c4c50;
+  margin-bottom: 8px;
+
+}
+
+.history-product-container {
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: #fcf7f8;
+  margin: auto;
+}
+
+.history-product-card {
+  margin: 20px;
+  width: 180px;
+ 
+}
+
+.card-img img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card-description {
+  width: 95%;
+  position: relative;
+  padding: 13px;
+
+}
+
+.card-price,
+.card-name {
+  font-size: 0.7rem;
+  color: #fff;
+}
+.stars {
+  font-size: 12px;
+}
+
+/* end of history styles for desktop*/
+
+
 }
 
 @keyframes balanceando {
