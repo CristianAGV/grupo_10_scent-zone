@@ -27,6 +27,10 @@ app.get("/historial", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/history.html"))
 })
 
+app.get("/product-detail", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/product-detail.html"))
+})
+
 
 app.get("/categories", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/categories.html"))
