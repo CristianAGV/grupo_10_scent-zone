@@ -160,6 +160,8 @@ a.main-header__btn{
 /* End slider's styles */
 
 
+
+
 @media screen and ( min-width: 760px ){
 
     .main-header__container{
@@ -194,7 +196,7 @@ a.main-header__btn{
         width: 200px;
         /* border-radius:20px;
         b     */
-        position: relative;        
+                
     }
 
     .main-header__search--bar{
