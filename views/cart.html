@@ -14,6 +14,38 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <header class="main-header">
+      <div class="main-header__container">
+        <h1 class="main-header__title">SCENTZONE</h1>
+        <div class="main-header__menuIcons">
+          <a href="" class="main-header__btn"><i class="fas fa-home"></i></a>
+          <a href="" class="main-header__btn"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+          <span class="main-header__btn"><i class="fas fa-user"></i></span>
+        </div>
+        <div class="main-header__search">
+          <input class="main-header__search--bar" type="text" />
+          <span class="icon-search"><i class="fas fa-search"></i></span>
+        </div>
+      </div>
+    </header>
+    <!-- NavBar's styles -->
+    <nav class="main-nav">
+      <div class="main-nav__container">
+        <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
+        <ul class="main-nav__menu">
+          <li class="menu__item">
+            <a href="" class="menu__link">Amaderado</a>
+          </li>
+          <li class="menu__item"><a href="" class="menu__link">Floral</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Cítrico</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Dulce</a></li>
+          <li class="menu__item"><a href="" class="menu__link">Frutal</a></li>
+        </ul>
+        <span class="icon-search"><i class="fas fa-search"></i></span>
+      </div>
+    </nav>
     <main class="cart__section">
       <section>
         <h1 class="cart__section--title">Carrito de compras</h1>
@@ -104,8 +136,43 @@
           </div>
         </div>
       </section>
-
-      <section></section>
     </main>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-divs">
+          <a href="#"><p>About Us</p></a>
+          <a href="#"><p>Preguntas Frecuentes</p></a>
+          <a href="#"><p>Testimonios</p></a>
+        </div>
+        <div class="footer-divs">
+          <a href="#"><p>Términos y condiciones</p></a>
+          <a href="#"><p>Derechos reservados</p></a>
+        </div>
+        <div class="footer-divs">
+          <a href="#"
+            ><p><i class="fab fa-instagram"></i>Instagram</p></a
+          >
+          <a href="#"
+            ><p><i class="fab fa-github"></i>Github</p></a
+          >
+        </div>
+        <div class="footer-email-div">
+          <p>
+            Déjanos tu email para recibir promociones e información sobre nuevos
+            productos
+          </p>
+          <form action="" method="get">
+            <input type="email" name="email" id="email" />
+            <input
+              type="submit"
+              name="enviar"
+              id="enviar"
+              placeholder="Enviar"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="copyright"><p>Copyright ©</p></div>
+    </footer>
   </body>
 </html>
