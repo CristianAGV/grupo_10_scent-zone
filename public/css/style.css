@@ -105,6 +105,8 @@ a.main-header__btn {
   margin-bottom: 20px;
 }
 
+
+
 .main-slider__container {
   width: 100%;
   position: relative;
@@ -172,6 +174,10 @@ a.main-header__btn {
 .product__section {
   width: 90%;
   margin: auto;
+}
+
+.product__section a{
+  text-decoration: none;
 }
 
 /* SECCION CART */
