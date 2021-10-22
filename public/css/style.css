@@ -10,6 +10,7 @@
 .cart__section {
   width: 90%;
   margin: auto;
+  margin-top: 50px;
 }
 
 .cart__section--title {
@@ -19,7 +20,7 @@
 
 .cart__section--container {
   width: 100%;
-  padding: 20px 15px;
+  padding: 20px 20px;
   border: 1px solid #868784;
 }
 
@@ -30,8 +31,9 @@
   margin-bottom: 30px;
 }
 
-.cart__section--items i {
+.cart__section--items .fa-trash-alt {
   cursor: pointer;
+  color: #50020d;
   animation-name: balanceando;
   animation-duration: 4s;
   animation-delay: 1s;
@@ -53,8 +55,12 @@
   font-size: 0.8rem;
 }
 
+.cart__item--number {
+  display: none;
+}
+
 .cart__total {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -68,6 +74,116 @@
 
 .cart__total--total .total {
   margin-right: 30px;
+}
+
+.cart__total--payment {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.cart__total--payment button {
+  flex-basis: 45%;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  padding: 10px;
+  background: #50020d;
+  border: none;
+  color: #fff;
+}
+
+.cart__total--payment span {
+  font-size: 0.7rem;
+}
+.cart__total--payment span a {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (min-width: 481px) {
+  .cart__item--info {
+    margin: 0;
+  }
+
+  .cart__item--number {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart__item--number i {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .cart__section {
+    width: 70%;
+  }
+  .cart__section--container {
+    position: relative;
+  }
+  .cart__section--items {
+    width: 55%;
+    padding-bottom: 25px;
+    padding-left: 8px;
+    border-bottom: 1px solid #8687844f;
+  }
+
+  .cart__section--items img {
+    width: 100px;
+    height: 100px;
+    margin-right: 8px;
+  }
+
+  .cart__item--info p,
+  .cart__item--info span {
+    font-size: 0.8rem;
+  }
+
+  .cart__section--items .fa-trash-alt {
+    margin-left: 8px;
+  }
+
+  .cart__total--info,
+  .cart__total--total {
+    border: none;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+
+  .cart__total--info p {
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+
+  .cart__total {
+    width: 25%;
+    border: 1px solid #868784;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    padding: 20px;
+  }
+
+  .cart__total--payment {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .cart__total--payment button {
+    width: 100%;
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #50020d;
+    color: #50020d;
+  }
+
+  .cart__total--payment button:hover {
+    background: #50020d;
+    color: #fff;
+  }
 }
 
 @keyframes balanceando {
