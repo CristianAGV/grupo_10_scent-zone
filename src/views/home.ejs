@@ -3,38 +3,11 @@
   <%- include('./partials/head')%>
   <body>
     <!-- Header's styles -->
-    <header class="main-header">
-      <div class="main-header__container">
-        <h1 class="main-header__title">SCENTZONE</h1>
-        <div class="main-header__menuIcons">
-          <a href="/" class="main-header__btn"><i class="fas fa-home"></i></a>
-          <a href="/cart" class="main-header__btn"
-            ><i class="fas fa-shopping-cart"></i
-          ></a>
-          <a href="/login" class="main-header__btn"><i class="fas fa-user"></i></a>
-        </div>
-        <div class="main-header__search">
-          <input class="main-header__search--bar" type="text" />
-          <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
-        </div>
-      </div>
-    </header>
+    <%- include('./partials/header')%>
+
     <!-- NavBar's styles -->
-    <nav class="main-nav">
-      <div class="main-nav__container">
-        <span class="icon-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
-        <ul class="main-nav__menu">
-          <li class="menu__item">
-            <a href="/categories" class="menu__link">Amaderado</a>
-          </li>
-          <li class="menu__item"><a href="/categories" class="menu__link">Floral</a></li>
-          <li class="menu__item"><a href="/categories" class="menu__link">Cítrico</a></li>
-          <li class="menu__item"><a href="/categories" class="menu__link">Dulce</a></li>
-          <li class="menu__item"><a href="/categories" class="menu__link">Frutal</a></li>
-        </ul>
-        <span class="icon-search"><i class="fas fa-search"></i></span>
-      </div>
-    </nav>
+    <%- include('./partials/nav')%>
+
     <!-- Slider's styles -->
     <section class="main-slider">
       <div class="main-slider__container">
