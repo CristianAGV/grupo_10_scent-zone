@@ -12,6 +12,8 @@ app.get("/", (req, res) => {
 })
 
 
-
+app.get("/categories", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/categories.html"))
+})
 
 app.listen(port, () => console.log("Servidor corriendo en el puerto", port))
