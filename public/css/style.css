@@ -100,14 +100,15 @@ a.main-header__btn{
 .main-slider__container{
     width: 100%;    
     position: relative;
-    
+    height: 200px;
 }
 
 .main-slider__image{
     display: block;
     width: 100%;    
     object-fit: cover;
-    z-index: 1;    
+    z-index: 1;
+    height:200px
 }
 
 .main-slider__content{
@@ -117,17 +118,18 @@ a.main-header__btn{
     transform: translate(-10%, -30%);
     z-index: 9999;
     color:#fff;
-    width:50%
+    width:50%;
+   
 }
 
 .slider__title{
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 300;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.1em;
 }
 
 .slider__text{
-    font-size: 1em;
+    font-size: 0.7em;
 }
 
 .slider__btn{
@@ -192,28 +194,32 @@ a.main-header__btn{
     }
 
     .main-header__search{
-      display: block;
-        width: 200px;
-        /* border-radius:20px;
-        b     */
-                
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    width: 200px;
+    background-color:#3b010a;
+      height:35px;
+      border-radius:20px;
+      border:none;            
     }
 
     .main-header__search--bar{
       background-color:#3b010a;
-      height:35px;
-      border-radius:20px;
+      height:25px;
+      width: 90%;
       border:none;
       color: white;
       font-size: 14px;
+      margin-right: 10px;
+      outline:none
     }
 
     .icon-search{
         color:rgba(255, 255, 255, 0.5);
-        padding:5px 10px;
-        position: absolute;
-        top:0;
-        left:0;
+        padding:5px 5px;
+       order:-1;
+        
         font-size: 20px;       
     }
 
@@ -245,18 +251,33 @@ a.main-header__btn{
 
     .menu__link{
         text-decoration: none;
-        color:#ffff;
+        color:rgb(199, 199, 199);
         font-size: 1.3em;
     }
-
+    
+    .menu__link:hover{
+        color:#fff;
+    }
+    
+    /* Slider-styles */
     .main-slider__container{
         width: 100%;
-        height: 400px;
+        height: 300px;
     }
 
     .main-slider__image{
         display: block;
         width: 100%;    
-        
+        height: 300px;
+    }
+
+    .slider__title{
+        font-size: 1.5em;
+        font-weight: 300;
+        margin-bottom: 1.1em;
+    }
+    
+    .slider__text{
+        font-size: 1em;
     }
 }
