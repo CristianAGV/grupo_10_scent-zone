@@ -304,18 +304,20 @@ body {
     display:flex;
     margin-top:15px;
     margin-bottom: 30px;
+    flex-direction: column;
 }
 
 .main__login-createCount{
   width: 40%;
   margin-right: 5px;
+  width:100%
 }
 
 .main__login-userOptions a{
     font-size: 11px;
     margin-right: 15px;
     color:#fff;
-    
+    margin-bottom: 10px;
 }
 
 .main__login-google a{

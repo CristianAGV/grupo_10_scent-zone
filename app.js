@@ -12,16 +12,13 @@ app.get("/", (req, res) => {
 })
 
 
-<<<<<<< HEAD
 app.get("/login", (req,res) => {
   res.sendFile(path.join(__dirname,"./views/login.html"))
 })
 
 
-=======
 app.get("/categories", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/categories.html"))
 })
->>>>>>> master
 
 app.listen(port, () => console.log("Servidor corriendo en el puerto", port))
