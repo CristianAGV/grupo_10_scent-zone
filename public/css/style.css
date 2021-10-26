@@ -87,6 +87,7 @@ a.main-header__btn {
 .background {
   background-image: url("/assets/background.svg");
   background-size: cover;
+  backdrop-filter: blur(1px);
 }
 .frequentQuestions__container {
   width: 90%;
@@ -129,7 +130,7 @@ a.main-header__btn {
 .frequentQuestions__content h2 {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: #50020d;
+  color: #950101;
 }
 
 .frequentQuestions__content p {
