@@ -264,32 +264,51 @@ body {
 .main__login-content{
     background-color:#141417;
     color:#ffff;
-    padding: 15px;
+    padding: 35px 30px 35px 30px;
     margin-bottom: 40px;
     width: 340px;
+    border-radius:5px;
 }
 
 .main__login-userCredentials{
     list-style: none;
 }
 
+.main__login-userCredentials li{
+  margin: 21px 0;
+}
+
 .main__login-label{
     display: block;
-    margin:10px 0;
+    margin:5px 0;
     font-size: 14px;
 }
 
 .main__login-input{
     display:block;
-    margin:5px 0;
+    margin:10px 0 25px 0;
     height:25px;
-    border:none
+    border:none;
+    width: 200px;
+    border-radius:5px;
+    outline:none;
+    padding-left: 5px;
+}
+
+.main__login-input::placeholder{
+  font-family: Poppins;
+  padding-left: 5px;
 }
 
 .main__login-userOptions{
     display:flex;
     margin-top:15px;
     margin-bottom: 30px;
+}
+
+.main__login-createCount{
+  width: 40%;
+  margin-right: 5px;
 }
 
 .main__login-userOptions a{
@@ -319,6 +338,7 @@ body {
     border:none;
     font-size: 18px;
     cursor: pointer;
+    text-align: center;
 }
 
 
