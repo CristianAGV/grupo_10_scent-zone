@@ -351,7 +351,8 @@ footer{
       color: white;
       font-size: 14px;
       margin-right: 10px;
-      outline:none
+      outline:none;
+      width: 210px;
     }
 
     .icon-search{
@@ -522,8 +523,9 @@ footer{
     height: 30px;
   }
   .main-header__btn i {
-    font-size: 1.7em;
+    font-size: 1.2em;
     text-align: center;
+    margin-top:10px;
   }
 
   .main-header__menuIcons {
