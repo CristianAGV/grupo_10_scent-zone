@@ -343,8 +343,6 @@ body {
     text-align: center;
 }
 
-
-/*footer*/
 /* Categories section */
 .main__categories-container{
     width: 90%;
@@ -586,8 +584,6 @@ a.main-header__btn {
   color: #454546;
   text-decoration: none;
 }
-
-
 /* End header's styles */
 
 /* Navbar styles */
@@ -811,10 +807,6 @@ footer{
 }
 
 
-
-
-
-
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
     width: 100%;
@@ -981,7 +973,7 @@ footer{
     height: 30px;
   }
   .main-header__btn i {
-    font-size: 1.7em;
+    font-size: 1.3em;
     text-align: center;
   }
 
