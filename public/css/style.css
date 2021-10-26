@@ -53,7 +53,7 @@ a.main-header__btn{
 }
 
 .main-header__btn i{
-    font-size:1.4em;
+    font-size:1em;
     cursor:pointer;
     color:#ffff;
 }
@@ -83,7 +83,7 @@ a.main-header__btn{
 
 .icon-menu, .icon-search{
     color: #fff;
-    font-size:1.6em;    
+    font-size:1.1em;    
     display: block;   
     cursor: pointer;    
 }
@@ -179,8 +179,9 @@ a.main-header__btn{
         height: 30px;
     }
     .main-header__btn i{
-        font-size: 1.7em;
+        font-size: 1.2em;
         text-align: center;
+        margin-top: 5px;
     }
     
     .main-header__menuIcons{
@@ -199,7 +200,7 @@ a.main-header__btn{
       align-items: center;
     width: 200px;
     background-color:#3b010a;
-      height:35px;
+      height:30px;
       border-radius:20px;
       border:none;            
     }
