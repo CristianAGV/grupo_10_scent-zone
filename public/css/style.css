@@ -508,6 +508,48 @@ a.main-header__btn {
 }
 
 /*footer*/
+.product__section--title {
+  width: 100%;
+  font-size: 1.5rem;
+  color: #141417;
+  margin: 0 auto 20px auto;
+}
+.product__container {
+  width: 100%;
+  padding: 5%;
+  border-radius: 10px;
+  display: flex;
+  overflow: auto;
+  margin: auto;
+  margin-bottom: 5rem;
+  background: #fcf7f8;
+}
+
+.product__container--card {
+  min-width: 140px;
+  margin-right: 20px;
+  border-radius: 8px;
+  background: rgba(80, 2, 13, 0.7);
+  -webkit-box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+  box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
+}
+
+.perfume__info {
+  width: 100%;
+  position: relative;
+  padding: 15px;
+}
+
+.price,
+.product__name {
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.stars {
+  font-size: 0.6rem;
+  color: #f8dc68;
+}
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
@@ -869,11 +911,6 @@ footer {
     transition: all 0.3s ease;
   }
 
-  .product__container--card:hover {
-    transform: scale(1.1);
-    background: #50020d;
-  }
-
   .perfume__img {
     width: 100%;
   }
@@ -938,19 +975,54 @@ footer {
 }
 /* End frequent questions */
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 769px) {
   .product__section--title {
-    color: #141417;
     width: 80%;
-    margin: 0 auto 20px auto;
   }
   .product__container {
     width: 80%;
     padding: 3%;
   }
-}
 
-@media screen and (min-width: 769px) {
+  .product__container--card {
+    min-width: 190px;
+    margin-right: 90px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .product__container--card:hover {
+    transform: scale(1.1);
+    background: #50020d;
+  }
+
+  .perfume__img img {
+    height: 210px;
+  }
+
+  .price,
+  .product__name {
+    font-size: 14px;
+  }
+
+  .stars {
+    font-size: 12px;
+  }
+
+  .cart {
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  .product__container--card:hover .cart {
+    opacity: 1;
+  }
+
+  .product__container--card:hover .cart:hover {
+    color: rgba(0, 0, 0, 0.603);
+  }
   .frequentQuestions__container {
     width: 70%;
   }
