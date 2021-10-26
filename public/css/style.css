@@ -207,6 +207,25 @@ a.main-header__btn {
   font-family: "Poppins", sans-serif;
 }
 
+.cart {
+  font-size: 0.9rem;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+  color: #fffafabf;
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+}
+
 /* Frequent Questions */
 .background {
   background-image: url("/assets/background.svg");
