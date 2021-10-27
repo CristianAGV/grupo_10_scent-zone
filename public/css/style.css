@@ -976,6 +976,100 @@ footer {
 /* End frequent questions */
 
 @media screen and (min-width: 769px) {
+  .main-header__container {
+    padding: 30px 40px;
+  }
+
+  .main-header__title {
+    font-size: 48px;
+    width: 50%;
+  }
+
+  .main-header__btn {
+    height: 30px;
+  }
+  .main-header__btn i {
+    font-size: 1.7em;
+    text-align: center;
+  }
+
+  .main-header__menuIcons {
+    width: 30%;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  .main-header__menuIcons a:nth-child(1) {
+    display: block;
+  }
+
+  .main-header__search {
+    display: block;
+    width: 200px;
+    /* border-radius:20px;
+        b     */
+    position: relative;
+  }
+
+  .main-header__search--bar {
+    background-color: #3b010a;
+    height: 35px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 14px;
+  }
+
+  .icon-search {
+    color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+  }
+
+  /* Navbar's styles */
+  .icon-menu {
+    display: none;
+  }
+
+  .main-nav__container .icon-search {
+    display: none;
+  }
+
+  .main-nav__container {
+    width: 80%;
+  }
+
+  .main-nav__menu {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    list-style: none;
+  }
+
+  .menu__item {
+    text-align: center;
+  }
+
+  .menu__link {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.3em;
+  }
+
+  .main-slider__container {
+    width: 100%;
+    height: 400px;
+  }
+
+  .main-slider__image {
+    display: block;
+    width: 100%;
+  }
   .product__section--title {
     width: 80%;
   }
