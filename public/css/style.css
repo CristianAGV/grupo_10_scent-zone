@@ -664,6 +664,81 @@ color: white;
 }
 /*end of register styles*/
 
+/* product detail styles */
+
+.main-product-detail{
+  margin: 20px;
+  margin-top: 35px;
+}
+
+.main-pd-container{
+  margin-bottom: 25px;
+}
+
+.img-pd-container img{
+max-width: 80%;
+display: block;
+margin: auto;
+}
+
+.product-title{
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.brand-div{
+  display: flex;
+  margin-bottom: 7px;
+}
+
+.brand-title{
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.price-div{
+  margin-bottom: 7px;
+}
+
+.price{
+  font-weight: 700;
+  color: #50020D;
+}
+
+.cant-div{
+  margin-bottom: 10px;
+}
+
+.cant-div form label{
+  font-weight: 700;
+  margin-right: 10px;
+  
+}
+
+.add-to-cart{
+  font-size: 10px;
+background-color: #50020D;
+margin-top: 15px;
+border: 2px solid #50020D;
+font-family: 'Poppins', sans-serif;
+padding: 5px 20px;
+font-size: 14px;
+color: white;
+font-weight: lighter;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.add-to-cart i{
+padding-right: 6px;
+}
+
+.product-description{
+  margin-bottom: 35px;
+}
+
+/* End of product detail styles */
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
     width: 100%;
@@ -1080,6 +1155,34 @@ footer {
   .footer-email-div p {
     font-size: 10px;
   }
+
+  
+    /* product details */
+
+    .main-product-detail{
+      display: block;
+      margin: auto;
+      max-width: 65%;
+      margin-top: 50px;
+
+  }
+
+  .main-pd-container{
+      display: flex;
+  }
+
+  .product-description{
+    max-width: 60%;
+  }
+
+  .info-main-container{
+    margin-top: 10%;
+  }
+
+  .price-div, .brand-div{
+    margin-bottom: 15px;
+  }
+  /* end of product details */
 }
 .frequentQuestions__content p {
   font-size: 0.8rem;
