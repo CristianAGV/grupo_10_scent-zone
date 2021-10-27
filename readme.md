@@ -45,6 +45,10 @@ Estudiante de desarrollo web Fullstack, soy aficionada en la programación, la m
 - Edward Orozco:
 Profesor, licenciado y magíster en filosofía. Fullstack Web Developer en formación, apasionado por la innovación y por la resolución de problemas de manera ágil y perdurable.
 
+## Link del board en Jira
+
+-https://scentzone02.atlassian.net/jira/software/c/projects/SCEN/boards/5?selectedIssue=SCEN-12
+
 ## Sitios web de referencia
 
 - https://swissarabian.com/ca/ Fue escogido debido al tipo de clientes a los que apunta y a su vez, la estructura del sitio 
