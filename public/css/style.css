@@ -1150,6 +1150,16 @@ footer {
     font-size: 0.8rem;
   }
 
+  .cart__item--number {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart__item--number i {
+    padding: 10px;
+    cursor: pointer;
+  }
+
   .cart__section--items .fa-trash-alt {
     margin-left: 8px;
   }
@@ -1203,26 +1213,27 @@ footer {
   }
 
   /* Categories */
-.main__categories-menu {
-  height: 300px;
-}
+  .main__categories-menu {
+    height: 300px;
+  }
 
-.product__categories--card {
-  width: 20%;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  .product__categories--card {
+    width: 20%;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.product__categories--card:hover {
-  transform: scale(1.1);
-  background: #50020d;
-}
-.product__categories--card:hover .cart {
-  opacity: 1;
-}
-.product__categories--card:hover .cart:hover {
-  color: rgba(0, 0, 0, 0.603);}
+  .product__categories--card:hover {
+    transform: scale(1.1);
+    background: #50020d;
+  }
+  .product__categories--card:hover .cart {
+    opacity: 1;
+  }
+  .product__categories--card:hover .cart:hover {
+    color: rgba(0, 0, 0, 0.603);
+  }
 }
 
 @keyframes balanceando {
@@ -1256,4 +1267,3 @@ footer {
 .frequentQuestions__content p {
   font-size: 1rem;
 }
-
