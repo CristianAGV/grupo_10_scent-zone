@@ -553,6 +553,117 @@ a.main-header__btn {
   color: #f8dc68;
 }
 
+/*register styles*/
+
+.register-title{
+  margin: 30px 0px;
+ font-size: 30px;
+ text-align: center;
+}
+
+.main-form-section{
+width: 80%;
+display: block;
+margin: auto;
+margin-top: 25px;
+margin-bottom: 40px;
+background-color:#50020d;
+padding: 30px;background-color:#141417;
+color:#ffff;
+border-radius: 10px;
+-webkit-box-shadow: 0px 0px 7px -1px #141417;
+-moz-box-shadow: 0px 0px 7px -1px #141417;
+box-shadow: 0px 0px 7px -1px #141417;
+
+}
+
+.main-form-section:hover{
+-webkit-box-shadow: 0px 0px 7px -1px #50020d;
+-moz-box-shadow: 0px 0px 7px -1px #50020d;
+box-shadow: 0px 0px 7px -1px #50020d;
+
+}
+
+.main-form-section form{
+display: flex;
+justify-content: center;
+}
+
+
+.text-area{
+border: none;
+padding: 4px 4px;
+width: 90%;
+margin: 5px 0px;
+border-radius: 3px;
+border: solid #363435 1px ;
+display: block;
+font-family: 'Poppins', sans-serif;
+font-size: 13px;
+}
+
+.text-area:focus{
+border: solid #50020d 2px ;
+outline: none;
+}
+
+.reg-labels{
+display: block;
+margin: auto;
+margin-bottom: 10px;
+margin-top: 10px;
+
+}
+
+.reg-labels label{
+color: #141417;
+font-size: 14px;
+color:#ffff;
+}
+
+#country{
+display: block;
+border: none;
+padding: 3px;
+margin: 5px 0px;
+border-radius: 3px;
+max-width: 70%;
+background-color: #fff;
+border: solid #50020d 1px ;
+}
+
+
+#country:focus{
+border: solid #50020d 2px ;
+outline: none;
+}
+
+.forgot-password p{
+color:#ffff;
+text-decoration: #fff;
+font-size: 10px;
+margin: 15px 0px;
+}
+
+.button-container{
+display: flex;
+justify-content: center;
+margin: 5px;
+}
+
+.buttons{
+font-size: 10px;
+background-color: #50020D;
+margin: 5px 0px;
+border: none;
+font-family: 'Poppins', sans-serif;
+padding: 5px 20px;
+font-size: 14px;
+color: white;
+
+}
+/*end of register styles*/
+
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
     width: 100%;
@@ -1234,6 +1345,30 @@ footer {
   .product__categories--card:hover .cart:hover {
     color: rgba(0, 0, 0, 0.603);
   }
+
+  
+  /*register for desktop styles*/
+
+.main-form-section{
+  max-width: 35%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.text-area{
+  padding: 5px 5px;
+  margin: 10px 0px;
+  width: 100%;
+  
+}
+
+.reg-labels label{
+  font-size: 16px;
+}
+
+.reg-labels{
+  margin-bottom: 15px;
+}
 }
 
 @keyframes balanceando {

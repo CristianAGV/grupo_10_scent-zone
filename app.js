@@ -19,6 +19,14 @@ app.get("/login", (req,res) => {
   res.sendFile(path.join(__dirname,"./views/login.html"))
 })
 
+app.get("/registro", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/registro.html"))
+})
+
+app.get("/historial", (req, res) => {
+  res.sendFile(path.join(__dirname, "./views/historial.html"))
+})
+
 
 app.get("/categories", (req, res) => {
   res.sendFile(path.join(__dirname, "./views/categories.html"))
