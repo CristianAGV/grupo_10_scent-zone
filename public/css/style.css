@@ -256,7 +256,9 @@ a.main-header__btn {
 }
 
 /* End product section */
-
+a{
+  text-decoration: none;
+}
 /* Login -- mobile */
 .main__login-container {
   width: 95%;
