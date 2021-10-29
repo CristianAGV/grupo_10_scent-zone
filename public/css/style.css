@@ -256,7 +256,7 @@ a.main-header__btn {
 }
 
 /* End product section */
-a{
+.product__categories--card a{
   text-decoration: none;
 }
 /* Login -- mobile */
