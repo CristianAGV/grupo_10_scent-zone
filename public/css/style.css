@@ -265,7 +265,7 @@ a.main-header__btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .main__login-title {
