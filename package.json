@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CristianAGV/grupo_10_scent-zone#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
