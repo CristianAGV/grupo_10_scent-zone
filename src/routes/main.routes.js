@@ -9,6 +9,7 @@ router.get('/login', mainController.login)
 router.get('/historial', mainController.historial)
 router.get('/product-detail', mainController.product)
 router.get('/categories', mainController.product)
+router.get('/registro', mainController.registro)
 
 
 module.exports = router

@@ -19,8 +19,11 @@ const controller = {
     },
     categories: (req, res) => {
         res.render('categories')
-    }
+    },
     
+    registro: (req, res) => {
+        res.render('registro')
+    },
 }
 
 module.exports = controller
