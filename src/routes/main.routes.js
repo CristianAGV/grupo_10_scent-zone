@@ -10,6 +10,7 @@ router.get('/historial', mainController.historial)
 router.get('/product-detail', mainController.product)
 router.get('/categories', mainController.product)
 router.get('/registro', mainController.registro)
+router.get('/edit-product', mainController.editProduct)
 
 
 module.exports = router
