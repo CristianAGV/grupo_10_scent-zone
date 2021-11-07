@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head')%>
+  <body>
+    <!-- Header's styles -->
+    <%- include('./partials/header')%>
+
+    <!-- NavBar's styles -->
+    <%- include('./partials/nav')%>
+
+    <main>
+      <!-- Login section -->
+      <div class="main__login-container">
+        <h1 class="main__login-title">Inicio de sesión</h1>
+        <div class="main__login-content">
+          <form action="/">
+            <ul class="main__login-userCredentials">
+              <li>
+                <label class="main__login-label" for="name"
+                  >Correo Electónico:</label
+                >
+                <input
+                  class="main__login-input"
+                  type="email"
+                  id="name"
+                  name="user_name"
+                  placeholder="Correo electrónico"
+                />
+              </li>
+              <li>
+                <label class="main__login-label" for="password"
+                  >Contraseña:</label
+                >
+                <input
+                  class="main__login-input"
+                  type="password"
+                  id="password"
+                  name="user_password"
+                  placeholder="Contraseña"
+                />
+              </li>
+            </ul>
+            <div class="main__login-userOptions">
+              <a href="/registro" class="main__login-createCount"
+                >¿No tiene una cuenta?</a
+              >
+              <a href="">¿Se te olvidó la contraseña?</a>
+            </div>
+            <div class="main__login-google">
+              <a href="#"
+                ><p>
+                  <i class="fab fa-google"></i>Inicio de sesión con Google
+                </p></a
+              >
+            </div>
+            <button type="submit" class="main__login-btnLogin">
+              Iniciar sesión
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <!-- Footer section -->
+    <%- include('./partials/footer')%>
+
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head')%>
+  <body>
+    <%- include('./partials/header')%>
+    <!-- NavBar's styles -->
+    <%- include('./partials/nav')%>
+    <!-- Cart section -->
+    <main class="cart__section">
+      <section>
+        <h1 class="cart__section--title">Carrito de compras</h1>
+        <div class="cart__section--container">
+          <div class="cart__section--items">
+            <img src="./assets/versace.jpg" alt="Perfume" />
+            <div class="cart__item--info">
+              <p>Nombre del producto</p>
+              <p>$400</p>
+              <span><a href="">Ver mas...</a></span>
+            </div>
+            <div class="cart__item--number">
+              <i class="fas fa-minus"></i>
+              <span>1</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <i class="far fa-trash-alt"></i>
+          </div>
+          <div class="cart__section--items">
+            <img src="./assets/versace.jpg" alt="Perfume" />
+            <div class="cart__item--info">
+              <p>Nombre del producto</p>
+              <p>$400</p>
+              <span><a href="">Ver mas...</a></span>
+            </div>
+            <div class="cart__item--number">
+              <i class="fas fa-minus"></i>
+              <span>1</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <i class="far fa-trash-alt"></i>
+          </div>
+
+          <div class="cart__section--items">
+            <img src="./assets/versace.jpg" alt="Perfume" />
+            <div class="cart__item--info">
+              <p>Nombre del producto</p>
+              <p>$400</p>
+              <span><a href="">Ver mas...</a></span>
+            </div>
+            <div class="cart__item--number">
+              <i class="fas fa-minus"></i>
+              <span>1</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <i class="far fa-trash-alt"></i>
+          </div>
+
+          <div class="cart__section--items">
+            <img src="./assets/versace.jpg" alt="Perfume" />
+            <div class="cart__item--info">
+              <p>Nombre del producto</p>
+              <p>$400</p>
+              <span><a href="">Ver mas...</a></span>
+            </div>
+            <div class="cart__item--number">
+              <i class="fas fa-minus"></i>
+              <span>1</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <i class="far fa-trash-alt"></i>
+          </div>
+
+          <div class="cart__total">
+            <div class="cart__total--info">
+              <div>
+                <p>Subtotal</p>
+                <p>Envio</p>
+                <p>IVA</p>
+              </div>
+              <div>
+                <p>$16.000</p>
+                <p>$0</p>
+                <p>$0</p>
+              </div>
+            </div>
+            <div class="cart__total--total">
+              <p class="total">Total</p>
+              <p>$16.000</p>
+            </div>
+
+            <div class="cart__total--payment">
+              <button>CHECKOUT</button>
+              <button>Paga con paypal</button>
+              <span><a href="#">Opciones de pago...</a></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+<%- include('./partials/footer')%>
+  </body>
+</html>

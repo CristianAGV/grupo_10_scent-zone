@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head')%>
+  <body>
+    <!-- Header's styles -->
+    <%- include('./partials/header')%>
+
+    <!-- NavBar's styles -->
+    <%- include('./partials/nav')%>
+
+    <main class="main-product-detail">
+      <div class="main-pd-container">
+        <div class="img-pd-container">
+          <img src="./assets/atkinsons-arcade.jpg" alt="product image">
+        </div>
+        <div class="info-pd-container">
+          <h2 class="product-title">ATKINSONS 41 BURLINGTON ARCADE EAU DE PERFUM</h2>
+          <div class="info-main-container">
+            <div class="brand-div">
+              <p class="brand-title">Marca:</p>
+              <p class="brand">ATKINSONS</p>
+            </div>
+            <div class="price-div">
+              <p class="price-product-detail">$200</p>
+            </div>
+            <div class="cant-div">
+              <form action="">
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="20">
+              </form>
+            </div>
+            <div class="button-div">
+              <button class="add-to-cart"><i class="fas fa-shopping-cart"></i
+                >AÑADIR AL CARRITO</button>
+            </div>
+          </div>
+       
+        </div>
+      </div>
+      <div class="decription-pd-container">
+        <div class="product-description">
+          <h3>Descripción</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nesciunt incidunt illo, temporibus reprehenderit fugiat modi ea cum quo, quod cupiditate est voluptatem delectus sapiente libero dolore et nemo tenetur.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <%- include('./partials/footer')%>
+
+    </body>
+  </html>
