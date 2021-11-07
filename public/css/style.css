@@ -961,7 +961,7 @@ textarea {
 }
 
 .add-product__form--btn button:nth-child(2){
- background-color:#50020d;
+ background-color:#F17C19;
  font-size: 14px;
  color: #fff;
  padding: 10px 5px;
@@ -981,7 +981,7 @@ textarea {
 }
 
 .add-product__form--btn button:nth-child(2):hover{
-  background-color:rgba(80, 2, 13, 0.7)
+  background-color:#FFAC65
 }
 /* End add-product's tyles */
 
