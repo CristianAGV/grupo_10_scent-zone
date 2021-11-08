@@ -25,6 +25,10 @@ const controller = {
         res.render('registro')
     },
 
+    editProduct: (req,res) => {
+        res.render('edit-product')
+    },
+    
     addProducts: (req,res) => {
         res.render('add-product')
     }

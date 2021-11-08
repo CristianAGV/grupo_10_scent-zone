@@ -983,6 +983,29 @@ textarea {
 .add-product__form--btn button:nth-child(2):hover{
   background-color:#FFAC65
 }
+
+.add-product__btn--delete {
+  width: 80%;  
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;  
+}
+
+.add-product__btn--delete button{
+  background-color: #CB0000;
+  width: 300px;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 5px;
+  border: none;
+  font-family: Poppins;
+} 
+
+.add-product__btn--delete button:hover{
+  background-color:#FF9D9D;
+}
+
+
 /* End add-product's tyles */
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
