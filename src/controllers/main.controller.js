@@ -24,6 +24,10 @@ const controller = {
     registro: (req, res) => {
         res.render('registro')
     },
+
+    addProducts: (req,res) => {
+        res.render('add-product')
+    }
 }
 
 module.exports = controller
