@@ -828,8 +828,9 @@ a.main-header__btn {
 
 .add-product__imageLoading{
   width: 80%;
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
+  
 }
 
 .add-product__description h3 {
@@ -851,7 +852,7 @@ a.main-header__btn {
   margin: 20px 0;
 }
 
-.add-product__description form label {
+.add-product__description .add-product__imageLoading label {
   background-color: #50020d;
   display: block;
   color: #fff;
