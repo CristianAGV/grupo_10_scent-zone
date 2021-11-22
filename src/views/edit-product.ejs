@@ -1,102 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head')%>
-<body>
+  <%- include('./partials/head')%>
+  <body>
     <%- include('./partials/header')%>
     <!-- NavBar's styles -->
     <%- include('./partials/nav')%>
     <main>
-        <h2 class="add-product__title">Editar producto</h2>
+      <form  action="/add-products" method="POST">         
+        <h2 class="add-product__title">Agregar nuevo producto</h2>
         <div class="add-product__container">
-            <div class="add-product__description">
-                <h3>Añade una imagen del producto:</h3>
-                <div class="add-product__image">
-                    <img src="./assets/product3.jpg" alt="channel">
+          <div class="add-product__description">
+            <h3>Añade una imagen del producto:</h3>
+            <div class="add-product__image">
+              <img src="./assets/product3.jpg" alt="channel" />
+            </div>          
+            <div class="add-product__imageLoading">
+              <label for="myFile">Agregar imagen</label>
+              <input type="file" id="myFile" name="productImage" hidden />
+              <textarea
+              name="description"
+              rows="5"
+              cols="20"
+              placeholder="Añade una descripción del producto"
+              ></textarea>
+            </div>
+            <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
+          </div>
+          <div class="add-product__info">
+            <h3>Añade información del producto:</h3>
+            <div class="add-product__form">
+              <% if(locals.errors){ %> <% for(let error in errors){ %>
+                <p class="feedback"><%= errors[error].msg %></p>
+                <% } %> <% } %>
+                <ul>
+                  <li>
+                    <label for="nombre">Nombre del producto: </label>
+                    <input type="text" id="nombre" name="productName" />
+                  </li>
+                  <li>
+                    <label for="genero">Género:</label>
+                    <select name="gender" id="genero">
+                      <option value="masculino">Hombre</option>
+                      <option value="femenino">Mujer</option>
+                      <option value="unisex">Unisex</option>
+                    </select>
+                  </li>
+                  <li>
+                    <label for="marca">Marca: </label>
+                    <input type="text" id="marca" name="Brand" />
+                  </li>
+                  <li>
+                    <label for="precio">Precio: </label>
+                    <span>$ <input type="number" id="precio" name="price" /></span>
+                  </li>
+                  <li>
+                    <label for="vol">Volumen (ml): </label>
+                    <input type="number" id="vol" name="size" />
+                  </li>
+                  <li>
+                    <p>Selecciona una categoría:</p>
+                    <div class="add-product__categories">
+                      <span>
+                        <input
+                          type="radio"
+                          id="floral"
+                          name="category"
+                          value="floral"
+                        />
+                        <label for="floral">Floral</label>
+                      </span>
+    
+                      <span>
+                        <input
+                          type="radio"
+                          id="frutal"
+                          name="category"
+                          value="frutal"
+                        />
+                        <label for="frutal">Frutal</label>
+                      </span>
+    
+                      <span>
+                        <input
+                          type="radio"
+                          id="amaderado"
+                          name="category"
+                          value="amaderado"
+                        />
+                        <label for="amaderado">Amaderado</label>
+                      </span>
+    
+                      <span>
+                        <input
+                          type="radio"
+                          id="dulce"
+                          name="category"
+                          value="dulce"
+                        />
+                        <label for="dulce">Dulce</label>
+                      </span>
+    
+                      <span>
+                        <input
+                          type="radio"
+                          id="cítrico"
+                          name="category"
+                          value="cítrico"
+                        />
+                        <label for="cítrico">Cítrico</label>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+                <div class="add-product__form--btn">
+                  <button type="reset">Descartar</button>
+                  <button type="submit">Añadir</button>
                 </div>
-                <form action="">
-                    <label for="myFile">Agregar imagen</label>
-                    <input type="file" id="myFile" name="filename" hidden>                
-                  </form>            
-                <textarea name="textarea" rows="5" cols="20" placeholder="Añade una nueva descripción del producto"></textarea>
-                
             </div>
-            <div class="add-product__info">
-                <h3>Edita la información del producto:</h3>
-                <form class="add-product__form"action="">
-                   <ul>
-                       <li>
-                           <label for="nombre">Nombre del producto: </label>
-                           <input type="text" id="nombre"/>
-                       </li>
-                       <li>
-                           <label for="genero">Género:</label>
-                           <select name="" id="genero">
-                            <option value="masc">Hombre</option>
-                            <option value="fem">Mujer</option>
-                            <option value="uni">Unisex</option>
-                           </select>
-                       </li>
-                       <li>
-                        <label for="marca">Marca: </label>
-                        <input type="text" id="marca"/>
-                       </li>
-                       <li>
-                        <label for="precio">Precio: </label>
-                        <span>$ <input type="number" id="precio"/></span>
-                       </li>
-                       <li>
-                        <label for="vol">Volumen (ml): </label>
-                        <input type="number" id="vol"/>
-                       </li>
-                       <li>
-                           <p>Selecciona una categoría: </p>
-                            <div class="add-product__categories">
-                                <span>
-                                    <input type="radio" id="floral" name="category" value="floral">
-                                    <label for="floral">Floral</label>
-                                </span>
-    
-                                <span>
-                                    <input type="radio" id="frutal" name="category" value="frutal">
-                                    <label for="frutal">Frutal</label>
-                                </span>
-    
-                                <span>
-                                    <input type="radio" id="amaderado" name="category" value="amaderado">
-                                    <label for="amaderado">Amaderado</label>
-                                </span>
-    
-                                <span>
-                                    <input type="radio" id="dulce" name="category" value="dulce">
-                                    <label for="dulce">Dulce</label>
-                                </span>
-    
-                                <span>
-                                    <input type="radio" id="cítrico" name="category" value="cítrico">
-                                    <label for="cítrico">Cítrico</label> 
-                                </span>
-                            </div>
-                       </li>
-                      
-                       <li>
-                        <label for="estado">Estado:</label>
-                        <select name="" id="estado">
-                         <option value="Activo">Activo</option>
-                         <option value="Inactivo">Inactivo</option>
-                        </select>
-                       </li>
-                   </ul>
-                   <div class="add-product__form--btn">
-                    <button type="reset">Descartar</button>
-                    <button  type="submit">Editar</button>         
-                   </div>
-                </form>
+            
             </div>
         </div>
-        <div class="add-product__btn--delete">
-            <button>Eliminar producto</button>
-        </div>
+    </form>
+    <form action=""class="add-product__btn--delete">
+        <button>Eliminar producto</button>        
+      </form>
     </main>
     <%- include('./partials/footer')%>
-</body>
+  </body>
 </html>
