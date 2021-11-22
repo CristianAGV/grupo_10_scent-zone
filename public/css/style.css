@@ -105,8 +105,6 @@ a.main-header__btn {
   margin-bottom: 20px;
 }
 
-
-
 .main-slider__container {
   width: 100%;
   position: relative;
@@ -176,7 +174,7 @@ a.main-header__btn {
   margin: auto;
 }
 
-.product__section a{
+.product__section a {
   text-decoration: none;
 }
 
@@ -262,7 +260,7 @@ a.main-header__btn {
 }
 
 /* End product section */
-.product__categories--card a{
+.product__categories--card a {
   text-decoration: none;
 }
 /* Login -- mobile */
@@ -811,45 +809,43 @@ a.main-header__btn {
 
 /* End of product detail styles */
 
-
 /* Add product's styles */
-.add-product__title{
+.add-product__title {
   text-align: center;
   margin: 30px 0;
 }
 
-
-.add-product__container{
+.add-product__container {
   width: 90%;
   margin: 0 auto;
 }
 
-.add-product__description{
+.add-product__description {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-.add-product__description h3{
+.add-product__description h3 {
   margin: 10px 0;
   text-align: center;
 }
 
-.add-product__image{
-  display: block;  
+.add-product__image {
+  display: block;
   text-align: center;
 }
 
-.add-product__image img{
-  width: 70%;  
+.add-product__image img {
+  width: 70%;
 }
 
-.add-product__description form{
+.add-product__description form {
   text-align: center;
   margin: 20px 0;
 }
 
-.add-product__description form label{
+.add-product__description form label {
   background-color: #50020d;
   display: block;
   color: #fff;
@@ -858,7 +854,7 @@ a.main-header__btn {
   border-radius: 0.2rem;
   cursor: pointer;
   font-size: 1rem;
-  width: 250px;  
+  width: 250px;
   margin: 0 auto;
 }
 
@@ -868,143 +864,149 @@ textarea {
   width: 80%;
   margin: 0 auto;
   padding: 10px;
+  margin-top: 12px;
 }
 
-.add-product__info{
+.add-product__info {
   width: 100%;
-  margin: 20px 0;  
+  margin: 20px 0;
 }
 
-.add-product__info h3{
+.add-product__info h3 {
   text-align: center;
   margin: 10px 0;
 }
 
-.add-product__form{
+.add-product__form {
   width: 80%;
   margin: 0 auto;
-  border: 1px  solid #50020d;
+  border: 1px solid #50020d;
   padding: 5%;
 }
 
-.add-product__form li{
-  display: flex;
-  flex-direction: column;
-  list-style: none;  
+.feedback {
+  font-size: 0.8rem;
+  color: #cf9518;
+  margin-bottom: 8px;
 }
 
-.add-product__form li label{
+.add-product__form li {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.add-product__form li label {
   font-weight: 600;
   margin: 15px 0 5px 0;
   color: #50020d;
 }
 
-.add-product__form li input{
+.add-product__form li input {
   width: 200px;
   height: 25px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   font-family: Poppins;
-  outline: none
+  outline: none;
 }
 
-.add-product__form li:nth-child(4) input,.add-product__form li:nth-child(5) input{
+.add-product__form li:nth-child(4) input,
+.add-product__form li:nth-child(5) input {
   width: 100px;
 }
 
-
-.add-product__info select{
+.add-product__info select {
   width: 200px;
   border: 1px solid rgba(0, 0, 0, 0.5);
   height: 25px;
   outline: none;
 }
 
-.add-product__form li p{
+.add-product__form li p {
   margin: 10px 0;
   color: #50020d;
   font-family: Poppins;
   font-weight: bold;
 }
 
-.add-product__categories span label{
-  margin:0 5px;
+.add-product__categories span label {
+  margin: 0 5px;
   font-size: 14px;
   font-weight: 400;
 }
 
-.add-product__categories span{
+.add-product__categories span {
   display: flex;
-  align-items:center;
+  align-items: center;
   margin: 10px 0;
 }
-.add-product__categories span input{
+.add-product__categories span input {
   width: 30px;
   height: 15px;
 }
 
-.add-product__categories ul li{
+.add-product__categories ul li {
   display: flex;
   width: 500px;
 }
 
-.add-product__form--btn{
+.add-product__form--btn {
   display: flex;
   width: 100%;
   margin: 20px 0;
   justify-content: space-between;
 }
 
-.add-product__form--btn button{
+.add-product__form--btn button {
   width: 40%;
   font-family: Poppins;
 }
 
-.add-product__form--btn button:nth-child(2){
- background-color:#F17C19;
- font-size: 14px;
- color: #fff;
- padding: 10px 5px;
- border: none;
+.add-product__form--btn button:nth-child(2) {
+  background-color: #f17c19;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 5px;
+  border: none;
 }
 
-.add-product__form--btn button:nth-child(1){
- background-color:#141417;
- font-size: 14px;
- color: #fff;
- padding: 10px 5px;
- border: none;
+.add-product__form--btn button:nth-child(1) {
+  background-color: #141417;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 5px;
+  border: none;
 }
 
-.add-product__form--btn button:nth-child(1):hover{
-  background-color:#454545;
+.add-product__form--btn button:nth-child(1):hover {
+  background-color: #454545;
 }
 
-.add-product__form--btn button:nth-child(2):hover{
-  background-color:#FFAC65
+.add-product__form--btn button:nth-child(2):hover {
+  background-color: #ffac65;
 }
 
 .add-product__btn--delete {
-  width: 80%;  
+  width: 80%;
   display: flex;
   justify-content: center;
-  margin: 30px auto;  
+  margin: 30px auto;
 }
 
-.add-product__btn--delete button{
-  background-color: #CB0000;
+.add-product__btn--delete button {
+  background-color: #cb0000;
   width: 300px;
   color: #fff;
   font-size: 14px;
   padding: 10px 5px;
   border: none;
   font-family: Poppins;
-} 
-
-.add-product__btn--delete button:hover{
-  background-color:#FF9D9D;
 }
 
+.add-product__btn--delete button:hover {
+  background-color: #ff9d9d;
+}
 
 /* End add-product's tyles */
 
@@ -1463,28 +1465,24 @@ footer {
     margin-bottom: 15px;
   }
   /* end of product details */
-  
+
   /* Add-product's tyles */
-  
-  
-  .add-product__container{
+
+  .add-product__container {
     display: flex;
     justify-content: space-between;
-    align-content: center;    
+    align-content: center;
   }
- 
 
-
-  .add-product__info{
+  .add-product__info {
     margin-bottom: 20px;
-    margin-top: 0;    
+    margin-top: 0;
   }
 
-  .add-product__form{
+  .add-product__form {
     margin-top: 20px;
-    padding: 0 15px
+    padding: 0 15px;
   }
-
 }
 
 .frequentQuestions__content p {

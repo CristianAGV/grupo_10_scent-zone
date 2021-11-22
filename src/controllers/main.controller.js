@@ -1,3 +1,6 @@
+const productModel = require('../model')
+const productsModel = require('../model/productsModel')
+const {validationResult} = require('express-validator')
 const controller = {
     home: (req, res) => {
         res.render('home')
@@ -31,6 +34,19 @@ const controller = {
     
     addProducts: (req,res) => {
         res.render('add-product')
+    },
+
+    processAddProduct: (req, res) => {
+        let info = req.body
+        let errors = validationResult(req)
+        if(errors.isEmpty()) {
+            productsModel.addProduct(info)
+            res.send('product added')
+        } else {
+            res.render('add-product', {errors: errors.mapped(), old: info})
+        }
+        
+       
     }
 }
 
