@@ -11,11 +11,12 @@
             <h2 class="add-product__title">Agregar nuevo producto</h2>
             <div class="add-product__container">
               <div class="add-product__description">
-                <h3>Anade una imagen del producto:</h3>
+                <h3>Añade una imagen del producto:</h3>
                 <div class="add-product__image">
                   <img src="./assets/product3.jpg" alt="channel" />
                 </div>          
-                <label for="myFile">Agregar imagen</label>
+                <div class="add-product__imageLoading">
+                  <label for="myFile">Agregar imagen</label>
                   <input type="file" id="myFile" name="productImage" hidden />
                   <textarea
                     name="description"
@@ -23,6 +24,7 @@
                     cols="20"
                     placeholder="Añade una descripción del producto"
                   ></textarea>
+                </div>
                 <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
               </div>
             <div class="add-product__form">

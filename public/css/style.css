@@ -826,6 +826,12 @@ a.main-header__btn {
   width: 100%;
 }
 
+.add-product__imageLoading{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .add-product__description h3 {
   margin: 10px 0;
   text-align: center;
