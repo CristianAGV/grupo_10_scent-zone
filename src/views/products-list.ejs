@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head')%>
+    <body>
+      <!-- Header's styles -->
+      <%- include('./partials/header')%>
+  
+      <!-- NavBar's styles -->
+      <%- include('./partials/nav')%>
+
+      <h2>Productos</h2>
+
+      <div class="products-list-container">
+          <table>
+              <tr>
+                  <th>Producto</th>
+                  <th>ID</th>
+                  <th>Marca</th>
+                  <th>Precio</th>
+                  <th>Categoría</th>
+                  <th>Género</th>
+                  <th>Tamaño</th>
+                  <th>Actions</th>
+              </tr>
+              <tr>
+                  <% if (locals.showCharacters && locals.showCharacters.length) { %>
+                    <% showCharacters.forEach(item => { %>
+                        <td> <p class="td-text"><%= item.productName %></p></td>
+                        <td> <p class="td-text"><%= item.id %></p></td>
+                        <td> <p class="td-text"><%= item.Brand %></p></td>
+                        <td> <p class="td-text"><%= item.price %></p></td>
+                        <td> <p class="td-text"><%= item.category %></p></td>
+                        <td> <p class="td-text"><%= item.gender %></p></td>
+                        <td> <p class="td-text"><%= item.size %></p></td>
+                        <td> <a>Edit</a> <a>Delete</a></td>
+
+                    <% }); %>
+                  <% } else {%>
+                    <h3>Todavía no hay productos</h3>
+                  <% } %>
+
+              </tr>
+          </table>
+      </div>
+    </body>
+    
+</body>
+</html>

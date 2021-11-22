@@ -1,6 +1,7 @@
-const productModel = require('../model')
+//const productsModel = require('../model/index')
 const productsModel = require('../model/productsModel')
 const {validationResult} = require('express-validator')
+const showProducts = productsModel.showProducts;
 const controller = {
     home: (req, res) => {
         res.render('home')
@@ -31,7 +32,11 @@ const controller = {
     editProduct: (req,res) => {
         res.render('edit-product')
     },
-    
+
+    productsList: (req, res) => {
+        res.render('products-list', {showProducts: showProducts})
+    },
+
     addProducts: (req,res) => {
         res.render('add-product')
     },
@@ -47,7 +52,9 @@ const controller = {
         }
         
        
-    }
+    },
+
+
 }
 
 module.exports = controller

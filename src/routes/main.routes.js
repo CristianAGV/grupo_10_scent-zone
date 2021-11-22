@@ -24,6 +24,7 @@ router.get('/registro', controller.registro)
 router.get('/edit-product', controller.editProduct)
 router.get('/add-products', controller.addProducts)
 router.post('/add-products', createProductValidations ,controller.processAddProduct)
+router.get('/products-list', controller.showProducts)
 
 
 module.exports = router

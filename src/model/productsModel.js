@@ -1,6 +1,7 @@
 const path = require('path')
 const fs = require('fs')
-const productsDb = require('../data/products.json')
+const productsDb = require('../data/products.json');
+const productsPath = path.resolve(__dirname, '../data/products.json');
 
 
 function calcIndex() {
@@ -31,6 +32,13 @@ const productsModel = {
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(productsDb, null, 4))
         console.log('product added');
     },
+    showProducts: function() {
+        return JSON.parse(
+            fs.readFileSync(productsPath, {
+              encoding: "utf8",
+            })
+          );
+    }
 }
 
 module.exports = productsModel
