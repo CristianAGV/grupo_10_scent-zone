@@ -1,31 +1,27 @@
 [
     {
         "id": 1,
-        "productName": "L'eau D'issey Pour Homme",
-        "brand": "Issey Miyake",
-        "description": "justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum",
-        "gender": "Masculino",
-        "category": "Frutal",
-        "color": "Orange",
-        "price": 124.7,
-        "size": 200,
-        "stock": 49,
-        "state":true,
-        "image":"Issey.jpg"
+        "description": "prueba ",
+        "productName": "prueba ",
+        "gender": "masculino",
+        "Brand": "prueba ",
+        "price": "2",
+        "size": "23",
+        "category": "amaderado",
+        "status": false,
+        "productImage": "productImage-1637680430839.jpg"
     },
     {
         "id": 2,
-        "productName": "Grey Vetiver",
-        "brand": "Tom Ford",
-        "description": "ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla",
-        "gender": "Masculino",
-        "category": "Cítrico",
-        "color": "Indigo",
-        "price": 61.91,
-        "size": 150,
-        "stock": 42,
-        "status":true,
-        "image":"Tom-Ford-Grey.jpg"
+        "description": "5yty",
+        "productName": "",
+        "gender": "masculino",
+        "Brand": "prueba",
+        "price": "",
+        "size": "2",
+        "category": "amaderado",
+        "status": "true",
+        "productImage": "productImage-1637678879945.jpg"
     },
     {
         "id": 3,
@@ -39,7 +35,7 @@
         "size": 200,
         "stock": 75,
         "status": true,
-        "image":"hermes.jpg"
+        "productImage": "hermes.jpg"
     },
     {
         "id": 4,
@@ -53,7 +49,7 @@
         "size": 200,
         "stock": 18,
         "status": true,
-        "image":"prada.jpg"
+        "productImage": "prada.jpg"
     },
     {
         "id": 5,
@@ -66,22 +62,20 @@
         "price": 86.32,
         "size": 150,
         "stock": 80,
-        "status":true,
-        "image":"halloween.jpg"
+        "status": true,
+        "productImage": "halloween.jpg"
     },
     {
         "id": 6,
-        "productName": "Bleu de Chanel",
-        "brand": "Chanel",
-        "description": "quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum",
-        "gender": "Masculino",
-        "category": "Floral",
-        "color": "Orange",
-        "price": 82.71,
-        "size": 200,
-        "stock": 13,
-        "status":true,
-        "image":"Bleu-channel.jpg"
+        "description": "prueba mami de multer ",
+        "productName": "prueba_multer1",
+        "gender": "masculino",
+        "Brand": "Olga lucia",
+        "price": "5678",
+        "size": "23",
+        "category": "amaderado",
+        "status": "true",
+        "productImage": "productImage-1637677861383.jpg"
     },
     {
         "id": 7,
@@ -94,8 +88,8 @@
         "price": 98.61,
         "size": 100,
         "stock": 35,
-        "status":true,
-        "image":"guerlain.jpg"
+        "status": true,
+        "productImage": "guerlain.jpg"
     },
     {
         "id": 8,
@@ -108,8 +102,8 @@
         "price": 114.57,
         "size": 150,
         "stock": 61,
-        "status":true,
-        "image":"jean-paul.jpg"
+        "status": true,
+        "productImage": "jean-paul.jpg"
     },
     {
         "id": 9,
@@ -122,8 +116,8 @@
         "price": 69.24,
         "size": 100,
         "stock": 29,
-        "status":true,
-        "image":"hugo-boss.jpg"
+        "status": true,
+        "productImage": "hugo-boss.jpg"
     },
     {
         "id": 10,
@@ -136,8 +130,8 @@
         "price": 73.74,
         "size": 200,
         "stock": 97,
-        "status":true,
-        "image":"giorgio.jpg"
+        "status": true,
+        "productImage": "giorgio.jpg"
     },
     {
         "id": 11,
@@ -150,8 +144,8 @@
         "price": 146.41,
         "size": 100,
         "stock": 23,
-        "status":true,
-        "image":"19-69.jpg"
+        "status": true,
+        "productImage": "19-69.jpg"
     },
     {
         "id": 12,
@@ -164,8 +158,8 @@
         "price": 138.08,
         "size": 150,
         "stock": 96,
-        "status":true,
-        "image":"prada.jpg"
+        "status": true,
+        "productImage": "prada.jpg"
     },
     {
         "id": 13,
@@ -178,8 +172,8 @@
         "price": 115.47,
         "size": 200,
         "stock": 15,
-        "status":true,
-        "image":"dior.jpg"
+        "status": true,
+        "productImage": "dior.jpg"
     },
     {
         "id": 14,
@@ -192,8 +186,8 @@
         "price": 108.62,
         "size": 100,
         "stock": 64,
-        "status":true,
-        "image":"chloe.jpg"
+        "status": true,
+        "productImage": "chloe.jpg"
     },
     {
         "id": 15,
@@ -206,8 +200,8 @@
         "price": 148.37,
         "size": 100,
         "stock": 79,
-        "status":true,
-        "image":"hermes.jpg"
+        "status": true,
+        "productImage": "hermes.jpg"
     },
     {
         "id": 16,
@@ -220,8 +214,8 @@
         "price": 106,
         "size": 100,
         "stock": 91,
-        "status":true,
-        "image":"eau-de-rochas.jpg"
+        "status": true,
+        "productImage": "eau-de-rochas.jpg"
     },
     {
         "id": 17,
@@ -234,8 +228,8 @@
         "price": 83.31,
         "size": 100,
         "stock": 95,
-        "status":true,
-        "image":"adolfo-dominguez.jpg"
+        "status": true,
+        "productImage": "adolfo-dominguez.jpg"
     },
     {
         "id": 18,
@@ -248,8 +242,8 @@
         "price": 107.32,
         "size": 200,
         "stock": 88,
-        "status":true,
-        "image":"aerin.jpg"
+        "status": true,
+        "productImage": "aerin.jpg"
     },
     {
         "id": 19,
@@ -262,8 +256,8 @@
         "price": 60.19,
         "size": 200,
         "stock": 64,
-        "status":true,
-        "image":"azur.png"
+        "status": true,
+        "productImage": "azur.png"
     },
     {
         "id": 20,
@@ -276,7 +270,7 @@
         "price": 54.91,
         "size": 150,
         "stock": 100,
-        "status":true,
-        "image":"louis-vuitton.png"
+        "status": true,
+        "productImage": "louis-vuitton.png"
     }
 ]

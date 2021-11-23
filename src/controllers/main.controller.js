@@ -30,17 +30,7 @@ const controller = {
     registro: (req, res) => {
         res.render('registro')
     },
-
-    editProductPage: (req,res) => {
-        // res.render('edit-product')
-        const idParam = req.params.id;
-        console.log(idParam)
-        const product = productsModel.editProductInfo( idParam );
-        console.log( product )
-        res.render('edit-product',{product})
-        // res.render('edit-product')
-    },
-
+   
     productsList: (req, res) => {
         res.render('products-list', {showProducts: showProducts})
     },
@@ -57,10 +47,43 @@ const controller = {
             res.send('product added')
         } else {
             res.render('add-product', {errors: errors.mapped(), old: info})
-        }
-        
-       
+        }   
     },
+
+    editProductPage: (req,res) => {
+        // res.render('edit-product')
+        const idParam = req.params.id;
+        // console.log(idParam)
+        const product = productsModel.editProductInfo( idParam );
+        // console.log( product )
+        res.render('edit-product',{product})
+        // res.render('edit-product')
+    },
+
+    editProduct: ( req, res ) => {
+        let info=req.body;
+        let errors = validationResult(req);
+        console.log( errors )
+        if(errors.isEmpty()) {
+            const idParam = req.params.id;
+            console.log('controladoe', idParam)
+            const data = {
+                ...req.body,
+                productImage: req.file.filename
+            }
+            productsModel.editProduct( idParam, data );
+            res.redirect("/products-list");
+        } else {
+            res.render('edit-product', {errors: errors.mapped(), old: info})
+        }   
+    },
+
+    deleteProduct: (req, res ) => {
+        const idParam = req.params.id;
+        productsModel.deleteProduct( idParam )
+        res.redirect("/products-list");
+    }
+
 
 
 }
