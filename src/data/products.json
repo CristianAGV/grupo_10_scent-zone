@@ -2,7 +2,7 @@
     {
         "id": 1,
         "productName": "L'eau D'issey Pour Homme",
-        "Brand": "Issey Miyake",
+        "brand": "Issey Miyake",
         "description": "justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum",
         "gender": "Masculino",
         "category": "Frutal",
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "productName": "Grey Vetiver",
-        "Brand": "Tom Ford",
+        "brand": "Tom Ford",
         "description": "ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla",
         "gender": "Masculino",
         "category": "Cítrico",
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "productName": "Terre d'Hermès",
-        "Brand": "Hermès",
+        "brand": "Hermès",
         "description": "varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc",
         "gender": "Unisex",
         "category": "Floral",
@@ -38,7 +38,7 @@
     {
         "id": 4,
         "productName": "Luna Rossa Carbon",
-        "Brand": "Prada",
+        "brand": "Prada",
         "description": "justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra",
         "gender": "Unisex",
         "category": "Dulce",
@@ -50,7 +50,7 @@
     {
         "id": 5,
         "productName": "Halloween Men",
-        "Brand": "Halloween Perfumes",
+        "brand": "Halloween Perfumes",
         "description": "habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem",
         "gender": "Masculino",
         "category": "Frutal",
@@ -62,7 +62,7 @@
     {
         "id": 6,
         "productName": "Bleu de Chanel",
-        "Brand": "Chanel",
+        "brand": "Chanel",
         "description": "quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum",
         "gender": "Masculino",
         "category": "Floral",
@@ -74,7 +74,7 @@
     {
         "id": 7,
         "productName": "L'Homme Idéal L'Intense",
-        "Brand": "Guerlain",
+        "brand": "Guerlain",
         "description": "augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia",
         "gender": "Masculino",
         "category": "Frutal",
@@ -86,7 +86,7 @@
     {
         "id": 8,
         "productName": "Le Male",
-        "Brand": "Jean Paul Gaultier",
+        "brand": "Jean Paul Gaultier",
         "description": "odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros",
         "gender": "Masculino",
         "category": "Cítrico",
@@ -98,7 +98,7 @@
     {
         "id": 9,
         "productName": "Boss Bottled Infinite",
-        "Brand": "Hugo Boss",
+        "brand": "Hugo Boss",
         "description": "ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum",
         "gender": "Masculino",
         "category": "Amaderado",
@@ -110,7 +110,7 @@
     {
         "id": 10,
         "productName": "Acqua di Giò",
-        "Brand": "Giorgio Armani",
+        "brand": "Giorgio Armani",
         "description": "in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi",
         "gender": "Masculino",
         "category": "Amaderado",
@@ -122,7 +122,7 @@
     {
         "id": 11,
         "productName": "L'Air Barbés",
-        "Brand": "19-69",
+        "brand": "19-69",
         "description": "leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede",
         "gender": "Unisex",
         "category": "Dulce",
@@ -134,7 +134,7 @@
     {
         "id": 12,
         "productName": "Infusion Iris",
-        "Brand": "Prada",
+        "brand": "Prada",
         "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non",
         "gender": "Femenino",
         "category": "Dulce",
@@ -146,7 +146,7 @@
     {
         "id": 13,
         "productName": "Miss Dior",
-        "Brand": "Dios",
+        "brand": "Dios",
         "description": "eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus",
         "gender": "Femenino",
         "category": "Cítrico",
@@ -158,7 +158,7 @@
     {
         "id": 14,
         "productName": "Eau de parfum Naturelle",
-        "Brand": "Chloé",
+        "brand": "Chloé",
         "description": "a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis",
         "gender": "Unisex",
         "category": "Cítrico",
@@ -170,7 +170,7 @@
     {
         "id": 15,
         "productName": "Twilly d'Hermès",
-        "Brand": "Hermès",
+        "brand": "Hermès",
         "description": "sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed",
         "gender": "Femenino",
         "category": "Cítrico",
@@ -182,7 +182,7 @@
     {
         "id": 16,
         "productName": "Eau de Rochas",
-        "Brand": "Rochas",
+        "brand": "Rochas",
         "description": "tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in",
         "gender": "Femenino",
         "category": "Cítrico",
@@ -194,7 +194,7 @@
     {
         "id": 17,
         "productName": "Agua fresca Mimosa Coriando",
-        "Brand": "Adolfo Dominguez",
+        "brand": "Adolfo Dominguez",
         "description": "penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
         "gender": "Femenino",
         "category": "Cítrico",
@@ -206,7 +206,7 @@
     {
         "id": 18,
         "productName": "Rose de Grasse pour filles",
-        "Brand": "Aerin",
+        "brand": "Aerin",
         "description": "justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
         "gender": "Femenino",
         "category": "Dulce",
@@ -218,7 +218,7 @@
     {
         "id": 19,
         "productName": "Azur Riviera",
-        "Brand": "Berdoues",
+        "brand": "Berdoues",
         "description": "nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere",
         "gender": "Femenino",
         "category": "Floral",
@@ -230,7 +230,7 @@
     {
         "id": 20,
         "productName": "Attrape-Rêves",
-        "Brand": "Louis Vuitton",
+        "brand": "Louis Vuitton",
         "description": "pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit",
         "gender": "Femenino",
         "category": "Floral",
