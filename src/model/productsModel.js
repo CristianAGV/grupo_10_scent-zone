@@ -15,7 +15,7 @@ function calcIndex() {
 }
 
 const productsModel = {
-    addProduct: function(info) {
+    addProduct: function(info, img) {
         let newProduct = {
             id: calcIndex(),
             productName: info.productName,
@@ -25,7 +25,8 @@ const productsModel = {
             category: info.category,
             price: Number(info.price),
             size: Number(info.size),
-            stock: 20
+            stock: 20,
+            image: img
         }
 
         productsDb.push(newProduct)

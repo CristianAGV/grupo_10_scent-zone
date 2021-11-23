@@ -45,7 +45,7 @@ const controller = {
         let info = req.body
         let errors = validationResult(req)
         if(errors.isEmpty()) {
-            productsModel.addProduct(info)
+            productsModel.addProduct(info, req.file.filename)
             res.send('product added')
         } else {
             res.render('add-product', {errors: errors.mapped(), old: info})
