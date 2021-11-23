@@ -12,6 +12,7 @@
 
       <div class="products-list-container">
           <table>
+            <thead>
               <tr>
                   <th>Producto</th>
                   <th>ID</th>
@@ -22,24 +23,30 @@
                   <th>Tamaño</th>
                   <th>Actions</th>
               </tr>
+            </thead>
+            <tbody>
               <tr>
-                  <% if (locals.showCharacters && locals.showCharacters.length) { %>
-                    <% showCharacters.forEach(item => { %>
-                        <td> <p class="td-text"><%= item.productName %></p></td>
-                        <td> <p class="td-text"><%= item.id %></p></td>
-                        <td> <p class="td-text"><%= item.Brand %></p></td>
-                        <td> <p class="td-text"><%= item.price %></p></td>
-                        <td> <p class="td-text"><%= item.category %></p></td>
-                        <td> <p class="td-text"><%= item.gender %></p></td>
-                        <td> <p class="td-text"><%= item.size %></p></td>
+                  <% if (locals.showProducts && locals.showProducts.length) { %>
+                    <% showProducts.forEach(item => { %>
+                        <td> <%= item.productName %></td>
+                        <td> <%= item.id %></td> 
+                        <td> <%= item.Brand %></td>
+                        <td> <%= item.price %></td>
+                        <td> <%= item.category %></td>
+                        <td> <%= item.gender %></td>
+                        <td> <%= item.size %></td>
                         <td> <a>Edit</a> <a>Delete</a></td>
+                      </tr>
+                    </tbody>
 
                     <% }); %>
+           
                   <% } else {%>
                     <h3>Todavía no hay productos</h3>
                   <% } %>
 
-              </tr>
+              
+
           </table>
       </div>
     </body>

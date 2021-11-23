@@ -38,7 +38,9 @@ const productsModel = {
               encoding: "utf8",
             })
           );
-    }
+    },
 }
+
+
 
 module.exports = productsModel

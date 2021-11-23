@@ -1,7 +1,7 @@
 //const productsModel = require('../model/index')
 const productsModel = require('../model/productsModel')
 const {validationResult} = require('express-validator')
-const showProducts = productsModel.showProducts;
+const showProducts = productsModel.showProducts();
 const controller = {
     home: (req, res) => {
         res.render('home')

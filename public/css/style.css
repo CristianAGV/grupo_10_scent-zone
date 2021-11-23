@@ -585,7 +585,7 @@ a.main-header__btn {
   text-decoration: none;
 }
 
-/*footer*/
+
 .product__section--title {
   width: 100%;
   font-size: 1.5rem;
@@ -1009,6 +1009,12 @@ textarea {
 }
 
 /* End add-product's tyles */
+
+/*Products list styles*/
+td {
+  width: 20%;
+}
+/*End of products list styles*/
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
