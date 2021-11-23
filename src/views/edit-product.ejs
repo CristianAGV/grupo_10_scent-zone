@@ -6,13 +6,13 @@
     <!-- NavBar's styles -->
     <%- include('./partials/nav')%>
     <main>
-      <form  action="/edit-product" method="POST">         
+      <form  action="/edit/todo" method="POST">         
         <h2 class="add-product__title">Editar producto</h2>
         <div class="add-product__container">
           <div class="add-product__description">
             <h3>Añade una imagen del producto:</h3>
             <div class="add-product__image">
-              <img src="assets/products/prada.jpg" alt="channel" />
+              <img src="/assets/products/<%= product.image %> " alt="channel" />
             </div>          
             <div class="add-product__imageLoading">
               <label for="image">Agregar imagen</label>
@@ -29,9 +29,7 @@
           <div class="add-product__info">
             <h3>Añade información del producto:</h3>
             <div class="add-product__form">
-              <!-- <% if(locals.errors){ %> <% for(let error in errors){ %>
-                <p class="feedback"><%= errors[error].msg %></p>
-                <% } %> <% } %> -->
+            
                 <ul>
                   <li>
                     <label for="nombre">Nombre del producto: </label>

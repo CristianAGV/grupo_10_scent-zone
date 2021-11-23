@@ -33,11 +33,11 @@ const controller = {
 
     editProductPage: (req,res) => {
         // res.render('edit-product')
-        // const idParam = req.params.id;
-        // console.log(idParam)
-        // const product = productsModel.editProductInfo( idParam );
-        // console.log( product )
-        res.render('history')
+        const idParam = req.params.id;
+        console.log(idParam)
+        const product = productsModel.editProductInfo( idParam );
+        console.log( product )
+        res.render('edit-product',{product})
         // res.render('edit-product')
     },
 
