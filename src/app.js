@@ -3,7 +3,7 @@ const path = require("path")
 const app = express()
 const mainRoutes = require('./routes')
 
-app.use(express.static(path.join(__dirname, '../public/')))
+app.use(express.static(path.resolve(__dirname, '../public/')))
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())

@@ -9,7 +9,9 @@
         "color": "Orange",
         "price": 124.7,
         "size": 200,
-        "stock": 49
+        "stock": 49,
+        "state":true,
+        "image":"Issey.jpg"
     },
     {
         "id": 2,
@@ -21,7 +23,9 @@
         "color": "Indigo",
         "price": 61.91,
         "size": 150,
-        "stock": 42
+        "stock": 42,
+        "status":true,
+        "image":"Tom-Ford-Grey.jpg"
     },
     {
         "id": 3,
@@ -33,7 +37,9 @@
         "color": "Pink",
         "price": 107.24,
         "size": 200,
-        "stock": 75
+        "stock": 75,
+        "status": true,
+        "image":"hermes.jpg"
     },
     {
         "id": 4,
@@ -45,7 +51,9 @@
         "color": "Puce",
         "price": 78.48,
         "size": 200,
-        "stock": 18
+        "stock": 18,
+        "status": true,
+        "image":"prada.jpg"
     },
     {
         "id": 5,
@@ -57,7 +65,9 @@
         "color": "Orange",
         "price": 86.32,
         "size": 150,
-        "stock": 80
+        "stock": 80,
+        "status":true,
+        "image":"halloween.jpg"
     },
     {
         "id": 6,
@@ -69,7 +79,9 @@
         "color": "Orange",
         "price": 82.71,
         "size": 200,
-        "stock": 13
+        "stock": 13,
+        "status":true,
+        "image":"Bleu-channel.jpg"
     },
     {
         "id": 7,
@@ -81,7 +93,9 @@
         "color": "Orange",
         "price": 98.61,
         "size": 100,
-        "stock": 35
+        "stock": 35,
+        "status":true,
+        "image":"guerlain.jpg"
     },
     {
         "id": 8,
@@ -93,7 +107,9 @@
         "color": "Green",
         "price": 114.57,
         "size": 150,
-        "stock": 61
+        "stock": 61,
+        "status":true,
+        "image":"jean-paul.jpg"
     },
     {
         "id": 9,
@@ -105,7 +121,9 @@
         "color": "Aquamarine",
         "price": 69.24,
         "size": 100,
-        "stock": 29
+        "stock": 29,
+        "status":true,
+        "image":"hugo-boss.jpg"
     },
     {
         "id": 10,
@@ -117,7 +135,9 @@
         "color": "Crimson",
         "price": 73.74,
         "size": 200,
-        "stock": 97
+        "stock": 97,
+        "status":true,
+        "image":"giorgio.jpg"
     },
     {
         "id": 11,
@@ -129,7 +149,9 @@
         "color": "Mauv",
         "price": 146.41,
         "size": 100,
-        "stock": 23
+        "stock": 23,
+        "status":true,
+        "image":"19-69.jpg"
     },
     {
         "id": 12,
@@ -141,7 +163,9 @@
         "color": "Teal",
         "price": 138.08,
         "size": 150,
-        "stock": 96
+        "stock": 96,
+        "status":true,
+        "image":"prada.jpg"
     },
     {
         "id": 13,
@@ -153,7 +177,9 @@
         "color": "Puce",
         "price": 115.47,
         "size": 200,
-        "stock": 15
+        "stock": 15,
+        "status":true,
+        "image":"dior.jpg"
     },
     {
         "id": 14,
@@ -165,7 +191,9 @@
         "color": "Yellow",
         "price": 108.62,
         "size": 100,
-        "stock": 64
+        "stock": 64,
+        "status":true,
+        "image":"chloe.jpg"
     },
     {
         "id": 15,
@@ -177,7 +205,9 @@
         "color": "Teal",
         "price": 148.37,
         "size": 100,
-        "stock": 79
+        "stock": 79,
+        "status":true,
+        "image":"hermes.jpg"
     },
     {
         "id": 16,
@@ -189,7 +219,9 @@
         "color": "Yellow",
         "price": 106,
         "size": 100,
-        "stock": 91
+        "stock": 91,
+        "status":true,
+        "image":"eau-de-rochas.jpg"
     },
     {
         "id": 17,
@@ -201,7 +233,9 @@
         "color": "Turquoise",
         "price": 83.31,
         "size": 100,
-        "stock": 95
+        "stock": 95,
+        "status":true,
+        "image":"adolfo-dominguez.jpg"
     },
     {
         "id": 18,
@@ -213,7 +247,9 @@
         "color": "Maroon",
         "price": 107.32,
         "size": 200,
-        "stock": 88
+        "stock": 88,
+        "status":true,
+        "image":"aerin.jpg"
     },
     {
         "id": 19,
@@ -225,7 +261,9 @@
         "color": "Purple",
         "price": 60.19,
         "size": 200,
-        "stock": 64
+        "stock": 64,
+        "status":true,
+        "image":"azur.png"
     },
     {
         "id": 20,
@@ -237,6 +275,8 @@
         "color": "Fuscia",
         "price": 54.91,
         "size": 150,
-        "stock": 100
+        "stock": 100,
+        "status":true,
+        "image":"louis-vuitton.png"
     }
 ]

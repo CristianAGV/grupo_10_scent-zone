@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 const productsDb = require('../data/products.json');
 const productsPath = path.resolve(__dirname, '../data/products.json');
-
+const products = JSON.parse(fs.readFileSync(productsPath, 'utf-8'));
 
 function calcIndex() {
     let index = 0
@@ -31,6 +31,11 @@ const productsModel = {
         productsDb.push(newProduct)
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(productsDb, null, 4))
         console.log('product added');
+    },
+    editProductInfo: function( id ){
+        const productFound = products.find( product => product.id === parseInt(id));
+        console.log(productFound)
+        return productFound;
     },
     showProducts: function() {
         return JSON.parse(

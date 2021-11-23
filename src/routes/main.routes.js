@@ -21,10 +21,13 @@ router.get('/historial', controller.historial)
 router.get('/product-detail', controller.product)
 router.get('/categories', controller.product)
 router.get('/registro', controller.registro)
-router.get('/edit-product', controller.editProduct)
+router.get('/edit/er', controller.editProductPage)
 router.get('/add-products', controller.addProducts)
 router.post('/add-products', createProductValidations ,controller.processAddProduct)
 router.get('/products-list', controller.productsList)
+
+// Edit products
+// router.get('/products/:id/edit',controller.editProductPage)
 
 
 module.exports = router
