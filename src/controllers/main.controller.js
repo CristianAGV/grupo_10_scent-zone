@@ -18,8 +18,9 @@ const controller = {
     historial: (req, res) => {
         res.render('history')
     },
-    product: (req, res) => {
-        res.render('product-detail')
+    productDetail: (req, res) => {
+        let chosenId = req.params.id;
+        res.render('product-detail', {showProducts: showProducts, chosenId})
     },
     categories: (req, res) => {
         res.render('categories')
