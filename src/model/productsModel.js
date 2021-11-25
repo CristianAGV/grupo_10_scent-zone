@@ -34,6 +34,7 @@ const productsModel = {
         fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(productsDb, null, 4))
         console.log('product added');
     },
+   
     showProducts: function() {
         return JSON.parse(
             fs.readFileSync(productsPath, {
@@ -41,8 +42,45 @@ const productsModel = {
             })
           );
     },
-}
 
+    editProductInfo: function( id ){
+        const productFound = productsDb.find( product => product.id === parseInt(id));        
+        return productFound;
+    },
+
+    editProduct: function( id, data  ){
+
+        const newProducts = productsDb.map( product => {
+            if (product.id === parseInt(id)){
+                product={
+                    id: parseInt(id),
+                    ...data
+                }                
+                return product
+                
+            }else{
+                return product
+            }
+        });   
+		
+		fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(newProducts,null, 4) );
+	},
+
+    deleteProduct: function( id ){
+        const newProducts = productsDb.map( product => {
+            if ( product.id === parseInt( id )){
+                return {
+                    ...product,
+                    status: false
+                }
+                
+            }else{
+                return product
+            }
+        });
+        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(newProducts,null, 4) );
+    }
+}
 
 
 module.exports = productsModel

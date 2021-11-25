@@ -6,17 +6,21 @@
     <!-- NavBar's styles -->
     <%- include('./partials/nav')%>
     <main>
-      <form  action="/add-products" method="POST">         
-        <h2 class="add-product__title">Agregar nuevo producto</h2>
+      <form  action="?_method=PUT" method="POST" enctype="multipart/form-data">         
+        <h2 class="add-product__title">Editar producto</h2>
         <div class="add-product__container">
           <div class="add-product__description">
             <h3>Añade una imagen del producto:</h3>
             <div class="add-product__image">
-              <img src="./assets/product3.jpg" alt="channel" />
+              <img src="/assets/products/<%= 
+                  ( locals.errors ) ? 'default-image.png' 
+                  : product.productImage 
+                  %> 
+                  " alt="channel" />
             </div>          
             <div class="add-product__imageLoading">
-              <label for="myFile">Agregar imagen</label>
-              <input type="file" id="myFile" name="productImage" hidden />
+              <label for="productImage">Agregar imagen</label>
+              <input type="file" id="productImage" name="productImage" hidden/>
               <textarea
               name="description"
               rows="5"
@@ -28,10 +32,11 @@
           </div>
           <div class="add-product__info">
             <h3>Añade información del producto:</h3>
+            <% if(locals.errors){ %> <% for(let error in errors){ %>
+              <p class="feedback"><%= errors[error].msg %></p>
+              <% } %> <% } %>
             <div class="add-product__form">
-              <% if(locals.errors){ %> <% for(let error in errors){ %>
-                <p class="feedback"><%= errors[error].msg %></p>
-                <% } %> <% } %>
+            
                 <ul>
                   <li>
                     <label for="nombre">Nombre del producto: </label>
@@ -111,6 +116,7 @@
                       </span>
                     </div>
                   </li>
+                  
                 </ul>
                 <div class="add-product__form--btn">
                   <button type="reset">Descartar</button>
@@ -120,10 +126,8 @@
             
             </div>
         </div>
-    </form>
-    <form action=""class="add-product__btn--delete">
-        <button>Eliminar producto</button>        
       </form>
+      
     </main>
     <%- include('./partials/footer')%>
   </body>
