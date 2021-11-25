@@ -1018,12 +1018,40 @@ textarea {
 /* End add-product's tyles */
 
 /*Products list styles*/
+
+.productDashboard__title{
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+.products__add-product{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background-color:#cf9518;  
+  cursor:pointer;
+  margin-left: 10px;
+  border-radius:3px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+
+.products__add-product a{
+  color: #ffff;
+  text-decoration: none;
+}
+
+
 td {
   width: 20%;
 }
 .table{
-  width: 100vw;
-  overflow-x: scroll;
+  display: block;  
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .table td, .table th{
@@ -1038,13 +1066,17 @@ td {
 }
 
 .table th{
-  background-color: darkblue;
+  background-color: #50020d;;
   color:#ffff;
 
 }
 
 .table tbody tr:nth-child(even){
   background-color:#f5f5f5;
+}
+
+.delete-trash__icon{
+  color:#cb0000;
 }
 
 /*End of products list styles*/

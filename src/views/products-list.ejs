@@ -8,7 +8,11 @@
       <!-- NavBar's styles -->
       <%- include('./partials/nav')%>
 
-      <h2>Productos</h2>
+      <h2 class="productDashboard__title"> Dashboard Productos</h2>
+
+      <div class="products__add-product">
+        <a href="/add-products" >Agregar producto</a>
+      </div>
 
       <div class="products-list-container">
           <table class="table">
@@ -17,12 +21,12 @@
                   <th>Producto</th>
                   <th>ID</th>
                   <th>Marca</th>
-                  <th>Precio</th>
+                  <th>Precio $</th>
                   <th>Categoría</th>
                   <th>Género</th>
                   <th>Estado</th>
                   <th>Imagen</th>                  
-                  <th>Tamaño</th>
+                  <th>Tamaño (ml)</th>
                   <th>Actions</th>
               </tr>
             </thead>
@@ -38,11 +42,10 @@
                         <td data-label="Categoria"> <%= item.category %></td>
                         <td data-label="Género"> <%= item.gender %></td>
                         <td data-label="Estado"> <%= item.status ? 'Activo' : 'Inactivo' %></td>
-                        <td data-label="Imagen"> <img src="assets/products/<%= item.productImage %>" alt="product"></td>
+                        <td data-label="Imagen"> <img src="./assets/<%= item.productImage %>" alt="product"></td>
                         <td data-label="Tamaño"> <%= item.size %></td>
-                        <td data-label="Actions"> <a href=""><i class="fas fa-eye"></i></a> <span><a href="/products/<%= item.id %>/edit"><i class="fas fa-edit"></i></a></span> <form action="/products/<%= item.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt"></i></button> </form></td>
-                      <% } %>
-                        
+                        <td data-label="Actions"> <a href="/product-detail/<%= item.id %> "><i class="fas fa-eye"></i></a> <span><a href="/products/<%= item.id %>/edit"><i class="fas fa-edit"></i></a></span> <form action="/products/<%= item.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt delete-trash__icon"></i></button> </form></td>
+                      <% } %>     
                         
                       </tr>
                     </tbody>

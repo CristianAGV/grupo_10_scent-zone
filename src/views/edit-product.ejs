@@ -20,7 +20,7 @@
             </div>          
             <div class="add-product__imageLoading">
               <label for="productImage">Agregar imagen</label>
-              <input type="file" id="productImage" name="productImage" />
+              <input type="file" id="productImage" name="productImage" hidden/>
               <textarea
               name="description"
               rows="5"
@@ -116,13 +116,7 @@
                       </span>
                     </div>
                   </li>
-                  <li>
-                    <label for="status">Estado:</label>
-                    <select name="status" id="status">
-                      <option value="true">Activo</option>
-                      <option value="false">Inactivo</option>                      
-                    </select>
-                  </li>
+                  
                 </ul>
                 <div class="add-product__form--btn">
                   <button type="reset">Descartar</button>
@@ -133,9 +127,7 @@
             </div>
         </div>
       </form>
-      <form action="?_method=DELETE" method="POST" class="add-product__btn--delete">
-          <button type="submit">Eliminar producto</button>        
-        </form>
+      
     </main>
     <%- include('./partials/footer')%>
   </body>

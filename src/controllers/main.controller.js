@@ -50,23 +50,18 @@ const controller = {
         }   
     },
 
-    editProductPage: (req,res) => {
-        // res.render('edit-product')
-        const idParam = req.params.id;
-        // console.log(idParam)
-        const product = productsModel.editProductInfo( idParam );
-        // console.log( product )
-        res.render('edit-product',{product})
-        // res.render('edit-product')
+    editProductPage: (req,res) => {        
+        const idParam = req.params.id;       
+        const product = productsModel.editProductInfo( idParam );        
+        res.render('edit-product',{product})        
     },
 
     editProduct: ( req, res ) => {
         let info=req.body;
         let errors = validationResult(req);
-        console.log( errors )
+        
         if(errors.isEmpty()) {
-            const idParam = req.params.id;
-            console.log('controladoe', idParam)
+            const idParam = req.params.id;           
             const data = {
                 ...req.body,
                 productImage: req.file.filename
@@ -83,8 +78,6 @@ const controller = {
         productsModel.deleteProduct( idParam )
         res.redirect("/products-list");
     }
-
-
 
 }
 

@@ -4,7 +4,7 @@ const app = express()
 const mainRoutes = require('./routes');
 const methodOverride =  require('method-override');
 
-app.use(express.static(path.resolve(__dirname, '../public')))
+app.use(express.static(path.resolve(__dirname, '../public/')))
 app.use(express.urlencoded({extended: false}))
 app.use(express.json());
 app.use(methodOverride('_method'));
