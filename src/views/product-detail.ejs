@@ -13,14 +13,15 @@
 <main class="main-product-detail">
   <div class="main-pd-container">
     <div class="img-pd-container">
-      <img src="./assets/atkinsons-arcade.jpg" alt="product image">
+       
+      <img src="/assets/<%= pickedProduct.productImage %> " alt="product image">
     </div>
     <div class="info-pd-container">
       <h2 class="product-title"><%= pickedProduct.productName %></h2>
       <div class="info-main-container">
         <div class="brand-div">
           <p class="brand-title">Marca:</p>
-          <p class="brand"><%= pickedProduct.brand %></p>
+          <p class="brand"><%= pickedProduct.Brand %></p>
         </div>
         <div class="price-div">
           <p class="price-product-detail">$<%= pickedProduct.price %></p>

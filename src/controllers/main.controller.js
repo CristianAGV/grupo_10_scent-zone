@@ -62,9 +62,16 @@ const controller = {
         let errors = validationResult(req);
         
         if(errors.isEmpty()) {
+            const { price, size, Brand, ...resto } = req.body;
+             
             const idParam = req.params.id;           
-            const data = {
-                ...req.body,
+            const data = {                
+                ...resto,
+                Brand: Brand,
+                price: parseFloat( price ),
+                size: parseFloat( price ),
+                stock:20,
+                status:true,                    
                 productImage: req.file.filename
             }
             productsModel.editProduct( idParam, data );

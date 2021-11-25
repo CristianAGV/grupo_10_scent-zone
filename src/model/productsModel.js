@@ -27,7 +27,8 @@ const productsModel = {
             price: Number(info.price),
             size: Number(info.size),
             stock: 20,
-            image: img
+            status: true,  // lo agregé en caso de que usemos este parametro para eliminar
+            productImage: img,   
         }
 
         productsDb.push(newProduct)
@@ -61,7 +62,9 @@ const productsModel = {
             }else{
                 return product
             }
-        });   
+        });
+        
+       
 		
 		fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(newProducts,null, 4) );
 	},
