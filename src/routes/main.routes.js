@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 // Se pasa como si fuera objeto ya que vamos a pasar varios controladores en un futuro y es mejor que estar creando variables con el require todo el tiempo//
-const {controller} = require('../controllers') 
+const {mainController, productsController, usersController} = require('../controllers/index') 
 const multer = require('multer')
 const {body} = require('express-validator')
 
@@ -40,24 +40,24 @@ let createProductValidations = [
 ]
 let upload = multer({ storage })
 
-router.get('/', controller.home)
-router.get('/cart', controller.cart)
-router.get('/questions', controller.questions)
-router.get('/login', controller.login)
-router.get('/historial', controller.historial)
-router.get('/product-detail/:id', controller.productDetail)
-router.get('/categories', controller.categories)
-router.get('/registro', controller.registro)
-router.get('/edit-product', controller.editProduct)
-router.get('/add-products', controller.addProducts)
-router.post('/add-products', upload.single('productImage'),createProductValidations ,controller.processAddProduct)
-router.get('/products-list', controller.productsList)
+router.get('/', mainController.home)
+router.get('/cart', mainController.cart)
+router.get('/questions', mainController.questions)
+router.get('/login', usersController.login)
+router.get('/historial', usersController.historial)
+router.get('/product-detail/:id', productsController.productDetail)
+router.get('/categories', productsController.categories)
+router.get('/registro', usersController.registro)
+router.get('/edit-product', productsController.editProduct)
+router.get('/add-products', productsController.addProducts)
+router.post('/add-products', upload.single('productImage'),createProductValidations ,productsController.processAddProduct)
+router.get('/products-list', productsController.productsList)
 
 // router.get('/edit/:id', controller.editProductPage)
-router.get('/products/:id/edit',controller.editProductPage)
-router.put('/products/:id/edit', upload.single('productImage'),createProductValidations, controller.editProduct)
+router.get('/products/:id/edit',productsController.editProductPage)
+router.put('/products/:id/edit', upload.single('productImage'),createProductValidations, productsController.editProduct)
 
 // Delete products 
-router.delete('/products/:id/delete', controller.deleteProduct)
+router.delete('/products/:id/delete', productsController.deleteProduct)
 
 module.exports = router
