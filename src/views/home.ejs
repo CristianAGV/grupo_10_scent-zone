@@ -31,200 +31,70 @@
     <main class="product__section">
       <h1 class="product__section--title">Promociones del dia</h1>
       <section class="product__container">
-        <a href="/products/product-detail"><article class="product__container--card">
-          <div class="perfume__img">
-            <img src="./assets/perfume1.jpg" alt="" />
-          </div>
-          <div class="perfume__info">
-            <p class="price">180$</p>
-            <p class="product__name">Coco Noir</p>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-shopping-cart cart"></i>
-          </div>
-        </article>
-      </a>
-      <a href="/products/product-detail"><article class="product__container--card">
-        <div class="perfume__img">
-          <img src="./assets/perfume1.jpg" alt="" />
-        </div>
-        <div class="perfume__info">
-          <p class="price">180$</p>
-          <p class="product__name">Coco Noir</p>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-shopping-cart cart"></i>
-        </div>
-      </article>
-    </a>
-    <a href="/products/product-detail"><article class="product__container--card">
-      <div class="perfume__img">
-        <img src="./assets/perfume1.jpg" alt="" />
-      </div>
-      <div class="perfume__info">
-        <p class="price">180$</p>
-        <p class="product__name">Coco Noir</p>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-shopping-cart cart"></i>
-      </div>
-    </article>
-  </a>
-  <a href="/products/product-detail"><article class="product__container--card">
-    <div class="perfume__img">
-      <img src="./assets/perfume1.jpg" alt="" />
-    </div>
-    <div class="perfume__info">
-      <p class="price">180$</p>
-      <p class="product__name">Coco Noir</p>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-shopping-cart cart"></i>
-    </div>
-  </article>
-</a>
+        <% if(products.length){ %> <% for(let i= 0; i<=5; i++) { %>
+        <a href="/products/product-detail/<%= products[i].id %> "
+          ><article class="product__container--card">
+            <div class="perfume__img">
+              <img src="./assets/<%= products[i].productImage %> " alt="" />
+            </div>
+            <div class="perfume__info">
+              <p class="price"><%= products[i].price %>$</p>
+              <p class="product__name"><%= products[i].productName %></p>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-shopping-cart cart"></i>
+            </div>
+          </article>
+        </a>
+        <% } %> <% } %>
       </section>
 
       <h1 class="product__section--title">Los mas vendidos</h1>
       <section class="product__container">
-        <a href="/products/product-detail"><article class="product__container--card">
-          <div class="perfume__img">
-            <img src="./assets/perfume1.jpg" alt="" />
-          </div>
-          <div class="perfume__info">
-            <p class="price">180$</p>
-            <p class="product__name">Coco Noir</p>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-shopping-cart cart"></i>
-          </div>
-        </article>
-      </a>
-      <a href="/products/product-detail"><article class="product__container--card">
-        <div class="perfume__img">
-          <img src="./assets/perfume1.jpg" alt="" />
-        </div>
-        <div class="perfume__info">
-          <p class="price">180$</p>
-          <p class="product__name">Coco Noir</p>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-shopping-cart cart"></i>
-        </div>
-      </article>
-    </a>
-
-    <a href="/products/product-detail"><article class="product__container--card">
-      <div class="perfume__img">
-        <img src="./assets/perfume1.jpg" alt="" />
-      </div>
-      <div class="perfume__info">
-        <p class="price">180$</p>
-        <p class="product__name">Coco Noir</p>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-shopping-cart cart"></i>
-      </div>
-    </article>
-  </a>
-  <a href="/products/product-detail"><article class="product__container--card">
-    <div class="perfume__img">
-      <img src="./assets/perfume1.jpg" alt="" />
-    </div>
-    <div class="perfume__info">
-      <p class="price">180$</p>
-      <p class="product__name">Coco Noir</p>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-shopping-cart cart"></i>
-    </div>
-  </article>
-</a>
+        <% if(products.length){ %> <% for(let i= 6; i<=11; i++) { %>
+        <a href="/products/product-detail/<%= products[i].id %> "
+          ><article class="product__container--card">
+            <div class="perfume__img">
+              <img src="./assets/<%= products[i].productImage %> " alt="" />
+            </div>
+            <div class="perfume__info">
+              <p class="price"><%= products[i].price %>$</p>
+              <p class="product__name"><%= products[i].productName %></p>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-shopping-cart cart"></i>
+            </div>
+          </article>
+        </a>
+        <% } %> <% } %>
       </section>
 
       <h1 class="product__section--title">Ediciones exclusivas</h1>
       <section class="product__container">
-        <a href="/products/product-detail"><article class="product__container--card">
-          <div class="perfume__img">
-            <img src="./assets/perfume1.jpg" alt="" />
-          </div>
-          <div class="perfume__info">
-            <p class="price">180$</p>
-            <p class="product__name">Coco Noir</p>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-star stars"></i>
-            <i class="fas fa-shopping-cart cart"></i>
-          </div>
-        </article>
-      </a>
-      <a href="/products/product-detail"><article class="product__container--card">
-        <div class="perfume__img">
-          <img src="./assets/perfume1.jpg" alt="" />
-        </div>
-        <div class="perfume__info">
-          <p class="price">180$</p>
-          <p class="product__name">Coco Noir</p>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-star stars"></i>
-          <i class="fas fa-shopping-cart cart"></i>
-        </div>
-      </article>
-    </a>
-
-    <a href="/products/product-detail"><article class="product__container--card">
-      <div class="perfume__img">
-        <img src="./assets/perfume1.jpg" alt="" />
-      </div>
-      <div class="perfume__info">
-        <p class="price">180$</p>
-        <p class="product__name">Coco Noir</p>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-star stars"></i>
-        <i class="fas fa-shopping-cart cart"></i>
-      </div>
-    </article>
-  </a>
-
-  <a href="/products/product-detail"><article class="product__container--card">
-    <div class="perfume__img">
-      <img src="./assets/perfume1.jpg" alt="" />
-    </div>
-    <div class="perfume__info">
-      <p class="price">180$</p>
-      <p class="product__name">Coco Noir</p>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-star stars"></i>
-      <i class="fas fa-shopping-cart cart"></i>
-    </div>
-  </article>
-</a>
+        <% if(products.length){ %> <% for(let i= 12; i<=17; i++) { %>
+        <a href="/products/product-detail/<%= products[i].id %> "
+          ><article class="product__container--card">
+            <div class="perfume__img">
+              <img src="./assets/<%= products[i].productImage %> " alt="" />
+            </div>
+            <div class="perfume__info">
+              <p class="price"><%= products[i].price %>$</p>
+              <p class="product__name"><%= products[i].productName %></p>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-star stars"></i>
+              <i class="fas fa-shopping-cart cart"></i>
+            </div>
+          </article>
+        </a>
+        <% } %> <% } %>
       </section>
     </main>
     <%- include('./partials/footer')%>
-
   </body>
 </html>

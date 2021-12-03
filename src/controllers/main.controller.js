@@ -6,7 +6,7 @@ const showProducts = productsModel.showProducts();
 
 const mainController = {
     home: (req, res) => {
-        res.render('home')
+        res.render('home', {products: showProducts})
     },
     cart: (req, res) => {
         res.render('cart')
