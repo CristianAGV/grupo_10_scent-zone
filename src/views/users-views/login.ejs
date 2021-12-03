@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head')%>
+  <%- include('../partials/head')%>
   <body>
     <!-- Header's styles -->
-    <%- include('./partials/header')%>
+    <%- include('../partials/header')%>
 
-    <!-- NavBar's styles -->
-    <%- include('./partials/nav')%>
-
+      <!-- NavBar's styles -->
+      <%- include('../partials/nav')%>
     <main>
       <!-- Login section -->
       <div class="main__login-container">
@@ -41,7 +40,7 @@
               </li>
             </ul>
             <div class="main__login-userOptions">
-              <a href="/registro" class="main__login-createCount"
+              <a href="/users/registro" class="main__login-createCount"
                 >¿No tiene una cuenta?</a
               >
               <a href="">¿Se te olvidó la contraseña?</a>
@@ -61,7 +60,7 @@
       </div>
     </main>
     <!-- Footer section -->
-    <%- include('./partials/footer')%>
+    <%- include('../partials/footer')%>
 
   </body>
 </html>

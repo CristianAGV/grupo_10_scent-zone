@@ -1,13 +1,13 @@
 
 const usersController = {
     login: (req, res) => {
-        res.render('login')
+        res.render('./users-views/login')
     },
     registro: (req, res) => {
-        res.render('registro')
+        res.render('./users-views/registro')
     },
     historial: (req, res) => {
-        res.render('history')
+        res.render('./users-views/history')
     },
 
 }

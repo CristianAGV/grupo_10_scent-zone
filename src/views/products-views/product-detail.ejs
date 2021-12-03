@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('./partials/head')%>
+  <%- include('../partials/head')%>
   <body>
     <!-- Header's styles -->
-    <%- include('./partials/header')%>
+    <%- include('../partials/header')%>
 
     <!-- NavBar's styles -->
-    <%- include('./partials/nav')%>
+    <%- include('../partials/nav')%>
 
 <% if (locals.showProducts.length && locals.showProducts) {%>
 <% let pickedProduct = showProducts.find(item => item.id == chosenId);%>
@@ -51,7 +51,7 @@
   <h3>Producto no encontrado</h3>
 <% }%>
   </body>
-  <%- include('./partials/footer')%>
+  <%- include('../partials/footer')%>
 
     </body>
   </html>
