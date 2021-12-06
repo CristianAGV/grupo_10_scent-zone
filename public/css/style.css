@@ -59,6 +59,10 @@ a.main-header__btn {
   text-decoration: none;
 }
 
+.header__userName{
+  color: #ffff;
+}
+
 .main-header__btn i {
   font-size: 1.4em;
   cursor: pointer;

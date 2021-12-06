@@ -12,17 +12,20 @@
       <div class="main__login-container">
         <h1 class="main__login-title">Inicio de sesión</h1>
         <div class="main__login-content">
-          <form action="/">
+          <% if(locals.errors){ %> <% for(let error in errors){ %>
+            <p class="feedback"><%= errors[error].msg %></p>
+            <% } %> <% } %>
+          <form action="authlogin" method="POST">
             <ul class="main__login-userCredentials">
               <li>
-                <label class="main__login-label" for="name"
+                <label class="main__login-label" for="email"
                   >Correo Electónico:</label
                 >
                 <input
                   class="main__login-input"
                   type="email"
-                  id="name"
-                  name="user_name"
+                  id="email"
+                  name="email"
                   placeholder="Correo electrónico"
                 />
               </li>
@@ -34,7 +37,7 @@
                   class="main__login-input"
                   type="password"
                   id="password"
-                  name="user_password"
+                  name="password"
                   placeholder="Contraseña"
                 />
               </li>

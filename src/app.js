@@ -5,6 +5,11 @@ const mainRoutes = require('./routes/main.routes.js');
 const usersRoutes = require('./routes/users.routes.js');
 const productsRoutes = require('./routes/products.routes.js');
 const methodOverride =  require('method-override');
+const session = require("express-session");
+
+app.use(session({
+    secret:"ScentZoneSecret"
+}));
 
 app.use(express.static(path.join(__dirname, '../public/')))
 app.set('view engine', 'ejs')
