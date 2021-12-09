@@ -19,7 +19,12 @@ const usersController = {
         if ( errors.isEmpty() ){
             const user = userModel.verifyUser( req.body.email, req.body.password );
             if ( user ){
+                delete user.password
                 req.session.userLogged = user;
+                
+                if(req.body.remember_user){
+                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                }
                 return res.redirect('/') 
             }else{
                 return res.render('/.users-views/login',{

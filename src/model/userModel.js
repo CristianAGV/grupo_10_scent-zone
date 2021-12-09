@@ -18,6 +18,11 @@ const userModel = {
             }
         }   
 
+    },
+
+    findByEmail: (email) => {
+        let emailFound = userDb.find(user => user.email === email);
+        return emailFound;
     }
 
 

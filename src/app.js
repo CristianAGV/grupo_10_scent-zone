@@ -6,11 +6,15 @@ const usersRoutes = require('./routes/users.routes.js');
 const productsRoutes = require('./routes/products.routes.js');
 const methodOverride =  require('method-override');
 const session = require("express-session");
+const cookies = require('cookie-parser')
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware')
 
 app.use(session({
     secret:"ScentZoneSecret"
 }));
 
+app.use(cookies())
+app.use(userLoggedMiddleware)
 app.use(express.static(path.join(__dirname, '../public/')))
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({extended: false}))

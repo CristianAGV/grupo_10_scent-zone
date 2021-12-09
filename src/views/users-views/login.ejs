@@ -5,16 +5,16 @@
     <!-- Header's styles -->
     <%- include('../partials/header')%>
 
-      <!-- NavBar's styles -->
-      <%- include('../partials/nav')%>
+    <!-- NavBar's styles -->
+    <%- include('../partials/nav')%>
     <main>
       <!-- Login section -->
       <div class="main__login-container">
         <h1 class="main__login-title">Inicio de sesión</h1>
         <div class="main__login-content">
           <% if(locals.errors){ %> <% for(let error in errors){ %>
-            <p class="feedback"><%= errors[error].msg %></p>
-            <% } %> <% } %>
+          <p class="feedback"><%= errors[error].msg %></p>
+          <% } %> <% } %>
           <form action="authlogin" method="POST">
             <ul class="main__login-userCredentials">
               <li>
@@ -41,6 +41,10 @@
                   placeholder="Contraseña"
                 />
               </li>
+              <li>
+                <label for="remember">Recuerdame</label>
+                <input type="checkbox" name="remember_user" id="remember" />
+              </li>
             </ul>
             <div class="main__login-userOptions">
               <a href="/users/registro" class="main__login-createCount"
@@ -64,6 +68,5 @@
     </main>
     <!-- Footer section -->
     <%- include('../partials/footer')%>
-
   </body>
 </html>
