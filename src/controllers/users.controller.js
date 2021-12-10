@@ -1,5 +1,6 @@
 const {validationResult} = require('express-validator')
 const userModel = require('../model/userModel')
+const bcrypt = require('bcryptjs');
 
 
 const usersController = {
@@ -37,7 +38,23 @@ const usersController = {
             return res.render('./users-views/login', {errors: errors.mapped()})
         }
 
-    }
+    },
+
+    create: (req, res) => {
+    
+        let newUser = {
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email, 
+            password: bcrypt.hashSync(req.body.password, 12),
+            image: req.file,
+            country: req.body.country,
+        }
+        userModel.create(newUser)
+        res.redirect('/');
+
+    },
+
 
 }
 

@@ -637,6 +637,18 @@ a.main-header__btn {
 
 /*register styles*/
 
+.register-container{
+  display: block;
+  margin: auto;
+}
+
+.user-image-input{
+  color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+}
+
 .register-title {
   margin: 30px 0px;
   font-size: 30px;
@@ -649,7 +661,6 @@ a.main-header__btn {
   margin: auto;
   margin-top: 25px;
   margin-bottom: 40px;
-  background-color: #50020d;
   padding: 30px;
   background-color: #141417;
   color: #ffff;
@@ -666,15 +677,15 @@ a.main-header__btn {
 }
 
 .main-form-section form {
-  display: flex;
-  justify-content: center;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
 }
 
 .text-area {
   border: none;
   padding: 4px 4px;
-  width: 90%;
-  margin: 5px 0px;
+  width: 80%;
   border-radius: 3px;
   border: solid #363435 1px;
   display: block;
@@ -687,18 +698,16 @@ a.main-header__btn {
   outline: none;
 }
 
-.reg-labels {
-  display: block;
-  margin: auto;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
+
 
 .reg-labels label {
   color: #141417;
   font-size: 14px;
   color: #ffff;
+  display:block;
+  margin: 9px 0px;
 }
+
 
 #country {
   display: block;
@@ -716,11 +725,13 @@ a.main-header__btn {
   outline: none;
 }
 
-.forgot-password p {
-  color: #ffff;
-  text-decoration: #fff;
+.have-account{
   font-size: 10px;
-  margin: 15px 0px;
+  margin: 20px 0px;
+}
+
+.have-account a{
+  color: #fff;
 }
 
 .button-container {
@@ -739,6 +750,8 @@ a.main-header__btn {
   font-size: 14px;
   color: white;
 }
+
+
 /*end of register styles*/
 
 /* product detail styles */
@@ -1826,15 +1839,17 @@ footer {
   /*register for desktop styles*/
 
   .main-form-section {
-    max-width: 35%;
+    max-width: 27%;
     margin-top: 35px;
     margin-bottom: 35px;
+    padding-left: 60px;
+    padding-right: 30px;
   }
 
   .text-area {
     padding: 5px 5px;
     margin: 10px 0px;
-    width: 100%;
+    width: 75%;
   }
 
   .reg-labels label {
@@ -1844,6 +1859,17 @@ footer {
   .reg-labels {
     margin-bottom: 15px;
   }
+
+.have-account{
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.have-account a{
+  color: #fff;
+}
+
+  /*end of register styles for desktop*/
 
   /*history styles for desktop*/
   .history-main {
