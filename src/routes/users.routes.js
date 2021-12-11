@@ -29,6 +29,6 @@ router.get('/historial', usersController.historial)
 router.get('/registro', usersController.registro);
 
 router.post('/authLogin', userValidations, usersController.processLogin)
-router.post('/registrarse', upload.single('image'), usersController.create)
+router.post('/registro', upload.single('image'), usersController.createUser)
 
 module.exports = router

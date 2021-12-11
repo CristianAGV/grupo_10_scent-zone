@@ -40,15 +40,13 @@ const usersController = {
 
     },
 
-    create: (req, res) => {
+    createUser: (req, res) => {
     
         let newUser = {
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email, 
+            ...req.body,
             password: bcrypt.hashSync(req.body.password, 12),
             image: req.file,
-            country: req.body.country,
+
         }
         userModel.create(newUser)
         res.redirect('/');

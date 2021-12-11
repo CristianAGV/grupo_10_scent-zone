@@ -12,7 +12,7 @@
       <h1 class="register-title">Regístrate</h1>
         <section class="main-form-section">
           
-            <form action="/registrarse" method="POST" enctype="multipart/form-data">
+            <form action="/registro" method="POST" enctype="multipart/form-data">
                 <div class="register-container">
                     <div class="reg-labels">
                         <label for="image">Agrega una imágen de perfil:</label>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="reg-labels">
                     <label for="country">País:</label>
-                    <select id="country" name="country" selected>
+                    <select id="country" name="country" selected required>
                         <option value="Afganistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -283,11 +283,11 @@
                 </div>
                 <div class="reg-labels">
                     <label for="password">Contraseña:</label>
-                    <input class="text-area" type="password" name="password" placeholder="Choose a password...">
+                    <input class="text-area" type="password" name="password" placeholder="Choose a password..." required>
                 </div>
                 <div class="reg-labels">
                     <label for="password-confirm">Confirmar contraseña:</label>
-                    <input class="text-area" type="password" name="password-confirm" placeholder="Confirm your password...">
+                    <input class="text-area" type="password" name="password-confirm" placeholder="Confirm your password..." required>
                 </div>
                 <div class="have-account">
                     <a href="./login"><p>¿Ya tienes una cuenta?</p></a>
