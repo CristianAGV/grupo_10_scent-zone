@@ -52,7 +52,7 @@ const usersController = {
                 email: req.body.email,
                 country: req.body.country,
                 password: bcrypt.hashSync(req.body.password, 12),
-                image: req.file,
+                image: req.file.filename,
                 category: "user",
                 role: "client",
 

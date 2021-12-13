@@ -223,20 +223,11 @@
         "first_name": "Jackson",
         "last_name": "Smith",
         "email": "JSmith@gmail.com",
-        "country": "Anguilla",
-        "password": "$2a$12$hsHeMRX2bZfTXIDTeT8UdudMLK3A4EwGwj3aWWvN/y6.L2Lzp3OTS",
-        "image": {
-            "fieldname": "image",
-            "originalname": "default-avatar.jpg",
-            "encoding": "7bit",
-            "mimetype": "image/jpeg",
-            "destination": "C:\\Users\\Angelo\\Documents\\cosasdesalma\\Proyecto-integrador\\grupo_10_scent-zone\\public\\assets\\users",
-            "filename": "image-1639439308677.jpg",
-            "path": "C:\\Users\\Angelo\\Documents\\cosasdesalma\\Proyecto-integrador\\grupo_10_scent-zone\\public\\assets\\users\\image-1639439308677.jpg",
-            "size": 8022
-        },
+        "country": "Belarus",
+        "password": "$2a$12$Uigy0.UVH6wYIiS/iEdrG.J120Pk4e/khAZu6fNqGxTYfrtNmB/JG",
+        "image": "image-1639439570346.jpg",
         "category": "user",
         "role": "client",
-        "id": 22
+        "id": 23
     }
 ]
