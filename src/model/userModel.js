@@ -50,7 +50,7 @@ const userModel = {
 
     create: (user) => {
         let db = userModel.getUsers();
-        character.id = idGen();
+        user.id = idGen();
         db.push(user);
         userModel.pushUser(db);
     
