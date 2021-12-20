@@ -43,7 +43,7 @@ let upload = multer({ storage })
 router.get('/', mainController.home)
 
 router.get('/product-detail/:id', productsController.productDetail)
-router.get('/categories', productsController.categories)
+router.get('/categories/:name', productsController.categories)
 
 router.get('/edit-product', productsController.editProduct)
 router.get('/add-product', productsController.addProducts)

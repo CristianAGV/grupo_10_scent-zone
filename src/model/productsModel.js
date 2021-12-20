@@ -44,6 +44,10 @@ const productsModel = {
           );
     },
 
+    showProductsByCategory: function( category ){
+        return productsDb.filter( prod => prod.category === category );
+    },
+
     editProductInfo: function( id ){
         const productFound = productsDb.find( product => product.id === parseInt(id));        
         return productFound;

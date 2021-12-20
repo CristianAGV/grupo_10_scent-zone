@@ -2,6 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const userDb = require('../data/users.json');
 const usersPath = path.resolve(__dirname, '../data/users.json');
+
+const bcrypt = require('bcryptjs');
+
 let usableUsersDb = JSON.parse(fs.readFileSync(usersPath, 'utf8'));
 
 const idGen = function (){
@@ -21,7 +24,7 @@ const userModel = {
         const userFound = userDb.find( user => user.email === email);
 
         if ( userFound ){
-            if ( password === userFound.password ){
+            if ( bcrypt.compareSync( password, userFound.password ) ){
                 return userFound;
             }else{
                 return null;
@@ -45,12 +48,12 @@ const userModel = {
 
     pushUser: (base) => {
         base = JSON.stringify(base, null, 4);
-    return fs.writeFileSync(usersPath, base)
+        return fs.writeFileSync(usersPath, base)
     },
 
     create: (user) => {
         let db = userModel.getUsers();
-        character.id = idGen();
+        user.id = idGen();
         db.push(user);
         userModel.pushUser(db);
     

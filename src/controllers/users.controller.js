@@ -45,10 +45,14 @@ const usersController = {
         let newUser = {
             ...req.body,
             password: bcrypt.hashSync(req.body.password, 12),
-            image: req.file,
+            image: req.file.filename,
 
         }
-        userModel.create(newUser)
+        
+        console.log( newUser )
+
+        userModel.create(newUser);
+        
         res.redirect('/');
 
     },

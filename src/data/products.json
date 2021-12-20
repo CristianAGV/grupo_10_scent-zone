@@ -165,7 +165,7 @@
         "size": 150,
         "stock": 96,
         "status": true,
-        "productImage": "prada.jpg"
+        "productImage": "prada-iris.jpg"
     },
     {
         "id": 13,
@@ -277,6 +277,6 @@
         "size": 150,
         "stock": 100,
         "status": true,
-        "productImage": "louis-vuitton.png"
+        "productImage": "LouisVuitton.png"
     }
 ]

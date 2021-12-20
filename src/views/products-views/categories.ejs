@@ -12,7 +12,7 @@
        <!-- Categories's section -->
        <div class="main__categories-container">
         <div class="main__categories-menu">
-            <img src="../assets/slider_categories-resized.jpg" alt="" class="main__categories-image">
+            <img src="/assets/slider_categories-resized.jpg" alt="" class="main__categories-image">
             <div class="main__categories-mainMenu">
                 <h1 class="main__categories-title">Categoria</h1>                
                 <div class="main__categories-filter">
@@ -28,133 +28,26 @@
         </div>
         <!-- Products by categories -->
         <div class="main__categories-productsContent">          
+          <% prodByCategory.forEach(product => { %>
+            <article class="product__categories--card">
+             <a href="/products/product-detail">
+              <div class="perfume__img">
+                <% console.log(product.productImage) %> 
+                <img src="/assets/products/<%=product.productImage%>"  alt="Product Image" />
+              </div>
+              <div class="perfume__info">
+                <p class="price"><%= product.price %> $</p>
+                <p class="product__name"><%= product.productName %> </p>
+                <i class="fas fa-star stars"></i>
+                <i class="fas fa-star stars"></i>
+                <i class="fas fa-star stars"></i>
+                <i class="fas fa-star stars"></i>      
+                <i class="fas fa-shopping-cart cart"></i>
+              </div>
+            </a>
+            </article>
             
-              <article class="product__categories--card">
-               <a href="/products/product-detail">
-                <div class="perfume__img">
-                  <img src="../assets/product7-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </a>
-              </article>
-        
-            <article class="product__categories--card">
-              <a href="/products/product-detail">
-                <div class="perfume__img">
-                  <img src="../assets/product1-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </a>
-              </article>
-            <article class="product__categories--card">
-              <a href="/products/product-detail">
-                <div class="perfume__img">
-                  <img src="../assets/product2-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </a>
-              </article>
-            <article class="product__categories--card">
-                <div class="perfume__img">
-                  <img src="../assets/product3-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </article>
-            <article class="product__categories--card">
-                <div class="perfume__img">
-                  <img src="../assets/product4-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </article>
-            <article class="product__categories--card">
-                <div class="perfume__img">
-                  <img src="../assets/product5-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </article>
-            <article class="product__categories--card">
-                <div class="perfume__img">
-                  <img src="../assets/product6-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </article>
-            <article class="product__categories--card">
-                <div class="perfume__img">
-                  <img src="../assets/product8-resized.jpg" alt="" />
-                </div>
-                <div class="perfume__info">
-                  <p class="price">180$</p>
-                  <p class="product__name">Coco Noir</p>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-                  <i class="fas fa-star stars"></i>
-      
-                  <i class="fas fa-shopping-cart cart"></i>
-                </div>
-              </article>
+          <% }) %>
           
         </div>
         <div class="main__categories-sections">

@@ -8,7 +8,9 @@ const productsController = {
         res.render('./products-views/product-detail', {showProducts: showProducts, chosenId})
     },
     categories: (req, res) => {
-        res.render('./products-views/categories')
+        const category = req.params.name;
+        const prodByCategory = productsModel.showProductsByCategory( category )
+        res.render('./products-views/categories', { prodByCategory : prodByCategory })
     },
     productsList: (req, res) => {
         res.render('./products-views/products-list', {showProducts: showProducts})

@@ -13,7 +13,7 @@ let userValidations = [
 
 let storage = multer.diskStorage({
     destination: function(req, file, cb){
-        let imgFolder = path.resolve(__dirname, '../public/images/assets/users');
+        let imgFolder = path.resolve(__dirname, '../../public/assets/users');
         cb(null, imgFolder);
     },
     filename: function(req, file, cb){
