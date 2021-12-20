@@ -218,6 +218,27 @@
         "image": "user-man8(1).jpg",
         "country": "España",
         "role": "client"
+    },
+    {
+        "first_name": "Jackson",
+        "last_name": "Smith",
+        "email": "JSmith@gmail.com",
+        "country": "Belarus",
+        "password": "$2a$12$Uigy0.UVH6wYIiS/iEdrG.J120Pk4e/khAZu6fNqGxTYfrtNmB/JG",
+        "image": "image-1639439570346.jpg",
+        "category": "user",
+        "role": "client",
+        "id": 23
+    },
+    {
+        "first_name": "prueba",
+        "last_name": "prueba2",
+        "email": "prueba@prueba.com",
+        "country": "Afganistan",
+        "password": "$2a$12$snN34vX9lVa2I78QBVjxOOHvgSMMjcxmoANmFVAQAbWy7aY3ToLqu",
+        "image": "image-1640034099574.jpg",
+        "category": "user",
+        "role": "client",
+        "id": 24
     }
-    
 ]

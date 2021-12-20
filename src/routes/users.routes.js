@@ -9,6 +9,15 @@ let userValidations = [
     body('email').notEmpty().withMessage('Debes ingresar un email'),
     body('email').isEmail(),
     body('password').notEmpty().withMessage('Debes ingresar una contraseña')
+];
+
+let registerValidations = [
+    body('email').notEmpty().withMessage('Debes ingresar un email'),
+    body('email').isEmail(),
+    body('password').notEmpty().withMessage('Debes ingresar una contraseña'),
+    body('first_name').notEmpty().withMessage('Debes ingresar un nombre'),
+    body('last_name').notEmpty().withMessage('Debes ingresar un apellido'),
+    body('country').notEmpty().withMessage('Debes ingresar tu país'),
 ]
 
 let storage = multer.diskStorage({
@@ -29,6 +38,6 @@ router.get('/historial', usersController.historial)
 router.get('/registro', usersController.registro);
 
 router.post('/authLogin', userValidations, usersController.processLogin)
-router.post('/registro', upload.single('image'), usersController.createUser)
+router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
 
 module.exports = router

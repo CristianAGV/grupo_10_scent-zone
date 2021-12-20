@@ -28,7 +28,7 @@ const usersController = {
                 }
                 return res.redirect('/') 
             }else{
-                return res.render('/.users-views/login',{
+                return res.render('./users-views/login',{
                     errors:[{
                         msg: "Credenciales invalidas"
                     }]
@@ -40,21 +40,28 @@ const usersController = {
 
     },
 
-    createUser: (req, res) => {
-    
-        let newUser = {
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 12),
-            image: req.file.filename,
+    createUser: (req, res) => {       
 
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+
+            let newUser = {
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                country: req.body.country,
+                password: bcrypt.hashSync(req.body.password, 12),
+                image: req.file.filename,
+                category: "user",
+                role: "client",
+
+            }
+            userModel.create(newUser)
+            res.redirect('/');
+        } else{
+            return res.render('./users-views/registro', {errors: errors.mapped(), old: req.body})
         }
-        
-        console.log( newUser )
-
-        userModel.create(newUser);
-        
-        res.redirect('/');
-
     },
 
 
