@@ -565,7 +565,7 @@ a.main-header__btn {
 
 .product__categories--card {  
   /* width: 40%; */
-  width: 150px;
+  width: 170px;
   border-radius: 8px;
   background: rgba(80, 2, 13, 0.7);
   -webkit-box-shadow: 1px 1px 6px 3px rgba(86, 86, 86, 0.53);
@@ -1820,7 +1820,7 @@ footer {
   }
 
   .product__categories--card {
-    width: 150px;
+    width: 170px;
     margin-right: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
