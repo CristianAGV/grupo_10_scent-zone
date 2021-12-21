@@ -4,6 +4,7 @@ const path = require('path');
 const {usersController} = require('../controllers/index');
 const {body} = require("express-validator");
 const multer = require('multer');
+const clientMiddleware = require('../middlewares/clientMiddleware');
 
 let userValidations = [
     body('email').notEmpty().withMessage('Debes ingresar un email'),
@@ -33,9 +34,9 @@ let storage = multer.diskStorage({
 let upload = multer({storage: storage});
 
 
-router.get('/login', usersController.login)
+router.get('/login', clientMiddleware,usersController.login)
 router.get('/historial', usersController.historial)
-router.get('/registro', usersController.registro);
+router.get('/registro', clientMiddleware, usersController.registro);
 
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)

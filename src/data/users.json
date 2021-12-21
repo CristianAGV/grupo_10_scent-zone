@@ -240,5 +240,16 @@
         "category": "user",
         "role": "client",
         "id": 24
+    },
+    {
+        "first_name": "Pedro",
+        "last_name": "Perez",
+        "email": "pp2121@res.com",
+        "country": "Colombia",
+        "password": "$2a$12$/G2/PK4gbFBtKx0g5MDpd.eYZsETBUPri41c00gSaC.fc9Iktcufu",
+        "image": "image-1640123724194.jpg",
+        "category": "user",
+        "role": "client",
+        "id": 25
     }
 ]
