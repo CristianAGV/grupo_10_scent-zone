@@ -30,7 +30,7 @@
         <div class="main__categories-productsContent">          
           <% prodByCategory.forEach(product => { %>
             <article class="product__categories--card">
-             <a href="/products/product-detail">
+             <a href="/products/product-detail/<%= product.id %> ">
               <div class="perfume__img">
                 <% console.log(product.productImage) %> 
                 <img src="/assets/products/<%=product.productImage%>"  alt="Product Image" />
