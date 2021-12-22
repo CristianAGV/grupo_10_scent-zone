@@ -251,5 +251,16 @@
         "category": "user",
         "role": "client",
         "id": 25
+    },
+    {
+        "first_name": "carlos",
+        "last_name": "grisales",
+        "email": "carlos@hotmail.com",
+        "country": "Barbados",
+        "password": "$2a$12$WpvjTEDQzGs6PWHzwc2kbOKmD9rj14cPjA7rYLW0KoKSyNRwYWuuu",
+        "image": "image-1640134480182.jpg",
+        "category": "user",
+        "role": "client",
+        "id": 26
     }
 ]

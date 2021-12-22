@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const {productsController, mainController} = require('../controllers/index');
 
+
+
 const multer = require('multer')
 const {body} = require('express-validator')
 
