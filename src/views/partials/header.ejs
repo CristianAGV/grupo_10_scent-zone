@@ -1,6 +1,6 @@
 <header class="main-header">
   <div class="main-header__container">
-    <h1 class="main-header__title"> <a href= "/" >SCENTZONE</a></h1>
+    <h1 class="main-header__title"><a href="/">SCENTZONE</a></h1>
     <div class="main-header__menuIcons">
       <a href="/" class="main-header__btn"><i class="fas fa-home"></i></a>
       <a href="/cart" class="main-header__btn"
@@ -11,6 +11,9 @@
       ></a>
       <% if (locals.user) { %>
       <p class="header__userName"><%= user.first_name %></p>
+      <a href="/users/logout" class="main-header__btn"
+        ><i class="fas fa-sign-out-alt"></i
+      ></a>
       <% } %>
     </div>
     <div class="main-header__search">

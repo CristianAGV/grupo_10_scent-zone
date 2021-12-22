@@ -51,6 +51,7 @@ let upload = multer({storage: storage});
 router.get('/login', clientMiddleware,usersController.login)
 router.get('/historial', usersController.historial)
 router.get('/registro', clientMiddleware, usersController.registro);
+router.get('/logout', usersController.logOut)
 
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
