@@ -9,7 +9,8 @@ const clientMiddleware = require('../middlewares/clientMiddleware');
 let userValidations = [
     body('email').notEmpty().withMessage('Debes ingresar un email'),
     body('email').isEmail(),
-    body('password').notEmpty().withMessage('Debes ingresar una contraseña')
+    body('password').notEmpty().withMessage('Debes ingresar una contraseña'),
+    
 ];
 
 let registerValidations = [
@@ -19,6 +20,19 @@ let registerValidations = [
     body('first_name').notEmpty().withMessage('Debes ingresar un nombre'),
     body('last_name').notEmpty().withMessage('Debes ingresar un apellido'),
     body('country').notEmpty().withMessage('Debes ingresar tu país'),
+    body('productImage').custom((value, { req })=> {
+        let file = req.file
+        let acceptedExtensions = ['.png', '.jpg']
+        if(!file) {
+            throw new Error('Debes subir una imagen de perfil')
+        } else {
+            let fileExtension = path.extname(file.originalname)
+            if(!acceptedExtensions.includes(fileExtension)) {
+                throw new Error(`Solo se aceptan formatos de imagen ${acceptedExtensions.join(", ")}`)
+            }
+        }
+        return true
+    })
 ]
 
 let storage = multer.diskStorage({
