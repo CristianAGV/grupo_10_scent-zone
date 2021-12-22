@@ -20,7 +20,6 @@ const usersController = {
         if ( errors.isEmpty() ){
             const user = userModel.verifyUser( req.body.email, req.body.password );
             if ( user ){
-                delete user.password
                 req.session.userLogged = user;
                 
                 if(req.body.remember_user){
