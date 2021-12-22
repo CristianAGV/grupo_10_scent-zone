@@ -21,7 +21,7 @@ const userModel = {
 
     verifyUser: ( email, password ) => {
 
-        const userFound = userDb.find( user => user.email === email);
+        const userFound = JSON.parse(fs.readFileSync(usersPath, 'utf8')).find( user => user.email === email);
 
         if ( userFound ){
             if ( bcrypt.compareSync( password, userFound.password ) ){

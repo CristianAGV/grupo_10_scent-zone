@@ -251,5 +251,16 @@
         "category": "user",
         "role": "client",
         "id": 25
+    },
+    {
+        "first_name": "Cristian",
+        "last_name": "Gutierrez",
+        "email": "prueba@gmail.com",
+        "country": "Colombia",
+        "password": "$2a$12$Phal3LsUMlXiso.S9/loleR0QZNgkqcC1aX1LEM8uiWWL2MwP1/E2",
+        "image": "image-1640138840421.jpg",
+        "category": "user",
+        "role": "client",
+        "id": 26
     }
 ]
