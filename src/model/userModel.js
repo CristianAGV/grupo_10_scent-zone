@@ -20,15 +20,18 @@ const idGen = function (){
 const userModel = {
 
     verifyUser: ( email, password ) => {
+        console.log( "logueo",email, password )
 
-        const userFound = userDb.find( user => user.email === email);
-
+        const userFound = usableUsersDb.find( user => user.email == email);
+        console.log( "usuario encontrado ",userFound )
         if ( userFound ){
             if ( bcrypt.compareSync( password, userFound.password ) ){
                 return userFound;
             }else{
                 return null;
             }
+        }else{
+            return null;
         }   
 
     },

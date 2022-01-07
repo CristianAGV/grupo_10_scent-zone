@@ -19,6 +19,7 @@ const usersController = {
 
         if ( errors.isEmpty() ){
             const user = userModel.verifyUser( req.body.email, req.body.password );
+            console.log( user )
             if ( user ){
                 req.session.userLogged = user;
                 
