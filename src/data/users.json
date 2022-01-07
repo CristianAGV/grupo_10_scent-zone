@@ -253,113 +253,14 @@
         "id": 25
     },
     {
-        "first_name": "carlos",
-        "last_name": "grisales",
-        "email": "carlos@hotmail.com",
-        "country": "Barbados",
-        "password": "$2a$12$WpvjTEDQzGs6PWHzwc2kbOKmD9rj14cPjA7rYLW0KoKSyNRwYWuuu",
-        "image": "image-1640134480182.jpg",
+        "first_name": "Cristian",
+        "last_name": "Gutierrez",
+        "email": "prueba@gmail.com",
+        "country": "Colombia",
+        "password": "$2a$12$Phal3LsUMlXiso.S9/loleR0QZNgkqcC1aX1LEM8uiWWL2MwP1/E2",
+        "image": "image-1640138840421.jpg",
         "category": "user",
         "role": "client",
         "id": 26
-    },
-    {
-        "first_name": "carlos",
-        "last_name": "grisales",
-        "email": "carlose@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$zd9nV8t8CFdypB.FZcklBOujoqLqFNssWeIw/NlbvzQxrZIjWbdjm",
-        "image": "image-1640136058248.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 27
-    },
-    {
-        "first_name": "carlos",
-        "last_name": "grisales",
-        "email": "carlos@hotmail.com",
-        "country": "Colombia",
-        "password": "$2a$12$lhOj48ioC8IQIow1jAVMG.TNb86A5/3IK76cJNmkKFbSb6nu8EDum",
-        "image": "image-1640136373311.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 28
-    },
-    {
-        "first_name": "grisales",
-        "last_name": "montoya",
-        "email": "grisales@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$6bPLkKl0LnEFV6dlJbY2NOUABgTWNJ5tj3fKaHdIEDAKhYu.epxS2",
-        "image": "image-1640136961778.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 29
-    },
-    {
-        "first_name": "grisales2",
-        "last_name": "montoya2",
-        "email": "grisales2@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$28XSg3FXg3vZ38Pwg0isbuXFE.K2ljcXzqAxsdqxNVBuIUuQlFGMy",
-        "image": "image-1640138034138.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 30
-    },
-    {
-        "first_name": "grisales3",
-        "last_name": "grislaes4",
-        "email": "grisales3@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$tbPtWnjFDGc2lwd3yHdUKO2UL3yjgXg.CCUy3BIJY0WrwEISr73EW",
-        "image": "image-1640138210754.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 31
-    },
-    {
-        "first_name": "grisales5",
-        "last_name": "grisales5",
-        "email": "grisales5@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$vHlx7arOd4dH.aVwpVDWheGMjGYwDV3kXBxcNamYmNhbIC2crlepe",
-        "image": "image-1640138397714.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 32
-    },
-    {
-        "first_name": "carlos56",
-        "last_name": "grisales56",
-        "email": "grisales56@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$733bbSPvsrYOY3O/upwM6.RRcJfv2VEme/oCk56YSgtUBmlqm5SNC",
-        "image": "image-1640138567897.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 33
-    },
-    {
-        "first_name": "grisales666",
-        "last_name": "grisales666",
-        "email": "grisales666@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$vm0bvTOfgnl5fBHrwH0b9.n9RDVnHzbbojS5Eh1uMeoUb2t5.HysW",
-        "image": "image-1640138700271.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 34
-    },
-    {
-        "first_name": "eduardo777",
-        "last_name": "grisales777",
-        "email": "grisales777@hotmail.com",
-        "country": "Afganistan",
-        "password": "$2a$12$89W/s8u8JJHTieXHu3SdeOAELjJKhZkyRZePlneWL.yXuDxE9lz5G",
-        "image": "image-1640138857438.jpg",
-        "category": "user",
-        "role": "client",
-        "id": 35
     }
 ]
