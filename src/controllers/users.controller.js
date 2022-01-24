@@ -3,6 +3,7 @@ const userModel = require('../model/userModel')
 const bcrypt = require('bcryptjs');
 
 
+
 const usersController = {
     login: (req, res) => {
         res.render('./users-views/login')
@@ -40,9 +41,9 @@ const usersController = {
 
     },
 
-    createUser: (req, res) => {       
-
-        let errors = validationResult(req);
+    createUser: async(req, res) => {  
+        try {
+            let errors = validationResult(req);
 
         if (errors.isEmpty()) {
 
@@ -53,15 +54,20 @@ const usersController = {
                 country: req.body.country,
                 password: bcrypt.hashSync(req.body.password, 12),
                 image: req.file.filename,
-                category: "user",
-                role: "client",
+                role: 1,
 
             }
-            userModel.create(newUser)
+            let result = await userModel.create(newUser)
+            console.log(result)
             res.redirect('/');
         } else{
             return res.render('./users-views/registro', {errors: errors.mapped(), old: req.body})
         }
+        } catch (error) {
+            console.log(error)
+        }     
+
+        
     },
 
     logOut : (req, res) => {
