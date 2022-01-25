@@ -1,6 +1,11 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('categories', {
+
+
+  let alias = "Category"
+
+  let cols = {
+
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER.UNSIGNED,
@@ -11,19 +16,23 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING(50),
       allowNull: false
     }
-  }, {
-    sequelize,
+    
+  }
+
+  let config = {
     tableName: 'categories',
     timestamps: false,
-    indexes: [
-      {
-        name: "PRIMARY",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "id" },
-        ]
-      },
-    ]
-  });
+  }
+
+  let Category = sequelize.define(alias, cols, config);
+
+  Category.associate = function( models ){
+    Category.hasMany(models.Product, {
+      as:"product",
+      foreignKey:"category_id"
+    })
+  }
+
+  return Category;
+ 
 };

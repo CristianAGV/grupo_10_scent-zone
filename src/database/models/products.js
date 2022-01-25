@@ -1,6 +1,11 @@
+
+  
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('products', {
+
+  let alias = "Product";
+
+  let cols = {
     id: {
       autoIncrement: true,
       type: DataTypes.INTEGER.UNSIGNED,
@@ -49,26 +54,25 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
       defaultValue: "product3.jpg"
     }
-  }, {
-    sequelize,
+  }
+
+  let config = {
     tableName: 'products',
     timestamps: false,
-    indexes: [
-      {
-        name: "PRIMARY",
-        unique: true,
-        using: "BTREE",
-        fields: [
-          { name: "id" },
-        ]
-      },
-      {
-        name: "products_category_id_FK",
-        using: "BTREE",
-        fields: [
-          { name: "category_id" },
-        ]
-      },
-    ]
-  });
+  }
+
+  let Product = sequelize.define(alias,cols,config);
+
+  Product.associate = function( models ){
+    Product.belongsTo(models.Category, {
+      as:"category",
+      foreignKey:"category_id"
+    })
+  }
+
+  return Product
+
+
+
+  
 };

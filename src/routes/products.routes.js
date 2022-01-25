@@ -49,9 +49,9 @@ router.get('/product-detail/:id', productsController.productDetail)
 router.get('/categories/:name', productsController.categories)
 
 router.get('/edit-product', visitorsMiddleware, productsController.editProduct)
-router.get('/add-product', visitorsMiddleware, productsController.addProducts)
+router.get('/add-product', productsController.addProducts)
 router.post('/add-products', upload.single('productImage'),createProductValidations ,productsController.processAddProduct)
-router.get('/products-list', visitorsMiddleware, productsController.productsList)
+router.get('/products-list', productsController.productsList)
 
 // router.get('/edit/:id', controller.editProductPage)
 router.get('/products/:id/edit',productsController.editProductPage)

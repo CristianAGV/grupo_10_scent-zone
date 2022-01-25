@@ -1,12 +1,13 @@
 //const productsModel = require('../model/index')
-const productsModel = require('../model/productsModel')
+const productsModel = require('../model/productsModel-old')
 const {validationResult} = require('express-validator')
-const showProducts = productsModel.showProducts();
+// const showProducts = ;
 
 
 const mainController = {
-    home: (req, res) => {
-        res.render('home', {products: showProducts, user: req.session.userLogged })
+    home: async (req, res) => {
+        let products = await productsModel.showProducts();
+        res.render('home', {products: products, user: req.session.userLogged })
     },
     cart: (req, res) => {
         res.render('cart')

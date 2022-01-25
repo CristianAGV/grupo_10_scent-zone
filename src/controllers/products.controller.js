@@ -1,6 +1,6 @@
 const productsModel = require('../model/productsModel')
 const {validationResult} = require('express-validator')
-const showProducts = productsModel.showProducts();
+
 
 const productsController = {
     productDetail: (req, res) => {
@@ -12,8 +12,9 @@ const productsController = {
         const prodByCategory = productsModel.showProductsByCategory( category )
         res.render('./products-views/categories', { prodByCategory : prodByCategory })
     },
-    productsList: (req, res) => {
-        res.render('./products-views/products-list', {showProducts: showProducts})
+    productsList: async (req, res) => {
+        const allProducts = await productsModel.showProducts();
+        res.render('./products-views/products-list', {productos: allProducts})
     },
 
     addProducts: (req,res) => {

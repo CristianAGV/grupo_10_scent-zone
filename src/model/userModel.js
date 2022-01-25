@@ -65,15 +65,15 @@ const userModel = {
         }
     },
 
-     findByEmail: async(email) => {
-         try{
-             const emailFound = await db.users.findOne({ where: { email: email } });
-             return emailFound
-         } catch(error){
-             console.log(error)
-         }
+    //  findByEmail: async(email) => {
+    //      try{
+    //          const emailFound = await db.users.findOne({ where: { email: email } });
+    //          return emailFound
+    //      } catch(error){
+    //          console.log(error)
+    //      }
 
-     },
+    //  },
 
      verifyUser: async(email, password) => {
 
