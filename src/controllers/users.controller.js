@@ -58,7 +58,6 @@ const usersController = {
                 password: bcrypt.hashSync(req.body.password, 12),
                 image: req.file.filename,
                 role: 1,
-
             }
             let result = await userModel.create(newUser)
             console.log(result)
