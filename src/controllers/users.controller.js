@@ -14,6 +14,9 @@ const usersController = {
     historial: (req, res) => {
         res.render('./users-views/history', { user: req.session.userLogged })
     },
+    detalle: (req, res) => {
+        res.render('./users-views/detail')
+    },
     processLogin: ( req, res ) => {
         
         let errors = validationResult( req );

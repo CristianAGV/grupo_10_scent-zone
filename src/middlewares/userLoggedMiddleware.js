@@ -1,9 +1,9 @@
 const User = require('../model/userModel')
 
-function userLoggedMiddleware(req, res, next){
-    
-    let emailInCookie = req.cookies.userEmail
-    let userFromCookie = User.findByEmail(emailInCookie)
+async function userLoggedMiddleware(req, res, next){
+    try {
+        let emailInCookie = req.cookies.userEmail
+    let userFromCookie = await User.findByEmail(emailInCookie)
 
     if(userFromCookie) {
         req.session.userLogged = userFromCookie;
@@ -13,6 +13,11 @@ function userLoggedMiddleware(req, res, next){
     }
 
     next()
+    } catch (error) {
+        
+    }
+    
+    
 }
 
 module.exports = userLoggedMiddleware
