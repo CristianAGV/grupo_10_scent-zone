@@ -46,10 +46,8 @@ const usersController = {
 
 
         } catch (error) {
-            
-
+    
             console.log(error)
-
         }  
 
     },

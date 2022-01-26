@@ -23,7 +23,6 @@ async function userLoggedMiddleware(req, res, next){
         console.log(error)
     }
     
-    
 }
 
 module.exports = userLoggedMiddleware

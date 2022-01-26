@@ -90,6 +90,8 @@ const userModel = {
         }
         catch (err) {
             console.log(err)
+
+            
         }
     }
     
