@@ -77,9 +77,9 @@ const userModel = {
 
      verifyUser: async(email, password) => {
 
-        console.log( "logueo",email, password )
-
-        const userFound = db.user.userModel.findByEmail(email);
+        
+        try {
+            const userFound = await userModel.findByEmail(email);
             if(userFound){
                 if ( bcrypt.compareSync( password, userFound.password ) ){
                  return userFound;
@@ -88,6 +88,13 @@ const userModel = {
                return null;
            }
         }
+        catch (err) {
+            console.log(err)
+        }
+    }
+    
+
+        
 
 
 
