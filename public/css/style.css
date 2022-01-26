@@ -760,6 +760,20 @@ a.main-header__btn {
 
 /*end of register styles*/
 
+/* update user styles  */
+.userImage-update{
+  width: 100px;
+  height: 100px; 
+  margin: 20px auto;
+}
+
+.userImage-update img {
+  
+  width:100%;
+  height: 100%;
+  border-radius: 80%;
+}
+
 /* product detail styles */
 
 .main-product-detail {

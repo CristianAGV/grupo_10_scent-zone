@@ -3,7 +3,7 @@ const router = express.Router();
 const path = require('path');
 const {productsController, mainController} = require('../controllers/index');
 const visitorsMiddleware = require('../middlewares/visitorsMiddleware');
-
+const isAdminMiddleware = require('../middlewares/isAdminMiddleware')
 
 
 const multer = require('multer')
@@ -48,13 +48,13 @@ router.get('/', mainController.home)
 router.get('/product-detail/:id', productsController.productDetail)
 router.get('/categories/:name', productsController.categories)
 
-router.get('/edit-product', visitorsMiddleware, productsController.editProduct)
-router.get('/add-product', visitorsMiddleware, productsController.addProducts)
+router.get('/edit-product', visitorsMiddleware, isAdminMiddleware, productsController.editProduct)
+router.get('/add-product', visitorsMiddleware, isAdminMiddleware,productsController.addProducts)
 router.post('/add-products', upload.single('productImage'),createProductValidations ,productsController.processAddProduct)
-router.get('/products-list', visitorsMiddleware, productsController.productsList)
+router.get('/products-list', visitorsMiddleware, isAdminMiddleware, productsController.productsList)
 
 // router.get('/edit/:id', controller.editProductPage)
-router.get('/products/:id/edit',productsController.editProductPage)
+router.get('/products/:id/edit', visitorsMiddleware, isAdminMiddleware,productsController.editProductPage)
 router.put('/products/:id/edit', upload.single('productImage'),createProductValidations, productsController.editProduct)
 
 // Delete products 

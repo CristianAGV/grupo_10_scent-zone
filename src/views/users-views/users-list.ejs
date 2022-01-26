@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+    <body>
+      <!-- Header's styles -->
+      <%- include('../partials/header')%>
+  
+      <!-- NavBar's styles -->
+      <%- include('../partials/nav')%>
+
+      <h2 class="productDashboard__title"> Dashboard usuarios </h2>
+      
+      <div class="products-list-container">
+          <table class="table">
+            <thead>
+              <tr>
+                  <th>Nombre</th>
+                  <th>Apellido</th>
+                  <th>Email</th>
+                  <th>Imagen</th>
+                  <th>Rol</th>
+                  <th>País</th>
+                  <th>Acciones</th>                   
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <% if (locals.users && locals.users.length) { %>
+                    <% users.forEach(user => { %>             
+                        
+                        <td data-label="Nombre"> <%= user.dataValues.first_name %></td>
+                        <td data-label="Apellido"> <%= user.dataValues.last_name %></td> 
+                        <td data-label="Email"> <%= user.dataValues.email %></td>
+                        <td data-label="Imagen"> <img src="../assets/users/<%= user.dataValues.image %> " alt="user"></td>
+                        <td data-label="Rol"> <%= (user.dataValues.role === 1) ? 'Cliente' : 'Admin' %></td>
+                        <td data-label="País"> <%= user.dataValues.country %></td>
+                        <td data-label="Actions"> <form action="/users/<%= user.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt delete-trash__icon"></i></button> </form></td>                     
+                      </tr>
+                    </tbody>
+
+                    <% }); %>
+           
+                  <% } else {%>
+                    <h3>Todavía no hay usuarios</h3>
+                  <% } %>
+
+              
+
+          </table>
+      </div>
+    </body>
+    
+</body>
+</html>
