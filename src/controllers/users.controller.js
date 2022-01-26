@@ -17,30 +17,38 @@ const usersController = {
     detalle: (req, res) => {
         res.render('./users-views/detail')
     },
-    processLogin: ( req, res ) => {
-        
-        let errors = validationResult( req );
+    processLogin: async ( req, res ) => {
 
-        if ( errors.isEmpty() ){
-            const user = userModel.verifyUser( req.body.email, req.body.password );
-            console.log( user )
-            if ( user ){
-                req.session.userLogged = user;
-                
-                if(req.body.remember_user){
-                    res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+        try {
+            
+            let errors = validationResult( req );
+
+            if ( errors.isEmpty() ){
+                const user = await userModel.verifyUser( req.body.email, req.body.password );
+                console.log( user )
+                if ( user ){
+                    req.session.userLogged = user;
+                    
+                    if(req.body.remember_user){
+                        res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2})
+                    }
+                    return res.redirect('/') 
+                }else{
+                    return res.render('./users-views/login',{
+                        errors:[{
+                            msg: "Credenciales invalidas"
+                        }]
+                    })
                 }
-                return res.redirect('/') 
             }else{
-                return res.render('./users-views/login',{
-                    errors:[{
-                        msg: "Credenciales invalidas"
-                    }]
-                })
+                return res.render('./users-views/login', {errors: errors.mapped()})
             }
-        }else{
-            return res.render('./users-views/login', {errors: errors.mapped()})
-        }
+
+
+        } catch (error) {
+    
+            console.log(error)
+        }  
 
     },
 
