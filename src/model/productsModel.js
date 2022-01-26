@@ -3,14 +3,6 @@ const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const productsModel = {
-//   addProduct: async (newProduct) => {
-//     try {
-//       let result = await db.products.create(newProduct);
-//       console.log(result);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   },
 
   showProducts: async () => {
     try {
