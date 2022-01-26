@@ -1316,6 +1316,7 @@ footer {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   position: absolute;
+  bottom: 0px;
   font-weight: lighter;
   background-color: #50020d;
   width: 100%;
@@ -1423,6 +1424,13 @@ footer {
 }
 
 /* end of footer*/
+
+/*users detail style*/
+.user-detail-container{
+  display: block;
+  margin: 50px 100px;
+}
+/*end of user detail style*/
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {

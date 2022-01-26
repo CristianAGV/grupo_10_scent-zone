@@ -1,6 +1,8 @@
 const {validationResult} = require('express-validator')
 const userModel = require('../model/userModel')
 const bcrypt = require('bcryptjs');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 
 
@@ -14,8 +16,15 @@ const usersController = {
     historial: (req, res) => {
         res.render('./users-views/history', { user: req.session.userLogged })
     },
-    detalle: (req, res) => {
-        res.render('./users-views/detail')
+    detalle: async (req, res) => {
+        try {
+            let user = await db.users.findByPk(req.params.id)
+            let userId = req.params.id
+            res.render('./users-views/detail', {user: user})
+        } catch (error) {
+            console.log(error)
+        }
+        
     },
     processLogin: async ( req, res ) => {
 

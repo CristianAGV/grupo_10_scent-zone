@@ -7,8 +7,17 @@
     <!-- NavBar's styles -->
     <%- include('../partials/nav')%>
     <main>
-        <h1>User name</h1>
-        <p>user info</p>
+      <% if(locals.user) { %>
+        <div class="user-detail-container">
+          <h2 class="user-detail-name"><%= user.first_name + ' ' %> <%= user.last_name %></h2><h2>
+          <h4>Email: </h4>
+          <p><%= user.email%></p>
+          <h4>Country: </h4>
+          <p><%= user.country%></p>
+        </div>
+      <% } else { %>
+        <h1>No valid user for this search</h1>
+      <% } %>
     </main>
     <%- include('../partials/footer')%>
   </body>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+    <body>
+      <!-- Header's styles -->
+      <%- include('../partials/header')%>
+  
+      <!-- NavBar's styles -->
+      <%- include('../partials/nav')%>
+
+      <h2 class="productDashboard__title"> Dashboard Productos</h2>
+
+      <div class="products__add-product">
+        <a href="/add-products" >Agregar producto</a>
+      </div>
+
+      <div class="products-list-container">
+          <table class="table">
+            <thead>
+              <tr>
+                  <th>Producto</th>
+                  <th>ID</th>
+                  <th>Marca</th>
+                  <th>Precio $</th>
+                  <th>Categoría</th>
+                  <th>Género</th>
+                  <th>Estado</th>
+                  <th>Imagen</th>                  
+                  <th>Tamaño (ml)</th>
+                  <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <% if (locals.showProducts && locals.showProducts.length) { %>
+                    <% showProducts.forEach(item => { %>
+                      <% if (item.status) { %>
+                        <td data-label="Product"> <%= item.productName %></td>
+                        <td data-label="ID"> <%= item.id %></td> 
+                        <td data-label="Marca"> <%= item.Brand %></td>
+                        <td data-label="Precio"> <%= item.price %></td>
+                        <td data-label="Categoria"> <%= item.category %></td>
+                        <td data-label="Género"> <%= item.gender %></td>
+                        <td data-label="Estado"> <%= item.status ? 'Activo' : 'Inactivo' %></td>
+                        <td data-label="Imagen"> <img src="../assets/<%= item.productImage %>" alt="product"></td>
+                        <td data-label="Tamaño"> <%= item.size %></td>
+                        <td data-label="Actions"> <a href="/product-detail/<%= item.id %> "><i class="fas fa-eye"></i></a> <span><a href="/products/<%= item.id %>/edit"><i class="fas fa-edit"></i></a></span> <form action="/products/<%= item.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt delete-trash__icon"></i></button> </form></td>
+                      <% } %>     
+                        
+                      </tr>
+                    </tbody>
+
+                    <% }); %>
+           
+                  <% } else {%>
+                    <h3>Todavía no hay productos</h3>
+                  <% } %>
+
+              
+
+          </table>
+      </div>
+    </body>
+    
+</body>
+</html>
