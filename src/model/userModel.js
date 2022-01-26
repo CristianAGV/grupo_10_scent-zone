@@ -54,12 +54,14 @@ const userModel = {
     },
 
     update: async(user, userid) => {
+        console.log('HElllooo')
+        console.log( user )
+        console.log( userid)
         try{
-           let result = await db.users.update(user, {where: {
+           return await db.users.update(user, {where: {
                 id: userid
             }})
 
-            console.log(result)
         } catch (error){
            console.log(error)
         }

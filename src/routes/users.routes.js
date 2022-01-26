@@ -37,6 +37,8 @@ let registerValidations = [
 
 let storage = multer.diskStorage({
     destination: function(req, file, cb){
+        console.log('NOOOMBREE');
+        console.log( req.file )
         let imgFolder = path.resolve(__dirname, '../../public/assets/users');
         cb(null, imgFolder);
     },
@@ -53,8 +55,16 @@ router.get('/historial', usersController.historial)
 router.get('/registro', clientMiddleware, usersController.registro);
 router.get('/logout', usersController.logOut)
 router.get('/user/:id', usersController.detalle)
+router.get('/list', usersController.listarTodos)
+
+
 
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
+
+router.get('/edit/:id', usersController.actualizar)
+router.post('/edit/:id',upload.single('image'), usersController.actualizarUsuario)
+
+router.post('/:id/delete', usersController.eliminarUsuario)
 
 module.exports = router

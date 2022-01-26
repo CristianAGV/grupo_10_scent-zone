@@ -2,8 +2,6 @@ const {validationResult} = require('express-validator')
 const userModel = require('../model/userModel')
 const bcrypt = require('bcryptjs');
 
-
-
 const usersController = {
     login: (req, res) => {
         res.render('./users-views/login')
@@ -17,6 +15,77 @@ const usersController = {
     detalle: (req, res) => {
         res.render('./users-views/detail')
     },
+
+    actualizar: async(req, res ) => {
+        try {
+            const id = req.params.id;
+            const user = await userModel.read(parseInt(id));
+            res.render('./users-views/updateForm', {usuario: user })   
+        } catch (error) {
+            console.log(error)
+            res.redirect('/')
+        }
+    },
+
+        
+    listarTodos: async (req, res ) => {
+        try {
+            
+            const users = await userModel.getUsers();
+            res.render('./users-views/users-list', {users})
+            
+        } catch (error) {
+            console.log( error )
+            res.redirect('/');
+        }
+    },
+
+    actualizarUsuario: async (req, res ) => {   
+       try {
+            const id = req.params.id;
+
+            const { password,image, ...user } = req.body;
+
+            let userUpdated = {
+                ...user,
+                role:1
+            }
+
+            if ( req.file ){
+                userUpdated = {
+                    ...userUpdated,
+                    image: req.file.filename
+                }
+            }
+
+            if ( req.body.password ){
+                userUpdated = {
+                    ...userUpdated,
+                    password: bcrypt.hashSync(req.body.password, 12)
+                }
+            }                            
+            await userModel.update(userUpdated,id)
+            res.redirect('/');
+            
+        } catch (error) {
+            console.log( error )
+            res.redirect('/')
+        }
+        
+    },
+
+    eliminarUsuario: async(req,res) => {
+        try {
+
+            
+            
+        } catch (error) {
+            
+        }
+
+    },
+
+
     processLogin: async ( req, res ) => {
 
         try {
