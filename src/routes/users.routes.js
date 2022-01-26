@@ -5,6 +5,8 @@ const {usersController} = require('../controllers/index');
 const {body} = require("express-validator");
 const multer = require('multer');
 const clientMiddleware = require('../middlewares/clientMiddleware');
+const visitorsMiddleware = require('../middlewares/visitorsMiddleware')
+const isAdminMiddleware = require('../middlewares/isAdminMiddleware')
 
 let userValidations = [
     body('email').notEmpty().withMessage('Debes ingresar un email'),
@@ -55,14 +57,14 @@ router.get('/historial', usersController.historial)
 router.get('/registro', clientMiddleware, usersController.registro);
 router.get('/logout', usersController.logOut)
 router.get('/user/:id', usersController.detalle)
-router.get('/list', usersController.listarTodos)
+router.get('/list', visitorsMiddleware, isAdminMiddleware, usersController.listarTodos)
 
 
 
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
 
-router.get('/edit/:id', usersController.actualizar)
+router.get('/edit/:id', visitorsMiddleware, isAdminMiddleware, usersController.actualizar)
 router.post('/edit/:id',upload.single('image'), usersController.actualizarUsuario)
 
 router.post('/:id/delete', usersController.eliminarUsuario)

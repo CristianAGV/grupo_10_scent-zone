@@ -1,10 +1,10 @@
 module.exports ={
   "development": {
     "username": "root",
-    "password": "1234",
+    "password": "12345",
     "database": "scentzoneDB",
     "host": "127.0.0.1",
-    "port": "3307",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {
