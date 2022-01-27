@@ -62,7 +62,7 @@ const productsController = {
         };
         let result = await productsModel.addProduct(newProduct);
         console.log(result);
-        res.redirect("/products/products-list");
+        res.redirect("/");
       } else {
         return res.render("./products-views/add-product", {
           errors: errors.mapped(),
@@ -122,7 +122,7 @@ const productsController = {
     let productid = req.params.id;
     try {
         let result = await productsModel.deleteProduct(productid);
-        res.redirect("/products/products-list");
+        res.redirect("/");
     } catch (error) {
       res.redirect('/comeBack')
       console.log(error)
