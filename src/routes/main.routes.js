@@ -8,6 +8,7 @@ const visitorsMiddleware = require('../middlewares/visitorsMiddleware');
 router.get('/', mainController.home)
 router.get('/cart', visitorsMiddleware, mainController.cart)
 router.get('/questions', mainController.questions)
+router.get('/comeBack', mainController.errorCatch)
 
 
 

@@ -20,6 +20,9 @@ const mainController = {
     questions: (req, res) => {
         res.render('questions')
     },
+    errorCatch: (req, res) => {
+        res.render('comeBack')
+    }
     
 
 }
