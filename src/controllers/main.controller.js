@@ -5,8 +5,14 @@ const showProducts = productsModel.showProducts();
 
 
 const mainController = {
-    home: (req, res) => {
-        res.render('home', {products: showProducts, user: req.session.userLogged })
+    home: async (req, res) => {
+        try {
+            let products = await productsModel.showProducts()
+            res.render('home', {products, user: req.session.userLogged })
+        } catch (error) {
+            res.send(error)
+        }
+        
     },
     cart: (req, res) => {
         res.render('cart')
