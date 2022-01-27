@@ -12,14 +12,21 @@ const productsController = {
       console.log(product);
       return res.render('./products-views/product-detail', {product: product})
     } catch (error) {
+      res.redirect('/comeBack')
       console.log(error);
     }  
     },
 
     categories: async (req, res) => {
+      try {
         const category = req.params.id;
         const prodByCategory = await productsModel.showProductsByCategory( category )
         res.render('./products-views/categories', { prodByCategory : prodByCategory })
+      } catch (error) {
+        res.redirect('/comeBack')
+        console.log(error);
+      }
+        
     },
 
     productsList: async (req, res) =>  {
@@ -27,6 +34,7 @@ const productsController = {
         let allProducts = await showProducts
         res.render('./products-views/products-list', {showProducts: allProducts})
     } catch (error) {
+        res.redirect('/comeBack')
         console.log(error);
     }
         
@@ -62,6 +70,7 @@ const productsController = {
         });
       }
     } catch (error) {
+      res.redirect('/comeBack')
       console.log(error);
     }
   },
@@ -73,7 +82,8 @@ const productsController = {
     const categories = await db.categories.findAll();
     res.render('./products-views/edit-product',{product, categories})
     } catch (error) {
-        console.log(error)
+      res.redirect('/comeBack')
+      console.log(error)
     }
             
 },
@@ -103,6 +113,7 @@ const productsController = {
         });
       }
     } catch (error) {
+      res.redirect('/comeBack')
       console.log(error);
     }
   },
@@ -113,7 +124,8 @@ const productsController = {
         let result = await productsModel.deleteProduct(productid);
         res.redirect("/products/products-list");
     } catch (error) {
-        console.log(error)
+      res.redirect('/comeBack')
+      console.log(error)
     }
   },
 };
