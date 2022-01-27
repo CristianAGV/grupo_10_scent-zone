@@ -6,13 +6,13 @@
 
     <!-- NavBar's styles -->
     <%- include('../partials/nav')%>
-    <main>
+    <main class="users-detail-main">
       <% if(locals.user) { %>
         <div class="user-detail-container">
-          <div class="user-detail-up">
+          <div class="user-detail-left">
             <img src="/assets/users/<%= user.dataValues.image %> " alt="" class="user-detail-image">
             <!--<img src="../../../public/assets/users/<%= user.image %> " alt="user-image"> -->
-        
+          </div>
             <div class="user-detail-down">
               <h2 class="user-detail-name">
                 <%= user.first_name + ' ' %>
@@ -40,7 +40,7 @@
                 
             </div>
         
-          </div>
+          
         </div>
       <% } else { %>
         <h1>No valid user for this search</h1>

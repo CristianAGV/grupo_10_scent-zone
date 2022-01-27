@@ -1446,18 +1446,15 @@ footer {
 .user-detail-container{
   
   display: block;
-  margin: 50px 15%;
+  width: 85%;
+  margin: 50px auto;
   box-shadow: 0px 0px 5px -1px #50020d;
   padding: 30px 0px;
   border-radius: 5px;
   
 }
 
-.user-detail-up{
-  display: block;
-  margin: 0 auto;
-  align-items: center;
-}
+
 
 .user-detail-name{
   display: block;
@@ -1524,6 +1521,7 @@ footer {
 /*end of user detail style*/
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+
   .product__section--title {
     width: 100%;
   }
@@ -1579,6 +1577,68 @@ footer {
 }
 
 @media (min-width: 840px) {
+
+  /*users detail styles*/
+  /*past*/
+
+  .users-detail-main{
+    height: 60vh;
+  }
+  .user-detail-container{
+  
+    display: flex;
+    width: 43%;
+    margin: 50px auto;
+    justify-content: center;
+    padding: 70px 20px;
+    
+  }
+
+  .user-detail-left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .user-detail-name{
+    display: block;
+    text-align: left;
+    margin: 0px 0px 15px 0px;
+  }
+  .user-detail-image{
+    
+    width: 220px;
+    height: 220px;
+  
+    margin: 0 auto;
+  }
+  
+  
+  .user-detail-label-divs{
+    margin-bottom: 15px;
+  }
+  
+  .user-detail-btns{
+    margin-top: 40px;
+    
+  }
+  
+  
+  .user-detail-down{
+    display: block;
+    align-items: left;
+    
+  }
+
+  .user-detail-info{
+    margin: 20px 0px;
+  }
+  /**/
+  
+  
+  /*end of user detail style*/
   footer {
     font-size: 12px;
   }
