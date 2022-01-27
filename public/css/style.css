@@ -1501,7 +1501,7 @@ footer {
   margin-bottom: 8px;
 }
 
-#user-detail-delete-btn{
+.user-detail-delete-btn{
   font-family: "Poppins", sans-serif;
   background-color: #fff;
   border: 1px solid #880719;
@@ -1517,6 +1517,35 @@ footer {
   margin: 0 auto;
   align-items: center;
   width: 180px;
+}
+/*end of user detail style*/
+
+/*users delete style*/
+.users-delete-main{
+  height: 60vh;
+  
+}
+.users-delete-container{
+  display: block;
+  margin: 0 auto;
+  max-width: 75%;
+  margin-top: 65px;
+}
+
+.users-delete-container h3, p{
+  margin: 15px 0px;
+}
+
+
+
+#user-delete-btn{
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border: 1px solid #880719;
+  padding: 6px;
+  color: #880719;
+  width: 222px;
+  border-radius: 2px;
 }
 /*end of user detail style*/
 

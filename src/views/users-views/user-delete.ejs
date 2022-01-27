@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+    <body>
+      <!-- Header's styles -->
+      <%- include('../partials/header')%>
+  
+        <!-- NavBar's styles -->
+        <%- include('../partials/nav')%>
+
+        <main  class="users-delete-main">
+
+        <% if(locals.user) { %>
+        <div class="users-delete-container">
+            <h3>¿<%= user.first_name %> estás segur@ de que quieres eliminar esta cuenta?</h3>
+            <p>Esta opción no se puede deshacer, tus datos se perderán</p>
+            <form action="/users/<%= user.id %>/deleteUser?_method=DELETE" method="POST">
+                <input type="submit" id="user-delete-btn" name="users-detail-delete-sub" value="Eliminar Cuenta">
+            </form>
+        
+        </div>
+        <% } else { %>
+            <p>No hemos encontrado este usuario</p>
+        <% } %>
+
+        
+    </main>
+        <%- include('../partials/footer')%>
+
+    
+
+    </body>
+  </html>

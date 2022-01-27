@@ -56,11 +56,11 @@ router.get('/login', clientMiddleware,usersController.login)
 router.get('/historial', usersController.historial)
 router.get('/registro', clientMiddleware, usersController.registro);
 router.get('/logout', usersController.logOut)
-router.get('/user/:id', usersController.detalle)
+router.get('/detail/:id', usersController.detalle)
 router.get('/list', visitorsMiddleware, isAdminMiddleware, usersController.listarTodos)
+router.get('/delete/:id', usersController.deleteView)
 
-
-
+router.post('/:id/deleteUser', usersController.deleteUser)
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
 

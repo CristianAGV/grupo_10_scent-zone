@@ -95,6 +95,14 @@ const userModel = {
 
             
         }
+    }, 
+
+    delete: async(userId) => {
+        try {
+            db.users.destroy({where:{id: userId}})
+        } catch (error) {
+            console.log(error)
+        }
     }
     
 
@@ -125,38 +133,7 @@ const userModel = {
     //      return emailFound;
     //  },
 
-    // getUsers: () => {
-    //     return JSON.parse(
-    //         fs.readFileSync(usersPath, {
-    //           encoding: "utf8",
-    //         })
-    //       );
-    // },
-
-    // pushUser: (base) => {
-    //     base = JSON.stringify(base, null, 4);
-    //     return fs.writeFileSync(usersPath, base)
-    // },
-
-    // create: (user) => {
-    //     let db = userModel.getUsers();
-    //     user.id = idGen();
-    //     db.push(user);
-    //     userModel.pushUser(db);
-
-    // }
-
-
 }
-
-// userModel.update(  {first_name: "user",
-//     last_name: "user",
-//     email: "user@user.com",
-//     country: "Belize",
-//     password: "123",
-//     image: 'hi.jpg',
-//     role: 1,}, 12)
-
 
 
 

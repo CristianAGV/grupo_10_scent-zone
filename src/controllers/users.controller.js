@@ -162,6 +162,27 @@ const usersController = {
         res.clearCookie('userEmail')
         req.session.destroy()
         return res.redirect('/')
+    },
+
+    deleteView: async(req, res) => {
+        try {
+            let user = await db.users.findByPk(req.params.id)
+            let userId = req.params.id
+            res.render('users-views/user-delete', {user: user})
+        } catch (error) {
+            console.log(error)
+        }
+    },
+
+    deleteUser : async(req, res ) => {
+        try {
+            let userId = req.params.id
+            let deleted = await userModel.delete(userId)
+            console.log('Usuario eliminado')
+            res.redirect('/')
+        } catch (error) {
+            console.log(error)
+        }
     }
 
 
