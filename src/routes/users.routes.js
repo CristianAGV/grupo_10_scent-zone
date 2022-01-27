@@ -58,9 +58,9 @@ router.get('/registro', clientMiddleware, usersController.registro);
 router.get('/logout', usersController.logOut)
 router.get('/detail/:id', visitorsMiddleware, usersController.detalle)
 router.get('/list', visitorsMiddleware, isAdminMiddleware, usersController.listarTodos)
-router.get('/delete/:id', usersController.deleteView)
+router.get('/delete/:id', visitorsMiddleware, usersController.deleteView)
 
-router.delete('/:id/delete', usersController.deleteUser)
+router.delete('/:id/delete',visitorsMiddleware, usersController.deleteUser)
 router.post('/authLogin', userValidations, usersController.processLogin)
 router.post('/registro', upload.single('image'), registerValidations, usersController.createUser)
 
