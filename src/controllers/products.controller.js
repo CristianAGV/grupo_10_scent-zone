@@ -111,7 +111,9 @@ const productsController = {
     let productid = req.params.id;
     try {
         let result = await productsModel.deleteProduct(productid);
-        res.redirect("/products/products-list");
+        // res.redirect("/products/products-list");
+        let allProducts = await showProducts()
+        res.render('./products-views/products-list', {showProducts: allProducts})
     } catch (error) {
         console.log(error)
     }
