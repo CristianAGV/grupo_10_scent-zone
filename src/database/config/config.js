@@ -1,26 +1,28 @@
+require('dotenv').config();
+
 module.exports ={
   "development": {
-    "username": "root",
-    "password": "12345678",
-    "database": "scentzoneDB",
-    "host": "127.0.0.1",
-    "port": "3306",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOSTNAME,
+    "port": process.env.PORT,
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "12345",
-    "database": "scentzonedb",
-    "host": "127.0.0.1",
-    "port": "3306",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOSTNAME,
+    "port": process.env.PORT,
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "12345",
-    "database": "scentzonedb",
-    "host": "127.0.0.1",
-    "port": "3306",
+    "username": process.env.DB_USER,
+    "password": process.env.DB_PASSWORD,
+    "database": process.env.DB_NAME,
+    "host": process.env.DB_HOSTNAME,
+    "port": process.env.PORT,
     "dialect": "mysql"
   }
 }
