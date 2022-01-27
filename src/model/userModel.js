@@ -135,6 +135,15 @@ const userModel = {
 
 }
 
+// userModel.create({
+//     first_name: 'user',
+//     last_name: 'oneUser',
+//     email: 'user@user.com',
+//     country: 'Colombia',
+//     password: bcrypt.hashSync('789654', 12),
+//     image: 'user.jpg',
+//     role: 1,
+// })
 
 
 

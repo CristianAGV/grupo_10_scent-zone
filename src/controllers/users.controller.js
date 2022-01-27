@@ -74,7 +74,7 @@ const usersController = {
                 }
             }                            
             await userModel.update(userUpdated,id)
-            res.redirect('/');
+            res.redirect('/users/detail/' + req.params.id);
             
         } catch (error) {
             console.log( error )
