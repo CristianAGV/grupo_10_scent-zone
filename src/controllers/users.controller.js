@@ -20,6 +20,7 @@ const usersController = {
             let userId = req.params.id
             res.render('./users-views/detail', {user: user})
         } catch (error) {
+            res.redirect('/comeBack')
             console.log(error)
         }
         
@@ -32,7 +33,7 @@ const usersController = {
             res.render('./users-views/updateForm', {usuario: user })   
         } catch (error) {
             console.log(error)
-            res.redirect('/')
+            res.redirect('/comeBack')
         }
     },
 
@@ -45,7 +46,7 @@ const usersController = {
             
         } catch (error) {
             console.log( error )
-            res.redirect('/');
+            res.redirect('/comeBack')
         }
     },
 
@@ -78,20 +79,9 @@ const usersController = {
             
         } catch (error) {
             console.log( error )
-            res.redirect('/')
+            res.redirect('/comeBack')
         }
         
-    },
-
-    eliminarUsuario: async(req,res) => {
-        try {
-
-            
-            
-        } catch (error) {
-            
-        }
-
     },
 
 
@@ -124,7 +114,7 @@ const usersController = {
 
 
         } catch (error) {
-    
+            res.redirect('/comeBack')
             console.log(error)
         }  
 
@@ -152,6 +142,7 @@ const usersController = {
             return res.render('./users-views/registro', {errors: errors.mapped(), old: req.body})
         }
         } catch (error) {
+            res.redirect('/comeBack')
             console.log(error)
         }     
 
@@ -170,6 +161,7 @@ const usersController = {
             let userId = req.params.id
             res.render('users-views/user-delete', {user: user})
         } catch (error) {
+            res.redirect('/comeBack')
             console.log(error)
         }
     },
@@ -181,6 +173,7 @@ const usersController = {
             console.log('Usuario eliminado')
             res.redirect('/')
         } catch (error) {
+            res.redirect('/comeBack')
             console.log(error)
         }
     }

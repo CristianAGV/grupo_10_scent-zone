@@ -1529,6 +1529,24 @@ p {
   border-radius: 2px;
 }
 /*end of user detail style*/
+/*error style*/
+.error-catch-main{
+  padding: 60px;
+  height: 60vh;
+}
+
+.error-catch-main p{
+  text-align: center;
+}
+#conf-icon{
+color: #50020d;
+font-size: 30px;
+}
+
+.error-catch-title{
+  text-align: center;
+}
+/*end of error style*/
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
   .product__section--title {
