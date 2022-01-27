@@ -19,11 +19,14 @@ h2 {
   padding: 0;
 }
 
+
 body {
   width: 100%;
   height: 100vh;
   background: #fff;
   font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  
 }
 
 /* Header's styles */
@@ -1330,10 +1333,10 @@ footer {
   font-family: "Poppins", sans-serif;
   font-size: 10px;
   position: absolute;
-  bottom: 0px;
   font-weight: lighter;
   background-color: #50020d;
   width: 100%;
+  
 }
 
 .footer-container {
@@ -1441,8 +1444,82 @@ footer {
 
 /*users detail style*/
 .user-detail-container{
+  
   display: block;
-  margin: 50px 100px;
+  margin: 50px 15%;
+  box-shadow: 0px 0px 5px -1px #50020d;
+  padding: 30px 0px;
+  border-radius: 5px;
+  
+}
+
+.user-detail-up{
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.user-detail-name{
+  display: block;
+  text-align: center;
+  margin: 20px 0px 15px 0px;
+}
+.user-detail-image{
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5%;
+  margin: 0 auto;
+}
+
+.user-detail-info h4{
+  margin: 6px 0px;
+
+  
+}
+
+.user-detail-info p{
+  border-bottom: 1px solid #50020c4d;
+
+}
+
+.user-detail-label-divs{
+  margin-bottom: 15px;
+}
+
+.user-detail-btns{
+  margin-top: 25px;
+  
+}
+
+#user-detail-edit-btn {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  background-color: #50020d;
+  padding: 6px;
+  color: #ffff;
+  width: 100%;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+#user-detail-delete-btn{
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  border: 1px solid #880719;
+  padding: 6px;
+  color: #880719;
+  width: 100%;
+  border-radius: 2px;
+
+}
+
+.user-detail-down{
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+  width: 180px;
 }
 /*end of user detail style*/
 
