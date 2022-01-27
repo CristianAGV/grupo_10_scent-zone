@@ -8,16 +8,6 @@ const db = require("../database/models");
 const { editProduct } = require("./src/model/productsModel");
 const sequelize = db.sequelize;
 
-function calcIndex() {
-    let index = 0
-    productsDb.forEach(product => {
-        if(product.id > index) {
-            index = product.id
-        }
-    })
-    return index + 1
-}
-
 const productsModel = {
 
   addProduct: async (newProduct) => {
@@ -31,16 +21,25 @@ const productsModel = {
 
   showProducts: async () => {
     try {
-      let result = await db.products.findAll();
+      let result = await db.products.findAll({include: ["category"]});
       return result;
     } catch (error) {
       console.log(error);
     }
   },
 
+  findOne: async (chosenId) => {
+    try {
+      let result = await db.products.findByPk({include: ["category"], where: {id: chosenId}});
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+ 
   showProductsByCategory: async (category) => {
     try {
-      let result = await db.products.findAll(category);
+      let result = await db.products.findAll({where: {category_id: category}});
       return result;
     } catch (error) {
       console.log(error);
@@ -49,7 +48,7 @@ const productsModel = {
 
   editProductInfo: async (id) => {
     try {
-      let result = await db.products.update(id);
+      let result = await db.products.findByPk(id);
       return result;
     } catch (error) {
       console.log(error);
@@ -58,11 +57,7 @@ const productsModel = {
 
   editProduct: async (product, productid) => {
     try {
-      let result = await db.product.update(product, {
-        where: {
-          id: productid,
-        },
-      });
+      let result = await db.product.update(product, {where: {id: productid}});
       console.log(result);
     } catch (error) {
       console.log(error);
@@ -71,11 +66,7 @@ const productsModel = {
 
   deleteProduct: async (productid) => {
     try {
-      let result = await db.product.destroy(product, {
-        where: {
-          id: productid,
-        },
-      });
+      let result = await db.product.destroy({where: {id: productid}});
       console.log(result);
     } catch (error) {
       console.log(error);

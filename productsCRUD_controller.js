@@ -6,9 +6,14 @@ const productsModel = require("./src/model/productsModel");
 
 const productsController = {
 
-    productDetail: (req, res) => {
-        let chosenId = req.params.id;
-        res.render('./products-views/product-detail', {showProducts: showProducts, chosenId})
+    productDetail: async (req, res) => {
+    let chosenId = req.params.id;
+    try {
+      let product = await productsModel.findOne(chosenId);
+      return res.render('./products-views/product-detail', {product: product})
+    } catch (error) {
+      console.log(error);
+    }  
     },
 
     categories: (req, res) => {

@@ -8,29 +8,26 @@
     <!-- NavBar's styles -->
     <%- include('../partials/nav')%>
 
-<% if (locals.showProducts.length && locals.showProducts) {%>
-<% let pickedProduct = showProducts.find(item => item.id == chosenId);%>
+<% if (locals.product) {%>
 <main class="main-product-detail">
   <div class="main-pd-container">
     <div class="img-pd-container">
        
-      <img src="/assets/<%= pickedProduct.productImage %> " alt="product image">
+      <img src="/assets/<%= product.product_image %> " alt="product image">
     </div>
     <div class="info-pd-container">
-      <h2 class="product-title"><%= pickedProduct.productName %></h2>
+      <h2 class="product-title"><%= product.product_name %></h2>
       <div class="info-main-container">
         <div class="brand-div">
           <p class="brand-title">Marca:</p>
-          <p class="brand"><%= pickedProduct.Brand %></p>
+          <p class="brand"><%= product.brand %></p>
         </div>
         <div class="price-div">
-          <p class="price-product-detail">$<%= pickedProduct.price %></p>
+          <p class="price-product-detail">$<%= product.price %></p>
         </div>
-        <div class="cant-div">
-          <form action="">
-            <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad" min="1" max="20">
-          </form>
+        <div class="cant-div"> <!-- revisar -->
+          <p class="brand-title">Volumen:</p>
+          <p class="brand"><%= product.size %></p>
         </div>
         <div class="button-div">
           <button class="add-to-cart"><i class="fas fa-shopping-cart"></i
@@ -43,7 +40,7 @@
   <div class="decription-pd-container">
     <div class="product-description">
       <h3>Descripción</h3>
-      <p><%= pickedProduct.description %>.</p>
+      <p><%= product.description %>.</p>
     </div>
   </div>
 </main>

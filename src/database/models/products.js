@@ -1,9 +1,9 @@
 const Sequelize = require('sequelize');
 module.exports = function(sequelize, DataTypes) {
-  return sequelize.define('products', {
+const Product = sequelize.define('products', {
     id: {
       autoIncrement: true,
-      type: DataTypes.INTEGER.UNSIGNED,
+      type: DataTypes.INTEGER.UNSIGNED, 
       allowNull: false,
       primaryKey: true
     },
@@ -32,11 +32,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     price: {
-      type: DataTypes.DECIMAL(5,2),
+      type: DataTypes.FLOAT,
       allowNull: false
     },
     size: {
-      type: DataTypes.SMALLINT,
+      type: DataTypes.FLOAT,
       allowNull: false
     },
     status: {
@@ -70,5 +70,13 @@ module.exports = function(sequelize, DataTypes) {
         ]
       },
     ]
-  });
+  })
+
+  Product.associate = function( models ){
+    Product.belongsTo(models.categories, {
+      as:"category",
+      foreignKey:"category_id"
+    })
+  };
+  return Product;
 };

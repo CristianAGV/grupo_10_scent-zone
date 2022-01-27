@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <%- include('../partials/head')%>
   <body>
@@ -6,7 +6,7 @@
     <!-- NavBar's styles -->
     <%- include('../partials/nav')%>
     <main>
-      <form  action="?_method=PUT" method="POST" enctype="multipart/form-data">         
+      <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">         
         <h2 class="add-product__title">Editar producto</h2>
         <div class="add-product__container">
           <div class="add-product__description">
@@ -14,7 +14,7 @@
             <div class="add-product__image">
               <img src="/assets/<%= 
                   ( locals.errors ) ? 'default-image.png' 
-                  : product.productImage 
+                  : product.product_image 
                   %> 
                   " alt="channel" />
             </div>          
@@ -25,8 +25,7 @@
               name="description"
               rows="5"
               cols="20"
-              placeholder="Añade una descripción del producto"
-              ></textarea>
+              ><%= product.description%></textarea>
             </div>
             <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
           </div>
@@ -40,7 +39,7 @@
                 <ul>
                   <li>
                     <label for="nombre">Nombre del producto: </label>
-                    <input type="text" id="nombre" name="productName" />
+                    <input type="text" value="<%= product.product_name%>" id="nombre" name="productName" />
                   </li>
                   <li>
                     <label for="genero">Género:</label>
@@ -52,15 +51,15 @@
                   </li>
                   <li>
                     <label for="marca">Marca: </label>
-                    <input type="text" id="marca" name="Brand" />
+                    <input type="text" value="<%= product.brand%>" id="marca" name="Brand" />
                   </li>
                   <li>
                     <label for="precio">Precio: </label>
-                    <span>$ <input type="number" id="precio" name="price" /></span>
+                    <span>$ <input type="number" step="any" value="<%= product.price%>" id="precio" name="price" /></span>
                   </li>
                   <li>
                     <label for="vol">Volumen (ml): </label>
-                    <input type="number" id="vol" name="size" />
+                    <input type="number" value="<%= product.size%>" id="vol" name="size" />
                   </li>
                   <li>
                     <p>Selecciona una categoría:</p>
@@ -70,17 +69,16 @@
                           type="radio"
                           id="floral"
                           name="category"
-                          value="floral"
+                          value="4"
                         />
                         <label for="floral">Floral</label>
                       </span>
-    
                       <span>
                         <input
                           type="radio"
                           id="frutal"
                           name="category"
-                          value="frutal"
+                          value="5"
                         />
                         <label for="frutal">Frutal</label>
                       </span>
@@ -90,7 +88,7 @@
                           type="radio"
                           id="amaderado"
                           name="category"
-                          value="amaderado"
+                          value="2"
                         />
                         <label for="amaderado">Amaderado</label>
                       </span>
@@ -100,7 +98,7 @@
                           type="radio"
                           id="dulce"
                           name="category"
-                          value="dulce"
+                          value="1"
                         />
                         <label for="dulce">Dulce</label>
                       </span>
@@ -110,7 +108,7 @@
                           type="radio"
                           id="cítrico"
                           name="category"
-                          value="cítrico"
+                          value="3"
                         />
                         <label for="cítrico">Cítrico</label>
                       </span>
@@ -120,7 +118,7 @@
                 </ul>
                 <div class="add-product__form--btn">
                   <button type="reset">Descartar</button>
-                  <button type="submit">Añadir</button>
+                  <button type="submit">Guardar</button>
                 </div>
             </div>
             

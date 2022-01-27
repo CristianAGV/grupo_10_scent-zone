@@ -1,7 +1,7 @@
 module.exports ={
   "development": {
     "username": "root",
-    "password": "12345",
+    "password": "12345678",
     "database": "scentzoneDB",
     "host": "127.0.0.1",
     "port": "3306",

@@ -4,90 +4,72 @@ const productsDb = require('../data/products.json');
 const { receiveMessageOnPort } = require('worker_threads');
 const productsPath = path.resolve(__dirname, '../data/products.json');
 
-
-function calcIndex() {
-    let index = 0
-    productsDb.forEach(product => {
-        if(product.id > index) {
-            index = product.id
-        }
-    })
-    return index + 1
-}
+const db = require("../database/models");
+const sequelize = db.sequelize;
 
 const productsModel = {
-    addProduct: function(info, img) {
-        let newProduct = {
-            id: calcIndex(),
-            productName: info.productName,
-            Brand: info.Brand,
-            description: info.description,
-            gender: info.gender,
-            category: info.category,
-            price: Number(info.price),
-            size: Number(info.size),
-            stock: 20,
-            status: true,  // lo agregé en caso de que usemos este parametro para eliminar
-            productImage: img,   
-        }
 
-        productsDb.push(newProduct)
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(productsDb, null, 4))
-        console.log('product added');
-    },
-   
-    showProducts: function() {
-        return JSON.parse(
-            fs.readFileSync(productsPath, {
-              encoding: "utf8",
-            })
-          );
-    },
-
-    showProductsByCategory: function( category ){
-        return productsDb.filter( prod => prod.category === category );
-    },
-
-    editProductInfo: function( id ){
-        const productFound = productsDb.find( product => product.id === parseInt(id));        
-        return productFound;
-    },
-
-    editProduct: function( id, data  ){
-
-        const newProducts = productsDb.map( product => {
-            if (product.id === parseInt(id)){
-                product={
-                    id: parseInt(id),
-                    ...data
-                }                
-                return product
-                
-            }else{
-                return product
-            }
-        });
-        
-       
-		
-		fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(newProducts,null, 4) );
-	},
-
-    deleteProduct: function( id ){
-        const newProducts = productsDb.map( product => {
-            if ( product.id === parseInt( id )){
-                return {
-                    ...product,
-                    status: false
-                }
-                
-            }else{
-                return product
-            }
-        });
-        fs.writeFileSync(path.resolve(__dirname, '../data/products.json'), JSON.stringify(newProducts,null, 4) );
+  addProduct: async (newProduct) => {
+    try {
+      let result = await db.products.create(newProduct);
+      console.log(result);
+    } catch (error) {
+      console.log(error);
     }
-}
+  },
 
+  showProducts: async () => {
+    try {
+      let result = await db.products.findAll({include: ["category"]});
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  },
 
+  findOne: async (chosenId) => {
+    try {
+      let result = await db.products.findByPk(chosenId);
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+ 
+  showProductsByCategory: async (category) => {
+    try {
+      let result = await db.products.findAll({where: {category_id: category}});
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  editProductInfo: async (id) => {
+    try {
+      let result = await db.products.findByPk(id);
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  editProduct: async (product, productid) => {
+    try {
+      let result = await db.products.update(product, {where: {id: productid}});
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+
+  deleteProduct: async (productid) => {
+    try {
+      let result = await db.products.destroy({where: {id: productid}});
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
+  },
+};
 module.exports = productsModel
