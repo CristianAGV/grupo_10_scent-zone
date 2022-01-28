@@ -42,7 +42,7 @@
                         <td data-label="Género"> <%= item.gender %></td>
                         <td data-label="Imagen"> <img src="../assets/<%= item.product_image %>" alt="product"></td>
                         <td data-label="Tamaño"> <%= item.size %></td>
-                        <td data-label="Actions"> <a href="/product-detail/<%= item.id %>"><i class="fas fa-eye icono-color"></i></a><span><a href="/products/<%= item.id %>/edit"><i class="fas fa-edit icono-color"></i></a></span> <form action="/products/<%= item.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt delete-trash__icon"></i></button> </form></td>
+                        <td data-label="Actions"> <a href="/products/product-detail/<%= item.id %>"><i class="fas fa-eye icono-color"></i></a><span><a href="/products/<%= item.id %>/edit"><i class="fas fa-edit icono-color"></i></a></span> <form action="/products/<%= item.id %>/delete?_method=DELETE" method="POST"><button type="submit"><i class="far fa-trash-alt delete-trash__icon"></i></button> </form></td>
                       <% } %>     
                         
                       </tr>
