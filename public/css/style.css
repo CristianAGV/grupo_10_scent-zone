@@ -13,8 +13,8 @@ a {
   color: white;
 }
 
-.icono-color{
-  color:black;
+.icono-color {
+  color: black;
 }
 
 h1,
@@ -30,7 +30,7 @@ body {
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
-.plicons{
+.plicons {
   color: #50020d;
 }
 /* Header's styles */
@@ -78,7 +78,8 @@ a.main-header__btn {
 .main-header__btn i {
   font-size: 1.4em;
   cursor: pointer;
-  color: #ffff;
+  color: rgba(255, 255, 255, 0.973);
+  box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.288);
 }
 /* End header's styles */
 
@@ -117,6 +118,7 @@ a.main-header__btn {
 .main-slider {
   position: relative;
   width: 100%;
+  height: 40vh;
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -124,7 +126,7 @@ a.main-header__btn {
 .main-slider__container {
   width: 100%;
   position: relative;
-  height: 300px;
+  height: 90%;
 }
 
 .main-slider__image {
@@ -132,7 +134,7 @@ a.main-header__btn {
   width: 100%;
   object-fit: cover;
   z-index: 1;
-  height: 300px;
+  height: 100%;
 }
 
 .main-slider__content {
@@ -1341,6 +1343,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: 0.7rem;
 }
 
 .footer-divs {
@@ -1410,7 +1413,6 @@ footer {
 }
 
 .footer-email-div p {
-  font-size: 8px;
   color: white;
 }
 
@@ -1536,20 +1538,20 @@ p {
 }
 /*end of user detail style*/
 /*error style*/
-.error-catch-main{
+.error-catch-main {
   padding: 60px;
   height: 60vh;
 }
 
-.error-catch-main p{
+.error-catch-main p {
   text-align: center;
 }
-#conf-icon{
-color: #50020d;
-font-size: 30px;
+#conf-icon {
+  color: #50020d;
+  font-size: 30px;
 }
 
-.error-catch-title{
+.error-catch-title {
   text-align: center;
 }
 /*end of error style*/
@@ -1709,7 +1711,7 @@ font-size: 30px;
   }
 
   .footer-email-div p {
-    font-size: 10px;
+    font-size: 1.3em;
   }
 
   /* product details */
@@ -1804,10 +1806,13 @@ font-size: 30px;
   .main-header__search--bar {
     background-color: #3b010a;
     height: 35px;
+    width: 100%;
     border-radius: 20px;
     border: none;
     color: white;
     font-size: 14px;
+    padding-left: 10px;
+    outline: none;
   }
 
   .icon-search {
@@ -1815,7 +1820,7 @@ font-size: 30px;
     padding: 5px 10px;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0.3rem;
     font-size: 20px;
   }
 
@@ -1854,13 +1859,13 @@ font-size: 30px;
 
   .main-slider__container {
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
 
   .main-slider__image {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 100%;
   }
   .product__section--title {
     width: 80%;
