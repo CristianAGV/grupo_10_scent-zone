@@ -14,16 +14,25 @@
             <div class="add-product__image">
               <img src="../assets/product3.jpg" alt="channel" />
             </div>
+            <span class="input-error" id="imageError"></span>
             <div class="add-product__imageLoading">
               <label for="myFile">Agregar imagen</label>
-              <input type="file" id="myFile" name="productImage" hidden />
+              <input
+                type="file"
+                id="myFile"
+                name="productImage"
+                hidden
+                accept=".jpeg, .jpg, .png, .gif"
+              />
               <textarea
                 name="description"
+                id="descripcion"
                 rows="5"
                 cols="20"
                 placeholder="Añade una descripción del producto"
               ></textarea>
             </div>
+            <span class="input-error" id="descriptionError"></span>
             <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
           </div>
           <div class="add-product__info">
@@ -35,6 +44,7 @@
               <ul>
                 <li>
                   <label for="nombre">Nombre del producto: </label>
+                  <span class="input-error" id="nameError"></span>
                   <input type="text" id="nombre" name="productName" />
                 </li>
                 <li>
@@ -47,16 +57,19 @@
                 </li>
                 <li>
                   <label for="marca">Marca: </label>
+                  <span class="input-error" id="brandError"></span>
                   <input type="text" id="marca" name="Brand" />
                 </li>
                 <li>
                   <label for="precio">Precio: </label>
+                  <span class="input-error" id="priceError"></span>
                   <span
-                    >$ <input type="number"  step="any" id="precio" name="price"
+                    >$ <input type="number" step="any" id="precio" name="price"
                   /></span>
                 </li>
                 <li>
                   <label for="vol">Volumen (ml): </label>
+                  <span class="input-error" id="volError"></span>
                   <input type="number" id="vol" name="size" />
                 </li>
                 <li>
@@ -116,7 +129,7 @@
               </ul>
               <div class="add-product__form--btn">
                 <button type="reset">Descartar</button>
-                <button type="submit">Añadir</button>
+                <button type="submit" id="btn">Añadir</button>
               </div>
             </div>
           </div>
@@ -124,5 +137,6 @@
       </form>
     </main>
     <%- include('../partials/footer')%>
+    <script src="/js/addProduct.js"></script>
   </body>
 </html>
