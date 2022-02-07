@@ -1628,7 +1628,7 @@ p {
   }
   .user-detail-container {
     display: flex;
-    width: 43%;
+    width: 50%;
     margin: 50px auto;
     justify-content: center;
     padding: 70px 20px;
