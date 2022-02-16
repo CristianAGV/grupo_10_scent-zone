@@ -41,7 +41,7 @@ let registerValidations = [
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
-    console.log("NOOOMBREE");
+    
     console.log(req.file);
     let imgFolder = path.resolve(__dirname, "../../public/assets/users");
     cb(null, imgFolder);
@@ -89,6 +89,8 @@ router.get(
   editUserMiddleware,
   usersController.actualizar
 );
+
+// router.get("/edit/:id", usersController.actualizar)
 router.post(
   "/edit/:id",
   upload.single("image"),

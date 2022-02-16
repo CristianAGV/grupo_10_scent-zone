@@ -962,11 +962,13 @@ textarea {
   outline: none;
 }
 
+.input-userError,
 .input-error {
   color: #cf9518;
   font-size: 0.8rem;
   margin-bottom: 5px;
 }
+
 
 .add-product__form li:nth-child(4) input,
 .add-product__form li:nth-child(5) input {

@@ -19,19 +19,47 @@
                 <div class="register-container">
                     <div class="reg-labels">
                         <label for="image">Agrega una imágen de perfil:</label>
-                        <input type="file" name="image" class="user-image-input" accept="image/png, image/jpeg">
+                        <span class="input-userError" id="userImageError"></span>
+                        <input 
+                            type="file" 
+                            name="image" 
+                            class="user-image-input"
+                            id="file-addUser" 
+                            accept=".jpeg, .jpg, .png,"
+                        >
                     </div>
                 <div class="reg-labels">
                     <label for="first_name">Nombre:</label>
-                    <input class="text-area" type="text" name="first_name" id="first_name" placeholder="Type your name..." >
+                    <span class="input-userError" id="userNameError"></span>
+                    <input 
+                        class="text-area" 
+                        type="text" 
+                        name="first_name" 
+                        id="first_name" 
+                        placeholder="Type your name..." 
+                    >
                 </div>
                 <div class="reg-labels">
                     <label for="last_name">Apellido:</label>
-                    <input class="text-area" type="text" name="last_name" id="last_name" placeholder="Type your name..." >
+                    <span class="input-userError" id="userLastNameError"></span>
+                    <input 
+                        class="text-area" 
+                        type="text" 
+                        name="last_name" 
+                        id="last_name" 
+                        placeholder="Type your name..." 
+                    >
                 </div>
                 <div class="reg-labels">
                     <label for="email">Email:</label>
-                    <input class="text-area" type="email" name="email" id="email" placeholder="Type your email..." >
+                    <span class="input-userError" id="userEmailError"></span>
+                    <input 
+                        class="text-area" 
+                        type="email" 
+                        name="email" 
+                        id="email" 
+                        placeholder="Type your email..." 
+                    >
                 </div>
                 <div class="reg-labels">
                     <label for="country">País:</label>
@@ -286,19 +314,27 @@
                 </div>
                 <div class="reg-labels">
                     <label for="password">Contraseña:</label>
-                    <input class="text-area" type="password" name="password" placeholder="Choose a password..." >
+                    <span class="input-userError" id="userPasswordError"></span>
+                    <input 
+                        class="text-area" 
+                        type="password" 
+                        name="password"
+                        id="password" 
+                        placeholder="Choose a password..." 
+                    >
                 </div>
                 <div class="have-account">
                     <a href="./login"><p>¿Ya tienes una cuenta?</p></a>
                 </div>
+                <span class="input-userError"  id="generalErrors"></span>
                 <div class="button-container">
-                    <input class="buttons" type="submit" value="Registrarse">
+                    <input class="buttons" id="btn-submit" type="submit" value="Registrarse">
                 </div>
             </div>
               </form>
         </section>
     </body>
     <%- include('../partials/footer')%>
-
+    <script src="/js/addUser.js"></script>
   </body>
 </html>

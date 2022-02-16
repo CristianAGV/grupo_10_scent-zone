@@ -25,19 +25,48 @@
                     </div>
                     <div class="reg-labels">
                         <label for="image">Actualiza imágen de perfil:</label>
-                        <input type="file" name="image" value=<%= usuario.dataValues.image %> class="user-image-input" accept="image/png, image/jpeg">
+                        <span class="input-userError" id="userImageError"></span>
+                        <input 
+                            type="file" 
+                            name="image" 
+                            value=<%= usuario.dataValues.image %> 
+                            class="user-image-input"
+                            id = "file-updateUser" 
+                            accept="image/png, image/jpeg"
+                        >
                     </div>
                     <div class="reg-labels">
                         <label for="first_name">Nombre:</label>
-                        <input class="text-area" type="text" name="first_name" id="first_name" value=<%= usuario.dataValues.first_name %>  >
+                        <span class="input-userError" id="userNameError"></span>
+                        <input 
+                            class="text-area" 
+                            type="text" 
+                            name="first_name" 
+                            id="first_name" 
+                            value=<%= usuario.dataValues.first_name %>  
+                        >
                     </div>
                     <div class="reg-labels">
                         <label for="last_name">Apellido:</label>
-                        <input class="text-area" type="text" name="last_name" id="last_name" value=<%= usuario.dataValues.last_name %> >
+                        <span class="input-userError" id="userLastNameError"></span>
+                        <input 
+                            class="text-area" 
+                            type="text" 
+                            name="last_name" 
+                            id="last_name" 
+                            value=<%= usuario.dataValues.last_name %> 
+                        >
                     </div>
                     <div class="reg-labels">
                         <label for="email">Email:</label>
-                        <input class="text-area" type="email" name="email" id="email" value=<%= usuario.dataValues.email %>>
+                        <span class="input-userError" id="userEmailError"></span>
+                        <input 
+                            class="text-area" 
+                            type="email" 
+                            name="email" 
+                            id="email" 
+                            value=<%= usuario.dataValues.email %>
+                        >
                     </div>
                     <div class="reg-labels">
                         <label for="country">País:</label>
@@ -292,18 +321,29 @@
                     </div>
                     <div class="reg-labels">
                         <label for="password"> Cambiar contraseña:</label>
-                        <input class="text-area" type="password"  name="password" placeholder="change" >
+                        <span class="input-userError" id="userPasswordError"></span>
+                        <input 
+                            class="text-area" 
+                            type="password"  
+                            name="password"
+                            id="password" 
+                            placeholder="change" 
+                        >
                     </div>
-                
-                    <div class="button-container">
-                       
-                        <input class="buttons" type="submit" value="Actualizar">
+                    <span class="input-userError"  id="generalErrors"></span>
+                    <div class="button-container">                       
+                        <input 
+                            class="buttons" 
+                            type="submit" 
+                            value="Actualizar"
+                            id="btn-submit"
+                        >
                     </div>
                 </div>
             </form>           
         </section>
     </body>
     <%- include('../partials/footer')%>
-
+    <script src="/js/updateUser.js"></script>
   </body>
 </html>
