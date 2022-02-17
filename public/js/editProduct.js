@@ -1,13 +1,13 @@
 let productName = document.querySelector("#nombre");
 let nameError = document.querySelector("#nameError");
 let productBrand = document.querySelector("#marca");
-let brandError = document.querySelector("#brandError");
+let brandErrorEdit = document.querySelector("#brandErrorEdit");
 let productPrice = document.querySelector("#precio");
-let priceError = document.querySelector("#priceError");
-let productDescription = document.querySelector("#descripcion");
+let priceErrorEdit = document.querySelector("#priceErrorEdit");
+let productDescription = document.querySelector("#description");
 let descriptionError = document.querySelector("#descriptionError");
 let productVol = document.querySelector("#vol");
-let volError = document.querySelector("#volError");
+let volErrorEdit = document.querySelector("#volErrorEdit");
 let productImage = document.querySelector("#myFile");
 let imageError = document.querySelector("#imageError");
 let form = document.querySelector("form");
@@ -77,11 +77,11 @@ productBrand.addEventListener("blur", (e) => {
   let value = e.target.value;
   if (value.length === 0) {
     e.target.style.borderColor = errorColor;
-    brandError.innerHTML = defaultErrorMessage;
+    brandErrorEdit.innerHTML = defaultErrorMessage;
     isBrandValid = false;
   } else if (value.length > 0) {
     e.target.style.borderColor = normalColor;
-    brandError.innerHTML = "";
+    brandErrorEdit.innerHTML = "";
     isBrandValid = true;
   }
 });
@@ -90,11 +90,11 @@ productPrice.addEventListener("blur", (e) => {
   let value = e.target.value;
   if (value.length === 0) {
     e.target.style.borderColor = errorColor;
-    priceError.innerHTML = defaultErrorMessage;
+    priceErrorEdit.innerHTML = defaultErrorMessage;
     isPriceValid = false;
   } else if (value.length > 0) {
     e.target.style.borderColor = normalColor;
-    priceError.innerHTML = "";
+    priceErrorEdit.innerHTML = "";
     isPriceValid = true;
   }
 });
@@ -103,13 +103,14 @@ productVol.addEventListener("blur", (e) => {
   let value = e.target.value;
   if (value.length === 0) {
     e.target.style.borderColor = errorColor;
-    volError.innerHTML = defaultErrorMessage;
+    volErrorEdit.innerHTML = defaultErrorMessage;
     isVolValid = false;
   } else if (value.length > 0) {
     e.target.style.borderColor = normalColor;
-    volError.innerHTML = "";
+    volErrorEdit.innerHTML = "";
     isVolValid = true;
   }
+  console.log(value);
 });
 
 submitBtn.addEventListener("click", (e) => {
