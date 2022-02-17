@@ -1,132 +1,115 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head')%>
+<%- include('../partials/head')%>
+
   <body>
     <%- include('../partials/header')%>
-    <!-- NavBar's styles -->
-    <%- include('../partials/nav')%>
-    <main>
-      <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">         
-        <h2 class="add-product__title">Editar producto</h2>
-        <div class="add-product__container">
-          <div class="add-product__description">
-            <h3>Añade una imagen del producto:</h3>
-            <div class="add-product__image">
-              <img src="/assets/<%= 
+      <!-- NavBar's styles -->
+      <%- include('../partials/nav')%>
+        <main>
+          <form action="/products/edit/<%=product.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <h2 class="add-product__title">Editar producto</h2>
+            <div class="add-product__container">
+              <div class="add-product__description">
+                <h3>Añade una imagen del producto:</h3>
+                <div class="add-product__image">
+                  <img src="/assets/<%= 
                   ( locals.errors ) ? 'default-image.png' 
                   : product.product_image 
                   %> 
                   " alt="channel" />
-            </div>          
-            <div class="add-product__imageLoading">
-              <label for="productImage">Agregar imagen</label>
-              <input type="file" id="productImage" name="productImage" hidden/>
-              <textarea
-              name="description"
-              rows="5"
-              cols="20"
-              ><%= product.description%></textarea>
-            </div>
-            <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
-          </div>
-          <div class="add-product__info">
-            <h3>Añade información del producto:</h3>
-            <% if(locals.errors){ %> <% for(let error in errors){ %>
-              <p class="feedback"><%= errors[error].msg %></p>
-              <% } %> <% } %>
-            <div class="add-product__form">
-            
-                <ul>
-                  <li>
-                    <label for="nombre">Nombre del producto: </label>
-                    <input type="text" value="<%= product.product_name%>" id="nombre" name="productName" />
-                  </li>
-                  <li>
-                    <label for="genero">Género:</label>
-                    <select name="gender" id="genero">
-                      <option value="masculino">Hombre</option>
-                      <option value="femenino">Mujer</option>
-                      <option value="unisex">Unisex</option>
-                    </select>
-                  </li>
-                  <li>
-                    <label for="marca">Marca: </label>
-                    <input type="text" value="<%= product.brand%>" id="marca" name="Brand" />
-                  </li>
-                  <li>
-                    <label for="precio">Precio: </label>
-                    <span>$ <input type="number" step="any" value="<%= product.price%>" id="precio" name="price" /></span>
-                  </li>
-                  <li>
-                    <label for="vol">Volumen (ml): </label>
-                    <input type="number" value="<%= product.size%>" id="vol" name="size" />
-                  </li>
-                  <li>
-                    <p>Selecciona una categoría:</p>
-                    <div class="add-product__categories">
-                      <span>
-                        <input
-                          type="radio"
-                          id="floral"
-                          name="category"
-                          value="4"
-                        />
-                        <label for="floral">Floral</label>
-                      </span>
-                      <span>
-                        <input
-                          type="radio"
-                          id="frutal"
-                          name="category"
-                          value="5"
-                        />
-                        <label for="frutal">Frutal</label>
-                      </span>
-    
-                      <span>
-                        <input
-                          type="radio"
-                          id="amaderado"
-                          name="category"
-                          value="2"
-                        />
-                        <label for="amaderado">Amaderado</label>
-                      </span>
-    
-                      <span>
-                        <input
-                          type="radio"
-                          id="dulce"
-                          name="category"
-                          value="1"
-                        />
-                        <label for="dulce">Dulce</label>
-                      </span>
-    
-                      <span>
-                        <input
-                          type="radio"
-                          id="cítrico"
-                          name="category"
-                          value="3"
-                        />
-                        <label for="cítrico">Cítrico</label>
-                      </span>
-                    </div>
-                  </li>
-                  
-                </ul>
-                <div class="add-product__form--btn">
-                  <button type="reset">Descartar</button>
-                  <button type="submit">Guardar</button>
                 </div>
+                <span class="input-error" id="imageError"></span>
+                <div class="add-product__imageLoading">
+                  <label for="productImage">Agregar imagen</label>
+                  <input type="file" id="myFile" name="productImage" hidden accept=".jpeg, .jpg, .png, .gif" />
+                  <textarea name="description" id="description" rows="5" cols="20"><%= product.description%></textarea>
+                </div>
+                <span class="input-error" id="descriptionError"></span>
+                <!-- <textarea name="textarea" rows="5" cols="20" placeholder="Añade una descripción del producto"></textarea> -->
+              </div>
+              <div class="add-product__info">
+                <h3>Añade información del producto:</h3>
+                <% if(locals.errors){ %>
+                  <% for(let error in errors){ %>
+                    <p class="feedback">
+                      <%= errors[error].msg %>
+                    </p>
+                    <% } %>
+                      <% } %>
+                        <div class="add-product__form">
+                          <ul>
+                            <li>
+                              <label for="nombre">Nombre del producto: </label>
+                              <span class="input-error" id="nameError"></span>
+                              <input type="text" value="<%= product.product_name%>" id="nombre" name="productName" />
+                            </li>
+                            <li>
+                              <label for="genero">Género:</label>
+                              <select name="gender" id="genero">
+                                <option value="masculino">Hombre</option>
+                                <option value="femenino">Mujer</option>
+                                <option value="unisex">Unisex</option>
+                              </select>
+                            </li>
+                            <li>
+                              <label for="marca">Marca: </label>
+                              <span class="input-error" id="brandError"></span>
+                              <input type="text" value="<%= product.brand%>" id="marca" name="Brand" />
+                            </li>
+                            <li>
+                              <label for="precio">Precio: </label>
+                              <span class="input-error" id="priceError"></span>
+                              <span>$ <input type="number" step="any" value="<%= product.price%>" id="precio"
+                                  name="price" /></span>
+                            </li>
+                            <li>
+                              <label for="vol">Volumen (ml): </label>
+                              <span class="input-error" id="volError"></span>
+                              <input type="number" value="<%= product.size%>" id="vol" name="size" />
+                            </li>
+                            <li>
+                              <p>Selecciona una categoría:</p>
+                              <div class="add-product__categories">
+                                <span>
+                                  <input type="radio" id="floral" name="category" value="4" />
+                                  <label for="floral">Floral</label>
+                                </span>
+                                <span>
+                                  <input type="radio" id="frutal" name="category" value="5" />
+                                  <label for="frutal">Frutal</label>
+                                </span>
+
+                                <span>
+                                  <input type="radio" id="amaderado" name="category" value="2" />
+                                  <label for="amaderado">Amaderado</label>
+                                </span>
+
+                                <span>
+                                  <input type="radio" id="dulce" name="category" value="1" />
+                                  <label for="dulce">Dulce</label>
+                                </span>
+
+                                <span>
+                                  <input type="radio" id="cítrico" name="category" value="3" />
+                                  <label for="cítrico">Cítrico</label>
+                                </span>
+                              </div>
+                            </li>
+
+                          </ul>
+                          <div class="add-product__form--btn">
+                            <button type="reset">Descartar</button>
+                            <button type="submit" id="btn">Guardar</button>
+                          </div>
+                        </div>
+
+              </div>
             </div>
-            
-            </div>
-        </div>
-      </form>
-      
-    </main>
-    <%- include('../partials/footer')%>
+          </form>
+
+        </main>
+        <%- include('../partials/footer')%>
+        <script src="/public/js/editProduct.js"></script>
   </body>
 </html>
