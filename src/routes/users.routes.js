@@ -17,10 +17,10 @@ let userValidations = [
 
 let registerValidations = [
   body("email").notEmpty().withMessage("Debes ingresar un email"),
-  body("email").isEmail(),
-  body("password").notEmpty().withMessage("Debes ingresar una contraseña"),
-  body("first_name").notEmpty().withMessage("Debes ingresar un nombre"),
-  body("last_name").notEmpty().withMessage("Debes ingresar un apellido"),
+  body("email").isEmail().withMessage("El email debe tener un formato similar a 'email@email.com'"),
+  body("password").notEmpty().withMessage("Debes ingresar una contraseña").isLength({ min: 8 }).withMessage('La contraseña debe tener más de 8 caracteres'),
+  body("first_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El nombre debe tener más de dos caracteres"),
+  body("last_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El apellido debe tener más de dos caracteres"),
   body("country").notEmpty().withMessage("Debes ingresar tu país"),
   body("productImage").custom((value, { req }) => {
     let file = req.file;
