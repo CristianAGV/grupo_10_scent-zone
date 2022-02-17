@@ -94,6 +94,7 @@ router.get(
 router.post(
   "/edit/:id",
   upload.single("image"),
+  registerValidations,
   usersController.actualizarUsuario
 );
 
