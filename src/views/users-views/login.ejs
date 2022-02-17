@@ -15,12 +15,14 @@
           <% if(locals.errors){ %> <% for(let error in errors){ %>
           <p class="feedback"><%= errors[error].msg %></p>
           <% } %> <% } %>
-          <form action="authlogin" method="POST">
+          <form id="login-form" action="authlogin" method="POST">
+            <span id="not-filled" class="input-error"></span>
             <ul class="main__login-userCredentials">
               <li>
                 <label class="main__login-label" for="email"
                   >Correo Electónico:</label
                 >
+                <span class="input-error" id="email-login-error"></span>
                 <input
                   class="main__login-input"
                   type="email"
@@ -33,6 +35,7 @@
                 <label class="main__login-label" for="password"
                   >Contraseña:</label
                 >
+                <span class="input-error" id="password-login-error"></span>
                 <input
                   class="main__login-input"
                   type="password"
@@ -59,13 +62,15 @@
                 </p></a
               >
             </div>
-            <button type="submit" class="main__login-btnLogin">
+            <button type="submit" class="main__login-btnLogin" id="login-submit">
               Iniciar sesión
             </button>
           </form>
         </div>
       </div>
     </main>
+
+    <script src="/js/login.js"></script>
     <!-- Footer section -->
     <%- include('../partials/footer')%>
   </body>
