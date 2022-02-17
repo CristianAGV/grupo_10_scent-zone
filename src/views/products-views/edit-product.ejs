@@ -54,25 +54,25 @@
                             </li>
                             <li>
                               <label for="marca">Marca: </label>
-                              <span class="input-error" id="brandError"></span>
+                              <span class="input-error" id="brandErrorEdit"></span>
                               <input type="text" value="<%= product.brand%>" id="marca" name="Brand" />
                             </li>
                             <li>
                               <label for="precio">Precio: </label>
-                              <span class="input-error" id="priceError"></span>
+                              <span class="input-error" id="priceErrorEdit"></span>
                               <span>$ <input type="number" step="any" value="<%= product.price%>" id="precio"
                                   name="price" /></span>
                             </li>
                             <li>
                               <label for="vol">Volumen (ml): </label>
-                              <span class="input-error" id="volError"></span>
+                              <span class="input-error" id="volErrorEdit"></span>
                               <input type="number" value="<%= product.size%>" id="vol" name="size" />
                             </li>
                             <li>
                               <p>Selecciona una categoría:</p>
                               <div class="add-product__categories">
                                 <span>
-                                  <input type="radio" id="floral" name="category" value="4" />
+                                  <input type="radio" id="floral" name="category" value="4" checked />
                                   <label for="floral">Floral</label>
                                 </span>
                                 <span>
@@ -110,6 +110,6 @@
 
         </main>
         <%- include('../partials/footer')%>
-        <script src="/public/js/editProduct.js"></script>
+        <script src="/js/editProduct.js"></script>
   </body>
 </html>
