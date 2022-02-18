@@ -83,8 +83,8 @@ password.addEventListener("focus", ( e ) => {
 
     const userPassword = e.target.value
 
-    if ( userPassword.length < 4 ){
-        passwordError.innerHTML = "Debes ingresar una contraseña de al menos 4 caracteres"
+    if ( userPassword.length < 8 ){
+        passwordError.innerHTML = "Debes ingresar una contraseña de al menos 8 caracteres"
         anyError = true;
     }
     

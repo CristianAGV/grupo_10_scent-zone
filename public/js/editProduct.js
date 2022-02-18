@@ -86,6 +86,8 @@ productBrand.addEventListener("blur", (e) => {
   }
 });
 
+console.log( productPrice )
+
 productPrice.addEventListener("blur", (e) => {
   let value = e.target.value;
   if (value.length === 0) {

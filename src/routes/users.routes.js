@@ -90,7 +90,8 @@ router.get(
   usersController.actualizar
 );
 
-// router.get("/edit/:id", usersController.actualizar)
+// router.get("/edit/:id", usersController.actualizar);
+
 router.post(
   "/edit/:id",
   upload.single("image"),
