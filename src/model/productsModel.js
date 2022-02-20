@@ -1,14 +1,11 @@
-const path = require('path')
-const fs = require('fs')
-const productsDb = require('../data/products.json');
-const { receiveMessageOnPort } = require('worker_threads');
-const productsPath = path.resolve(__dirname, '../data/products.json');
+const path = require("path");
+const { receiveMessageOnPort } = require("worker_threads");
+const productsPath = path.resolve(__dirname, "../data/products.json");
 
 const db = require("../database/models");
 const sequelize = db.sequelize;
 
 const productsModel = {
-
   addProduct: async (newProduct) => {
     try {
       let result = await db.products.create(newProduct);
@@ -20,7 +17,7 @@ const productsModel = {
 
   showProducts: async () => {
     try {
-      let result = await db.products.findAll({include: ["category"]});
+      let result = await db.products.findAll({ include: ["category"] });
       return result;
     } catch (error) {
       console.log(error);
@@ -35,10 +32,12 @@ const productsModel = {
       console.log(error);
     }
   },
- 
+
   showProductsByCategory: async (category) => {
     try {
-      let result = await db.products.findAll({where: {category_id: category}});
+      let result = await db.products.findAll({
+        where: { category_id: category },
+      });
       return result;
     } catch (error) {
       console.log(error);
@@ -56,7 +55,9 @@ const productsModel = {
 
   editProduct: async (product, productid) => {
     try {
-      let result = await db.products.update(product, {where: {id: productid}});
+      let result = await db.products.update(product, {
+        where: { id: productid },
+      });
       console.log(result);
     } catch (error) {
       console.log(error);
@@ -65,11 +66,11 @@ const productsModel = {
 
   deleteProduct: async (productid) => {
     try {
-      let result = await db.products.destroy({where: {id: productid}});
+      let result = await db.products.destroy({ where: { id: productid } });
       console.log(result);
     } catch (error) {
       console.log(error);
     }
   },
 };
-module.exports = productsModel
+module.exports = productsModel;

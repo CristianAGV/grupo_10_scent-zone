@@ -12,16 +12,33 @@
     <section class="main-slider">
       <div class="main-slider__container">
         <img
-          src="assets/slider1-redim.jpg"
+          src="https://images.unsplash.com/photo-1519606247872-0440aae9b827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          alt="slider image"
+          class="main-slider__image slider-image-active"
+        />
+        <img
+          src="https://media.istockphoto.com/photos/lemon-essential-oil-on-a-yellow-background-selective-focus-picture-id1330929813?k=20&m=1330929813&s=612x612&w=0&h=3JjmNO8hnNbCtMzfwGqOs2Nf78ySU_SLg2DbyKA1v0M="
+          alt="slider image"
+          class="main-slider__image"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1567653418876-5bb0e566e1c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzR8fHN3ZWV0JTIwcGVyZnVtZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt="slider image"
+          class="main-slider__image"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1543157145-f78c636d023d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+          alt="slider image"
+          class="main-slider__image"
+        />
+        <img
+          src="https://media.istockphoto.com/photos/colorful-fruit-pattern-picture-id1013581718?k=20&m=1013581718&s=612x612&w=0&h=p1mj8Y97b3kY43SUoOOFHzV32VE5ikIV1umpk3gvS_o="
           alt="slider image"
           class="main-slider__image"
         />
         <div class="main-slider__content">
-          <h2 class="slider__title">Amaderado</h2>
-          <p class="slider__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
-            nisi.
-          </p>
+          <h2 class="slider__title" id="perfume-title"></h2>
+          <p class="slider__text" id="perfume-text"></p>
         </div>
         <div class="slider__btn slider__btn--right" id="btn-right">&#62;</div>
         <div class="slider__btn slider__btn--left" id="btn-left">&#60;</div>
@@ -96,5 +113,6 @@
       </section>
     </main>
     <%- include('./partials/footer')%>
+    <script src="/js/home.js"></script>
   </body>
 </html>
