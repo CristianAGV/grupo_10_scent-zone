@@ -3,7 +3,7 @@
   <%- include('../partials/head')%>
   <body>
     <!-- Header's styles -->
-    <%- include('../partials/header')%>
+    <%- include('../partials/header', {user})%>
 
     <!-- NavBar's styles -->
     <%- include('../partials/nav')%>
@@ -29,12 +29,12 @@
           <p class="brand-title">Volumen:</p>
           <p class="brand"><%= product.size %></p>
         </div>
-        <div class="button-div">
-          <button class="add-to-cart"><i class="fas fa-shopping-cart"></i
-            >AÑADIR AL CARRITO</button>
+        <div class="button-div"> 
+         <form action="/orders?product=<%= product.id %>" method="post">
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i>AÑADIR AL CARRITO</button>
+          </form>
         </div>
       </div>
-   
     </div>
   </div>
   <div class="decription-pd-container">

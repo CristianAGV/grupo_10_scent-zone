@@ -5,11 +5,13 @@ const app = express();
 const mainRoutes = require("./routes/main.routes.js");
 const usersRoutes = require("./routes/users.routes.js");
 const productsRoutes = require("./routes/products.routes.js");
+const ordersRoutes = require("./routes/orders.routes.js");
 const apiRoutes = require("./api/routes");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookies = require("cookie-parser");
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
+
 
 app.use(
   session({
@@ -27,6 +29,7 @@ app.use(methodOverride("_method"));
 app.use("/", mainRoutes);
 app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
+app.use("/orders", ordersRoutes);
 app.use("/api", apiRoutes);
 app.set("views", path.resolve(__dirname, "./views"));
 

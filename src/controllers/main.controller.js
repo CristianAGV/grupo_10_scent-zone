@@ -15,7 +15,7 @@ const mainController = {
         
     },
     cart: (req, res) => {
-        res.render('cart')
+        res.render('cart', {user: req.session.userLogged})
     },
     questions: (req, res) => {
         res.render('questions')

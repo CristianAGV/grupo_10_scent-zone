@@ -10,7 +10,7 @@ const productsController = {
     try {
       let product = await productsModel.findOne(chosenId);
       console.log(product);
-      return res.render('./products-views/product-detail', {product: product})
+      return res.render('./products-views/product-detail', {product: product, user: req.session.userLogged} )
     } catch (error) {
       res.redirect('/comeBack')
       console.log(error);
@@ -127,6 +127,7 @@ const productsController = {
       res.redirect('/comeBack')
       console.log(error)
     }
-  },
+  }
+
 };
 module.exports = productsController;

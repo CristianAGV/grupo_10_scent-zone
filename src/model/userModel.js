@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const userDb = require('../data/users.json');
 const usersPath = path.resolve(__dirname, '../data/users.json');
 const db = require('../database/models');
 const sequelize = db.sequelize;
