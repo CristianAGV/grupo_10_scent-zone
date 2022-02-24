@@ -1,6 +1,31 @@
 const db = require("../../database/models");
 
 const apiUsersModel = {
+
+    getAllUsers: async() => {
+
+        try {
+            const result = await db.users.findAll();
+            const users = result.map( user => {
+                const { id, first_name, email } = user
+                return {
+                    id,
+                    first_name,
+                    email,
+                    detail:`/api/users/${ id }`    
+                }
+            })
+            return {
+                count: result.length,
+                users
+            }
+            
+        } catch (error) {
+            console.log( error )
+        }
+
+    },
+
     getUserDetail: async (userId) => {
         try {
 

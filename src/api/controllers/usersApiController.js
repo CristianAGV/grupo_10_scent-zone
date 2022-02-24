@@ -1,6 +1,23 @@
 const usersApiModel = require('../model/usersApiModel');
 
 const usersApiController = {
+
+    getAllUsers: async (req, res) =>{
+        try {
+
+            const users = await usersApiModel.getAllUsers();
+            if ( users ){
+                return res.status( 200 ).json( users )
+            }            
+        } catch (error) {
+            const message = "An internal error have occurred " + error 
+            return res.status( 500 ).json({
+                message
+            })
+        }
+    },
+
+
     getUserById: async (req, res) => {
         try {
             let userId = req.params.id;
