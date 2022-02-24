@@ -2,6 +2,13 @@
   <div class="main-header__container">
     <h1 class="main-header__title"><a href="/">SCENTZONE</a></h1>
     <div class="main-header__menuIcons">
+      <% if (locals.user) { %>
+        <% if (user.role == 2) { %>
+          <a href="/products/products-list"><button class="header-list-btn">Products</button></a>
+          <a href="/users/list"><button class="header-list-btn">Users</button></a>
+        <% } %>       
+      <% } %>
+      
       <a href="/" class="main-header__btn"><i class="fas fa-home"></i></a>
       <a href="/cart" class="main-header__btn"
         ><i class="fas fa-shopping-cart"></i

@@ -26,7 +26,7 @@ h2 {
 body {
   width: 100%;
   height: 100vh;
-  background: #f0e4e4;
+  background: #fff;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
@@ -82,6 +82,8 @@ a.main-header__btn {
   color: rgba(255, 255, 255, 0.973);
   box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.288);
 }
+
+
 /* End header's styles */
 
 /* Navbar styles */
@@ -1231,6 +1233,17 @@ a.main-header__btn {
   text-decoration: none;
 }
 
+.header-list-btn{
+  font-family: "Poppins", sans-serif;
+  border: none;
+  margin-right: 15px;
+  font-size: 1em;
+  color: #ffff;
+  background-color: #50020d;
+  border: solid 1px white;
+  padding: 2px 5px;
+  cursor: pointer;
+}
 /* End header's styles */
 
 .cart__section--items img {
@@ -1250,6 +1263,10 @@ a.main-header__btn {
 .cart__item--info p,
 .cart__item--info span {
   font-size: 0.8rem;
+}
+
+.cart__item--info span a {
+  color: #3b010a;
 }
 
 .cart__item--number {
