@@ -54,10 +54,9 @@ const productsModel = {
 
   editProduct: async (product, productid) => {
     try {
-      let result = await db.products.update(product, {
+      await db.products.update(product, {
         where: { id: productid },
       });
-      console.log(result);
     } catch (error) {
       console.log(error);
     }
@@ -65,8 +64,7 @@ const productsModel = {
 
   deleteProduct: async (productid) => {
     try {
-      let result = await db.products.destroy({ where: { id: productid } });
-      console.log(result);
+      await db.products.destroy({ where: { id: productid } });
     } catch (error) {
       console.log(error);
     }

@@ -86,7 +86,11 @@ const productsController = {
       const idParam = req.params.id;
       const product = await productsModel.editProductInfo(idParam); //idParam o id
       const categories = await db.categories.findAll();
-      res.render("./products-views/edit-product", { product, categories });
+      res.render("./products-views/edit-product", {
+        product,
+        categories,
+        user: req.session.userLogged,
+      });
     } catch (error) {
       res.redirect("/comeBack");
       console.log(error);
@@ -109,7 +113,7 @@ const productsController = {
           status: true,
           product_image: req.file.filename,
         };
-        let result = await productsModel.editProduct(productToUpdate, id);
+        await productsModel.editProduct(productToUpdate, id);
         res.redirect("/products/products-list");
       } else {
         return res.render("./products-views/add-product", {
@@ -126,8 +130,8 @@ const productsController = {
   deleteProduct: async function (req, res) {
     let productid = req.params.id;
     try {
-      let result = await productsModel.deleteProduct(productid);
-      res.redirect("/");
+      await productsModel.deleteProduct(productid);
+      res.redirect("/products/products-list");
     } catch (error) {
       res.redirect("/comeBack");
       console.log(error);
