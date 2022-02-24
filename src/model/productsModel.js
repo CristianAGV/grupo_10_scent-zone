@@ -8,8 +8,7 @@ const sequelize = db.sequelize;
 const productsModel = {
   addProduct: async (newProduct) => {
     try {
-      let result = await db.products.create(newProduct);
-      console.log(result);
+      await db.products.create(newProduct);
     } catch (error) {
       console.log(error);
     }
