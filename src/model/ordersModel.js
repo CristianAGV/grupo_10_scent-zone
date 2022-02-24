@@ -8,7 +8,19 @@ const ordersModel = {
         } catch (error) {
             console.error(error);
         }
+    },
+    getOrder: async( idUser ) =>{
+        try {
+            let orders = await db.orders.findAll({where:{ user_id : idUser}});
+            return orders;
+            // console.log( orders )
+        } catch (error) {
+            console.log("a rezar muchachos", error )
+        }
     }
+
 }
+// ordersModel.getOrder( 15 )
+
 
 module.exports = ordersModel
