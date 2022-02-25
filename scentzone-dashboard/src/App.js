@@ -1,9 +1,11 @@
 import "./App.css";
+import TotalsContainer from "./components/totalsContainer"
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola muchachos este es el dashboard</h1>
+      <h1>Scent Zone dashboard</h1>
+      <TotalsContainer />
     </div>
   );
 }

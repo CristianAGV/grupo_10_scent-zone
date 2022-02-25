@@ -10,6 +10,7 @@ const apiRoutes = require("./api/routes");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const cookies = require("cookie-parser");
+const cors = require('cors');
 const userLoggedMiddleware = require("./middlewares/userLoggedMiddleware");
 
 
@@ -18,7 +19,7 @@ app.use(
     secret: "ScentZoneSecret",
   })
 );
-
+app.use(cors());
 app.use(cookies());
 app.use(userLoggedMiddleware);
 app.use(express.static(path.join(__dirname, "../public/")));
@@ -32,5 +33,6 @@ app.use("/products", productsRoutes);
 app.use("/orders", ordersRoutes);
 app.use("/api", apiRoutes);
 app.set("views", path.resolve(__dirname, "./views"));
+
 
 module.exports = app;

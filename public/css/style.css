@@ -315,6 +315,7 @@ a.main-header__btn {
   margin: 30px 0px;
   font-size: 25px;
   text-align: center;
+  z-index: 20;
 }
 
 .main__login-content {
@@ -324,6 +325,7 @@ a.main-header__btn {
   margin-bottom: 40px;
   width: 340px;
   border-radius: 5px;
+  z-index: 20;
 }
 
 .main__login-userCredentials {
@@ -399,6 +401,20 @@ a.main-header__btn {
   text-align: center;
 }
 
+.background-main{
+  background-image: url("https://images.pexels.com/photos/2395249/pexels-photo-2395249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");  
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-bottom: 35px;
+
+}
+.background-main::before{
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(87, 87, 87, 0.301);
+}
 /*footer*/
 /*history styles*/
 .history-main {
@@ -684,9 +700,10 @@ a.main-header__btn {
 }
 
 .register-title {
-  margin: 30px 0px;
+  margin: 0px 0px;
   font-size: 30px;
   text-align: center;
+  padding-top: 30px;
 }
 
 .main-form-section {
@@ -694,7 +711,6 @@ a.main-header__btn {
   display: block;
   margin: auto;
   margin-top: 25px;
-  margin-bottom: 40px;
   padding: 30px;
   background-color: #141417;
   color: #ffff;
@@ -702,6 +718,7 @@ a.main-header__btn {
   -webkit-box-shadow: 0px 0px 7px -1px #141417;
   -moz-box-shadow: 0px 0px 7px -1px #141417;
   box-shadow: 0px 0px 7px -1px #141417;
+  z-index: 20;
 }
 
 .main-form-section:hover {
@@ -2077,9 +2094,10 @@ p {
   .main-form-section {
     max-width: 27%;
     margin-top: 35px;
-    margin-bottom: 35px;
+    margin-bottom: 0px;
     padding-left: 60px;
     padding-right: 30px;
+    padding-bottom: 35px;
   }
 
   .text-area {
