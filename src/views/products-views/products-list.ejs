@@ -18,7 +18,7 @@
           <table class="table">
             <thead>
               <tr>
-                  <th>ID</th>
+                  <!-- <th>ID</th> -->
                   <th>Producto</th>
                   <th>Marca</th>
                   <th>Precio $</th>
@@ -34,7 +34,7 @@
                   <% if (locals.showProducts && locals.showProducts.length) { %>
                     <% showProducts.forEach(item => { %>
                       <% if (item.status) { %>
-                        <td data-label="ID"> <%= item.id %></td> 
+                        
                         <td data-label="Product"> <%= item.product_name %></td>
                         <td data-label="Marca"> <%= item.brand %></td>
                         <td data-label="Precio"> <%= item.price %></td>
