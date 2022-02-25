@@ -83,7 +83,6 @@ a.main-header__btn {
   box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.288);
 }
 
-
 /* End header's styles */
 
 /* Navbar styles */
@@ -401,15 +400,14 @@ a.main-header__btn {
   text-align: center;
 }
 
-.background-main{
-  background-image: url("https://images.pexels.com/photos/2395249/pexels-photo-2395249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");  
+.background-main {
+  background-image: url("https://images.pexels.com/photos/2395249/pexels-photo-2395249.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding-bottom: 35px;
-
 }
-.background-main::before{
+.background-main::before {
   position: absolute;
   content: "";
   inset: 0;
@@ -704,6 +702,10 @@ a.main-header__btn {
   font-size: 30px;
   text-align: center;
   padding-top: 30px;
+}
+
+.register-overlay {
+  display: flex;
 }
 
 .main-form-section {
@@ -1250,7 +1252,7 @@ a.main-header__btn {
   text-decoration: none;
 }
 
-.header-list-btn{
+.header-list-btn {
   font-family: "Poppins", sans-serif;
   border: none;
   margin-right: 15px;
