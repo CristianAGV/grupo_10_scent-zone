@@ -34,7 +34,7 @@ const apiUsersModel = {
                 console.log("There is not a user with the requested ID");
                 return "nullUser";
             } else {
-                console.log(result);
+               
                 return result
             }
 

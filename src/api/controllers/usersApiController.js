@@ -22,6 +22,7 @@ const usersApiController = {
         try {
             let userId = req.params.id;
             let selectedUser = await usersApiModel.getUserDetail(userId);
+            let imageRoute = `http://localhost:3003/assets/users/${selectedUser.image}`
 
             if (selectedUser == "nullUser") {
                 return res.status(404).json({message: "There is not a user with the requested ID"})
@@ -35,7 +36,7 @@ const usersApiController = {
                         country: selectedUser.country
                     },
                     userImage: {
-                        url: selectedUser.image,
+                        url: imageRoute,
                     }
                 })
             }
