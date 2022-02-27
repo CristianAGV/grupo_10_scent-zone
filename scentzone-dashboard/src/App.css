@@ -2,6 +2,7 @@
 .App {
   font-family: "Poppins", sans-serif;
   padding: 0 2rem;
+  margin: 50px 50px;
 }
 
 .App h2 {
@@ -17,7 +18,14 @@
 }
 
 #dash-card {
-  width: 200px;
+  width: 190px;
+  box-shadow: 0px 0px 5px #6b021060;
+  background-color: rgb(255, 255, 255);
+}
+
+.text-div{
+  background-color: #141417;
+  width: 100%;
 }
 
 .dashboard-card h2 {
@@ -27,4 +35,7 @@
 
 .cards-container {
   display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 50px 0px;
 }
