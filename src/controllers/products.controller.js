@@ -25,7 +25,7 @@ const productsController = {
         category
       );
       res.render("./products-views/categories", {
-        prodByCategory: prodByCategory,
+        prodByCategory: prodByCategory, user: req.session.userLogged
       });
     } catch (error) {
       res.redirect("/comeBack");
@@ -38,6 +38,7 @@ const productsController = {
       let allProducts = await productsModel.showProducts();
       res.render("./products-views/products-list", {
         showProducts: allProducts,
+        user: req.session.userLogged
       });
     } catch (error) {
       res.redirect("/comeBack");
@@ -46,7 +47,7 @@ const productsController = {
   },
 
   addProducts: (req, res) => {
-    res.render("./products-views/add-product");
+    res.render("./products-views/add-product", { user: req.session.userLogged});
   },
 
   processAddProduct: async function (req, res) {

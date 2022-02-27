@@ -42,7 +42,7 @@ const usersController = {
         try {
             
             const users = await userModel.getUsers();
-            res.render('./users-views/users-list', {users})
+            res.render('./users-views/users-list', {users, user: req.session.userLogged})
             
         } catch (error) {
             console.log( error )

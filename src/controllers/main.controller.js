@@ -30,10 +30,10 @@ const mainController = {
     }
   },
   questions: (req, res) => {
-    res.render("questions");
+    res.render("questions", { user: req.session.userLogged});
   },
   errorCatch: (req, res) => {
-    res.render("comeBack");
+    res.render("comeBack", { user: req.session.userLogged});
   },
 };
 
