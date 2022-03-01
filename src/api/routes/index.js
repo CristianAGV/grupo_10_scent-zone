@@ -7,6 +7,9 @@ const usersApiController = require("../controllers/usersApiController");
 //products api routes
 router.get("/products", productsApiController.getProducts);
 
+// product details API route
+router.get("/products/:id", productsApiController.getProductDetails);
+
 // users list - api endpoint 
 router.get("/users", usersApiController.getAllUsers)
 
