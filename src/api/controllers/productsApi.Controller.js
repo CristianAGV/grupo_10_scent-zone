@@ -1,4 +1,5 @@
 const productsApiModel = require("../model/productsApi.model");
+
 const productsApiController = {
   getProducts: async function (req, res) {
     try {
@@ -34,6 +35,18 @@ const productsApiController = {
       return res.send(error.message);
     }
   },
+
+
+  getProductDetails: async function (req, res){
+    let chosenId = req.params.id;
+    try {
+      let product = await productsApiModel.findOne(chosenId);
+      return res.status(200).json({
+        product: product,
+      });
+    } catch (error) {
+      return res.send(error.message);
+    }  }
 };
 
 module.exports = productsApiController;

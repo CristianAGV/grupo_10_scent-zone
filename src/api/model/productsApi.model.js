@@ -14,6 +14,16 @@ const productsApiModel = {
       throw new Error("Error trying to connect to database");
     }
   },
+
+  findOne: async (chosenId) => {
+    try {
+      let result = await db.products.findByPk(chosenId);
+      return result;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
 };
 
 module.exports = productsApiModel;
