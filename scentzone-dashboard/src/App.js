@@ -1,6 +1,7 @@
 import "./App.css";
 import TotalsContainer from "./components/totalsContainer";
 import LastProduct from "./components/LastProduct";
+import ProductList from "./components/ProductList";
 function App() {
   return (
     <div className="App">
@@ -8,6 +9,7 @@ function App() {
       <TotalsContainer />
       <h2>Products List</h2>
       <LastProduct />
+      <ProductList/>
     </div>
   );
 }
