@@ -7,12 +7,13 @@ import Categories from "./components/Categories";
 function App() {
   return (
     <div className="App">
-      <h1>Scent Zone dashboard</h1>
+      <h1>Scent Zone Dashboard</h1>
       <TotalsContainer />
-      <Categories/>
+      <h2>Products per Category</h2>
+      <Categories />
       <h2>Products List</h2>
       <LastProduct />
-      <ProductList/>
+      <ProductList />
     </div>
   );
 }
