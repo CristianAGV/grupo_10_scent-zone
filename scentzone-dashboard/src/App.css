@@ -19,6 +19,7 @@
 
 #dash-card {
   width: 190px;
+  height: 200px;
   box-shadow: 0px 0px 5px #6b021060;
   background-color: rgb(255, 255, 255);
 }
@@ -36,6 +37,16 @@
 .cards-container {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 950px;
   margin: 50px 0px;
+}
+
+@media only screen and (max-width: 1000px) {
+.cards-container{
+  display: flex;
+  flex-direction: column;
+}
+#dash-card{
+  margin-bottom: 40px;
+}
 }
