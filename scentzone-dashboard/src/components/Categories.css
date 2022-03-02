@@ -1,0 +1,34 @@
+.categories-container {
+  width: 92%;
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #c710109d;
+}
+
+.categoriesTable {
+  display: block;
+  border-radius: 10px;
+  place-self: center;
+  width: 100%;  
+  display: table;
+}
+
+.categoriesTable th {
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+  background-color: #50020d;
+  color: #ffff;
+  border-radius: 10px;
+  height: 60px;
+}
+
+.categoriesTable td {
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    height: 30px;
+  }

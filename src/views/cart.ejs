@@ -10,7 +10,7 @@
       <section>
         <h1 class="cart__section--title">Carrito de compras</h1>
         <div class="cart__section--container">
-          <%if(locals.products && locals.products.length){%>
+          <%if(locals.products && locals.products.length && locals.total > 0){%>
           <%products.forEach(product =>{%>
           <div class="cart__section--items">
             <img
@@ -24,31 +24,17 @@
             </div>
             <div class="cart__item--number">
               <i class="fas fa-minus"></i>
-              <span>1</span>
+              <span data-number>1</span>
               <i class="fas fa-plus"></i>
             </div>
             <i class="far fa-trash-alt"></i>
           </div>
 
-          <% }) %> <% } else { %>
-          <p>No hay productos agregados al carrito</p>
-          <% } %>
+          <% }) %>
           <div class="cart__total">
-            <div class="cart__total--info">
-              <div>
-                <p>Subtotal</p>
-                <p>Envio</p>
-                <p>IVA</p>
-              </div>
-              <div>
-                <p>$16.000</p>
-                <p>$0</p>
-                <p>$0</p>
-              </div>
-            </div>
             <div class="cart__total--total">
               <p class="total">Total</p>
-              <p>$16.000</p>
+              <p>$<%= total %></p>
             </div>
 
             <div class="cart__total--payment">
@@ -57,9 +43,15 @@
               <span><a href="#">Opciones de pago...</a></span>
             </div>
           </div>
+
+          <% } else { %>
+          <p>No hay productos agregados al carrito</p>
+          <% } %>
         </div>
       </section>
     </main>
+    <script src="/js/hambMenu.js"></script>
     <%- include('./partials/footer')%>
+    <script src="/js/cart.js"></script>
   </body>
 </html>
