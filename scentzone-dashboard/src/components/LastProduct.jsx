@@ -21,7 +21,7 @@ function LastProduct() {
 
   return (
     <>
-        <h3 className='lastProduct-section-title'>Last Product Added</h3>
+        <h3 className='lastProduct-section-title'>Último producto agregado</h3>
         <div className='dashboard-card' id='last-product'>
             <div className='last-product-container'>
                 <div className='lastProduct-image-container'>

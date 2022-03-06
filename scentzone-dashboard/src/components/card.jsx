@@ -5,7 +5,7 @@ function Card(props) {
         
         <div className="dashboard-card" id="dash-card">
             <h2>{props.total}</h2>
-            <p>{props.object} in database</p>
+            <p>{props.object} en la base de datos</p>
             
         </div>
         

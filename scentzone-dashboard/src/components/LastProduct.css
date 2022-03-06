@@ -1,13 +1,15 @@
 .lastProduct-section-title {
-  font-weight: 400;
+  font-weight: lighter;
   margin-bottom: 1.3rem;
+  color: #fff;
+
 }
 
 #last-product {
   width: 90%;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  background-color: rgba(199, 49, 49, 0.062);
+  background-color: rgba(236, 202, 202, 0.822);
   box-shadow: 0px 0px 5px #c710109d;
 }
 

@@ -22,10 +22,10 @@ function TotalsContainer() {
 
     return (
         
-        <div className="cards-container">
-      <Card total={products.count} object="products"/>
-      <Card total={users.count} object="users"/>
-      <Card total="5" object="categories"/>
+        <div className="cards-container" >
+      <Card total={products.count} object="productos"/>
+      <Card total={users.count} object="usuarios"/>
+      <Card total="5" object="categorías"/>
       </div>
         
     )
