@@ -19,7 +19,10 @@
             />
             <div class="cart__item--info">
               <p><%=product.product_name %></p>
-              <p>$<%=product.price %></p>
+              <p>
+                <span>$</span>
+                <span data-price><%=product.price %></span>
+              </p>
               <span><a href="">Ver mas...</a></span>
             </div>
             <div class="cart__item--number">

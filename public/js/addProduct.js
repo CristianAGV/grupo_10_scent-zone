@@ -35,7 +35,7 @@ productImage.addEventListener("change", () => {
   ) {
     imageError.innerHTML = "";
     isImageValid = true;
-    console.log(isImageValid);
+
     return;
   } else {
     imageError.innerHTML =

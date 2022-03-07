@@ -8,7 +8,7 @@ function ProductList() {
     const fetchProducts = async() => {
 
         try {
-            const response = await fetch('http://localhost:3003/api/products')
+            const response = await fetch('http://localhost:3003/api/products/page/1')
             const {products} = await response.json()
             
             setProductsList( products );
@@ -17,6 +17,16 @@ function ProductList() {
             console.log(error)
         }
 
+    }
+
+    const nextProducts = async() => {
+        try {
+            const response = await fetch('http://localhost:3003/api/products/page/2')
+            const {products} = await response.json()
+            setProductsList(products)
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     useEffect(() => {
@@ -62,6 +72,11 @@ function ProductList() {
                 }                
                 </tbody>
             </table>
+
+            <div className='pagination-controls'>
+                <button className='pagination-btn' onClick={fetchProducts}>1</button>
+                <button className='pagination-btn' onClick={nextProducts}>2</button>
+            </div>
         </div>
     )
 }

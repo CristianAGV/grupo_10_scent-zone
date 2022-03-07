@@ -22,8 +22,37 @@ const productsApiModel = {
     } catch (error) {
       console.log(error);
     }
-  }
+  },
 
+  findPagination: async (chosenPage) => {
+    try {
+      if (chosenPage === 1) {
+        let result = await db.products.findAll({
+          include: ["category"],
+          limit: 10,
+        });
+        for (let product of result) {
+          product.dataValues.product_image = `http://localhost:3003/assets/products/${product.product_image}`;
+          product.dataValues.detail = `http://localhost:3003/api/products/${product.id}`;
+        }
+        return result;
+      } else {
+        let result = await db.products.findAll({
+          include: ["category"],
+          limit: 10,
+          offset: chosenPage * 10 - 10,
+        });
+
+        for (let product of result) {
+          product.dataValues.product_image = `http://localhost:3003/assets/products/${product.product_image}`;
+          product.dataValues.detail = `http://localhost:3003/api/products/${product.id}`;
+        }
+        return result;
+      }
+    } catch (error) {
+      throw new Error("Sorry, we are having problems, come later");
+    }
+  },
 };
 
 module.exports = productsApiModel;
