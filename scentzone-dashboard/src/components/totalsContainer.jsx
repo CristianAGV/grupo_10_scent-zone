@@ -10,11 +10,11 @@ function TotalsContainer() {
     }, [])
 
     const getData = async() => {
-        const productsData = await fetch('http://localhost:3003/api/products');
+        const productsData = await fetch('https://scent-zone.herokuapp.com/api/products');
         const products = await productsData.json();
         setProducts(products)
 
-        const usersData = await fetch('http://localhost:3003/api/users');
+        const usersData = await fetch('https://scent-zone.herokuapp.com/api/users');
         const users = await usersData.json();
         setUsers(users)
     }

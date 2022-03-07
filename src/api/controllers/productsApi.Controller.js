@@ -40,7 +40,7 @@ const productsApiController = {
     let chosenId = req.params.id;
     try {
       let product = await productsApiModel.findOne(chosenId);
-      let imageURL = `http://localhost:3003/assets/products/${product.product_image}`;
+      let imageURL = `https://scent-zone.herokuapp.com/assets/products/${product.product_image}`;
       return res.status(200).json({
         product: product,
         productImage: imageURL,

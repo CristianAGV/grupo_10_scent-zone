@@ -7,7 +7,7 @@ function Categories() {
   const fetchCategories = async () => {
 
     try {
-      let response = await fetch("http://localhost:3003/api/products");
+      let response = await fetch("https://scent-zone.herokuapp.com/api/products");
       let info = await response.json();
       let categories = info.countByCategory;
       setCategories(categories);
