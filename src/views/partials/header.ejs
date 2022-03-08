@@ -3,26 +3,29 @@
     <h1 class="main-header__title"><a href="/">SCENTZONE</a></h1>
     <div class="main-header__menuIcons">
       <% if (locals.user) { %>
-        <% if (user.role==2) { %>
+        <% if (user.role == 2) { %>
           <a href="/products/products-list"><button class="header-list-btn">Products</button></a>
           <a href="/users/list"><button class="header-list-btn">Users</button></a>
-          <% } %>
-            <% } %>
-
-              <a href="/" class="main-header__btn"><i class="fas fa-home"></i></a>
-              <a href="/cart" class="main-header__btn"><i class="fas fa-shopping-cart"></i></a>
-              <a href="/users/login" class="main-header__btn"><i class="fas fa-user"></i></a>
-              <% if (locals.user) { %>
-                <p class="header__userName"><a href="/users/detail/<%= user.id%>">
-                    <%= user.first_name %>
-                  </a></p>
-                <a href="/users/logout" class="main-header__btn"><i class="fas fa-sign-out-alt"></i></a>
-                <% } %>
+        <% } %>       
+      <% } %>
+      
+      <a href="/" class="main-header__btn"><i class="fas fa-home"></i></a>
+      <a href="/cart" class="main-header__btn"
+        ><i class="fas fa-shopping-cart"></i
+      ></a>
+      <a href="/users/login" class="main-header__btn"
+        ><i class="fas fa-user"></i
+      ></a>
+      <% if (locals.user) { %>
+      <p class="header__userName"><a href="/users/detail/<%= user.id%>"><%= user.first_name %></a></p>
+      <a href="/users/logout" class="main-header__btn"
+        ><i class="fas fa-sign-out-alt"></i
+      ></a>
+      <% } %>
     </div>
-    <!-- <div class="main-header__search">
-      <form action="/products/search" method="get" enctype="application/x-www-form-urlencoded">
-      <input class="main-header__search--bar" type="text" name="searchString" placeholder="Buscador..."/>
-      </form>
-    </div> -->
+    <div class="main-header__search">
+      <input class="main-header__search--bar" type="text" />
+      <span class="icon-search"><i class="fas fa-search"></i></span>
+    </div>
   </div>
 </header>

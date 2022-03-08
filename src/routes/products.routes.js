@@ -71,8 +71,6 @@ router.get('/edit-product', visitorsMiddleware, isAdminMiddleware, productsContr
 router.get('/add-products', visitorsMiddleware, isAdminMiddleware,productsController.addProducts)
 router.post('/add-products', upload.single('productImage'),createProductValidations ,productsController.processAddProduct)
 router.get('/products-list', visitorsMiddleware, isAdminMiddleware, productsController.productsList)
-router.get('/search/', productsController.searchProduct)
-
 
 // router.get('/edit/:id', controller.editProductPage)
 router.get('/:id/edit', visitorsMiddleware, isAdminMiddleware,productsController.editProductPage)
