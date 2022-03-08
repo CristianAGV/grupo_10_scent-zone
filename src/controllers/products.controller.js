@@ -25,7 +25,8 @@ const productsController = {
         category
       );
       res.render("./products-views/categories", {
-        prodByCategory: prodByCategory, user: req.session.userLogged
+        prodByCategory: prodByCategory,
+        user: req.session.userLogged,
       });
     } catch (error) {
       res.redirect("/comeBack");
@@ -38,7 +39,7 @@ const productsController = {
       let allProducts = await productsModel.showProducts();
       res.render("./products-views/products-list", {
         showProducts: allProducts,
-        user: req.session.userLogged
+        user: req.session.userLogged,
       });
     } catch (error) {
       res.redirect("/comeBack");
@@ -47,7 +48,9 @@ const productsController = {
   },
 
   addProducts: (req, res) => {
-    res.render("./products-views/add-product", { user: req.session.userLogged});
+    res.render("./products-views/add-product", {
+      user: req.session.userLogged,
+    });
   },
 
   processAddProduct: async function (req, res) {
@@ -112,8 +115,21 @@ const productsController = {
           price: Number(req.body.price),
           size: Number(req.body.size),
           status: true,
-          product_image: req.file.filename,
         };
+        if (req.file) {
+          productToUpdate = {
+            product_name: req.body.productName,
+            brand: req.body.Brand,
+            description: req.body.description,
+            gender: req.body.gender,
+            category_id: Number(req.body.category),
+            price: Number(req.body.price),
+            size: Number(req.body.size),
+            status: true,
+            product_image: req.file.filename,
+          };
+        }
+
         await productsModel.editProduct(productToUpdate, id);
         res.redirect("/products/products-list");
       } else {
