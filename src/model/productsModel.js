@@ -69,20 +69,5 @@ const productsModel = {
       console.log(error);
     }
   },
-
-  searchProduct: async (searchingText) => {
-    try {
-      let resultProductName = await db.products.findAll({
-        where: { product_name: searchingText },
-      });
-      let resultBrand = await db.products.findAll({
-        where: { brand: searchingText },
-      });
-      let searchResults = [...resultProductName, ...resultBrand];
-      return searchResults;
-    } catch (error) {
-      console.log(error);
-    }
-  },
 };
 module.exports = productsModel;
