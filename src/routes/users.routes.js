@@ -22,7 +22,7 @@ let registerValidations = [
   body("first_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El nombre debe tener más de dos caracteres"),
   body("last_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El apellido debe tener más de dos caracteres"),
   body("country").notEmpty().withMessage("Debes ingresar tu país"),
-  body("productImage").custom((value, { req }) => {
+  body("file-addUser").custom((value, { req }) => {
     let file = req.file;
     let acceptedExtensions = [".png", ".jpg"];
     if (!file) {
@@ -38,6 +38,31 @@ let registerValidations = [
     return true;
   }),
 ];
+
+let updateUserValidations = [
+  body("email").notEmpty().withMessage("Debes ingresar un email"),
+  body("email").isEmail().withMessage("El email debe tener un formato similar a 'email@email.com'"),
+  body("password").isLength({ min: 8 }).withMessage('La contraseña debe tener más de 8 caracteres'),
+  body("first_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El nombre debe tener más de dos caracteres"),
+  body("last_name").notEmpty().withMessage("Debes ingresar tu nombre").isLength({ min: 2, max:15 }).withMessage("El apellido debe tener más de dos caracteres"),
+  body("country").notEmpty().withMessage("Debes ingresar tu país"),
+  body("file-updateUser").custom((value, { req }) => {
+    let file = req.file;
+    let acceptedExtensions = [".png", ".jpg"];
+    if (!file) {
+      return true;
+    } else {
+      let fileExtension = path.extname(file.originalname);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        throw new Error(
+          `Solo se aceptan formatos de imagen ${acceptedExtensions.join(", ")}`
+        );
+      }
+    }
+    return true;
+  }),
+];
+
 
 let storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -95,7 +120,7 @@ router.get(
 router.post(
   "/edit/:id",
   upload.single("image"),
-  registerValidations,
+  updateUserValidations,
   usersController.actualizarUsuario
 );
 
