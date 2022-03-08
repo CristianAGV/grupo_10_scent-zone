@@ -66,6 +66,11 @@ const usersController = {
                     ...userUpdated,
                     image: req.file.filename
                 }
+            } else {
+                userUpdated = {
+                    ...user,
+                    role:1
+                }
             }
 
             if ( req.body.password ){
@@ -73,7 +78,13 @@ const usersController = {
                     ...userUpdated,
                     password: bcrypt.hashSync(req.body.password, 12)
                 }
-            }                            
+            } else {
+                 userUpdated = {
+                    ...userUpdated,
+                    role:1
+                }
+    
+            }                         
             await userModel.update(userUpdated,id)
             res.redirect('/users/detail/' + req.params.id);
             

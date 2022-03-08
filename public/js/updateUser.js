@@ -9,33 +9,42 @@ let email          = document.querySelector("#email");
 let emailError     = document.querySelector("#userEmailError");
 let password       = document.querySelector("#password");
 let passwordError  = document.querySelector("#userPasswordError");
-let generalErrors  = document.querySelector("#generalErrors")
-let btnSubmit      = document.querySelector("#btn-submit")
+let generalErrors  = document.querySelector("#generalErrors");
+let btnSubmit      = document.querySelector("#btn-submit");
+let userCurrentImage =document.querySelector("#userCurrentImage");
 
-// console.log("this is fucking running! |..| ");
 
-let anyError = true;
+let changedPassword = false;
+
+let anyError = false;
 let isFileUploaded = false;
 
 fileUpdateUser.addEventListener("change", () => {    
     
     const fileUser = fileUpdateUser.files[0];
+
     
-    if ( fileUser.type === "image/jpeg" || fileUser.type === "image/jpg" || fileUser.type === "image/png" ) {
-        fileUserError.innerHTML = "";
-        isFileUploaded = true
-        anyError = false;
-        return;
-      } else {
-        fileUserError.innerHTML = "Debes subir una imagen con formato valido (JPG, JPEG, PNG, GIF).";
-        anyError = true;
-        return;
-      }
+        if ( fileUser.type === "image/jpeg" || fileUser.type === "image/jpg" || fileUser.type === "image/png" ) {
+            fileUserError.innerHTML = "";
+            isFileUploaded = true
+            anyError = false;
+            
+            return;
+          } else if(fileUpdateUser.files.length == 0) { 
+              anyError = false;
+          }
+          else{
+            fileUserError.innerHTML = "Debes subir una imagen con formato valido (JPG, JPEG, PNG, GIF).";
+            anyError = true;
+            return;
+          }
+    
+   
     
 });
 
 
-firstName.addEventListener("blur", ( e ) => {
+firstName.addEventListener("change", ( e ) => {
     
     const userName = e.target.value;
     
@@ -49,7 +58,7 @@ firstName.addEventListener("blur", ( e ) => {
 
 });
 
-lastName.addEventListener("blur", ( e ) => {
+lastName.addEventListener("change", ( e ) => {
 
     const userLastName = e.target.value;
 
@@ -64,7 +73,7 @@ lastName.addEventListener("blur", ( e ) => {
 });
 
 
-email.addEventListener("blur", ( e )=>{
+email.addEventListener("change", ( e )=>{
 
     const userEmail = e.target.value;    
   
@@ -79,11 +88,14 @@ email.addEventListener("blur", ( e )=>{
 });
 
 
-password.addEventListener("focus", ( e ) => {
+password.addEventListener("change", ( e ) => {
 
     const userPassword = e.target.value
 
-    if ( userPassword.length < 8 ){
+    if (userPassword.length == 0){
+        changedPassword = false;
+        anyError = false;
+    } else if ( userPassword.length < 8 && userPassword.length > 1){
         passwordError.innerHTML = "Debes ingresar una contraseña de al menos 8 caracteres"
         anyError = true;
     }
@@ -97,7 +109,7 @@ password.addEventListener("change", (e) => {
 
     if ( userPassword.length >= 4 ){
         passwordError.innerHTML = ""
-        anyError = false
+        anyError = false;
     }
 
 });
@@ -105,7 +117,7 @@ password.addEventListener("change", (e) => {
 btnSubmit.addEventListener("click", (e) => {
         
     e.preventDefault();
-    if ( anyError || !isFileUploaded ){
+    if ( anyError ){
         generalErrors.innerHTML="Debes verificar que todos los campos sean correctos y estén llenos"
     }else if ( !anyError ) {
         formReg.submit()        

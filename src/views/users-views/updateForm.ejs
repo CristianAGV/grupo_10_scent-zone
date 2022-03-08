@@ -21,7 +21,7 @@
                 <div class="register-container">                               
                     
                     <div class="userImage-update">
-                        <img src="/assets/users/<%= usuario.dataValues.image %>" alt="user">
+                        <img src="/assets/users/<%= usuario.dataValues.image %>" alt="user" id="userCurrentImage">
                     </div>
                     <div class="reg-labels">
                         <label for="image">Actualiza imágen de perfil:</label>
@@ -29,7 +29,6 @@
                         <input 
                             type="file" 
                             name="image" 
-                            value=<%= usuario.dataValues.image %> 
                             class="user-image-input"
                             id = "file-updateUser" 
                             accept="image/png, image/jpeg"
