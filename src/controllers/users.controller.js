@@ -148,7 +148,7 @@ const usersController = {
             }
             let result = await userModel.create(newUser)
             console.log(result)
-            res.redirect('/');
+            res.redirect('/users/login');
         } else{
             return res.render('./users-views/registro', {errors: errors.mapped(), old: req.body})
         }
