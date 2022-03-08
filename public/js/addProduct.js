@@ -12,6 +12,7 @@ let productImage = document.querySelector("#myFile");
 let imageError = document.querySelector("#imageError");
 let form = document.querySelector("form");
 let submitBtn = document.querySelector("#btn");
+let finalError = document.querySelector("#final-error");
 
 // Error Handler Variables
 const errorColor = "#cf9518";
@@ -124,4 +125,17 @@ submitBtn.addEventListener("click", (e) => {
   ) {
     form.submit();
   }
+
+  if (
+    productName.value.length > 0 &&
+    productDescription.value.length > 0 &&
+    productBrand.value.length > 0 &&
+    productPrice.value.length > 0 &&
+    productVol.value.length > 0 &&
+    productImage.value
+  ) {
+    return form.submit();
+  }
+
+  finalError.textContent = "Debes verificar que todos los campos sean validos";
 });
