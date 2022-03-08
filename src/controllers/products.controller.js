@@ -51,7 +51,6 @@ const productsController = {
   },
 
   processAddProduct: async function (req, res) {
-    // ¿addProduct or processAddProduct?
     try {
       let errors = validationResult(req);
 
@@ -138,5 +137,17 @@ const productsController = {
       console.log(error);
     }
   },
+
+searchProduct: async function (req, res) {
+  let searchingText = req.query.searchString;
+  try {
+    let searchResults = await productsModel.searchProduct(searchingText);
+    res.render("./products-views/search-products", {searchResults})
+  } catch (error) {
+    res.render("./products-views/search-products")
+    console.log(error);
+  }
+},
+
 };
 module.exports = productsController;

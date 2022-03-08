@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head')%>
+
+    <body>
+        <!-- Header -->
+        <%- include('../partials/header')%>
+
+            <!-- NavBar -->
+            <%- include('../partials/nav')%>
+
+                <main>
+                    <!-- Search results -->
+                    <div class="main__searchResults-container">
+                        <div class="main__searchResults-menu">
+                            <div class="main__searchResults-mainMenu">
+                                <h1 class="main__searchResults-title">Resultados de búsqueda</h1>
+                            </div>
+                        </div>
+
+                        <div class="main__searchResults-productsContent">
+                            <% searchResults.forEach(product=> { %>
+                                <article class="product__categories--card">
+                                    <a href="/products/product-detail/<%= product.id %> ">
+                                        <div class="perfume__img">
+                                            <% console.log(product.productImage) %>
+                                                <img src="/assets/products/<%=product.product_image%>"
+                                                    alt="Product Image" />
+                                        </div>
+                                        <div class="perfume__info">
+                                            <p class="price">
+                                                <%= product.price %> $
+                                            </p>
+                                            <p class="product__name">
+                                                <%= product.product_name %>
+                                            </p>
+                                            <i class="fas fa-star stars"></i>
+                                            <i class="fas fa-star stars"></i>
+                                            <i class="fas fa-star stars"></i>
+                                            <i class="fas fa-star stars"></i>
+                                            <i class="fas fa-shopping-cart cart"></i>
+                                        </div>
+                                    </a>
+                                </article>
+                                <% }) %>
+                        </div>
+                </main>
+                <br>
+                <br>
+                <script src="/js/hambMenu.js"></script>
+                <!-- Footer  -->
+                <%- include('../partials/footer')%>
+    </body>
+
+</html>
