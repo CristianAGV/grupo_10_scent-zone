@@ -12,17 +12,18 @@ let productImage = document.querySelector("#myFile");
 let imageError = document.querySelector("#imageError");
 let form = document.querySelector("form");
 let submitBtn = document.querySelector("#btn");
+let finalError = document.querySelector("final-error");
 
 // Error Handler Variables
 const errorColor = "#cf9518";
 const normalColor = "rgba(0, 0, 0, 0.5)";
 const defaultErrorMessage = "Este campo no puede estar vacío";
-let isNameValid;
-let isBrandValid;
-let isDescriptionValid;
-let isPriceValid;
-let isVolValid;
-let isImageValid;
+let isNameValid = true;
+let isBrandValid = true;
+let isDescriptionValid = true;
+let isPriceValid = true;
+let isVolValid = true;
+let isImageValid = true;
 
 productImage.addEventListener("change", () => {
   const file = productImage.files[0];
@@ -86,7 +87,7 @@ productBrand.addEventListener("blur", (e) => {
   }
 });
 
-console.log( productPrice )
+console.log(productPrice);
 
 productPrice.addEventListener("blur", (e) => {
   let value = e.target.value;
@@ -125,6 +126,18 @@ submitBtn.addEventListener("click", (e) => {
     isVolValid &&
     isImageValid
   ) {
-    form.submit();
+    return form.submit();
   }
+  if (
+    productName.value.length > 0 &&
+    productDescription.value.length > 0 &&
+    productBrand.value.length > 0 &&
+    productPrice.value.length > 0 &&
+    productVol.value.length > 0 &&
+    productImage.value
+  ) {
+    return form.submit();
+  }
+
+  finalError.innerHTML = "Debes verificar que todos lod campos sean validos";
 });
